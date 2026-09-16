@@ -23,7 +23,7 @@ export function ExternalLink({
       <div className="group inline-flex items-center gap-1">
         <LinkLabel>{label}</LinkLabel>
         <span className="text-(--color-navigation-menu-panel-icon)">
-          <Icon component={ArrowUpRightIcon} size={20} />
+          <Icon component={ArrowUpRightIcon} size={16} />
         </span>
       </div>
 

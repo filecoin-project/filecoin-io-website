@@ -8,6 +8,8 @@ import type {
 
 import { PATHS } from '@/constants/paths'
 import {
+  FIL_ONE_URL,
+  FILECOIN_CLOUD_URL,
   FILECOIN_DOCS_URL,
   FILECOIN_DOCS_URLS,
   FILECOIN_FOUNDATION_URLS,
@@ -18,28 +20,12 @@ import { pickNavItem } from '../utils/pickNavItem'
 
 type FooterNavigationItem = { title: string; items: Array<NavItem> }
 
-function getBlockExplorerItems(t: TranslationFunction): Array<ExpandedNavItem> {
+function getBlockExplorerItems(): Array<ExpandedNavItem> {
   return [
-    {
-      label: 'Beryx',
-      description: t('descriptions.beryx'),
-      href: 'https://beryx.io/',
-    },
-    {
-      label: 'Blockscout (FEVM)',
-      description: t('descriptions.blockscout'),
-      href: 'https://www.blockscout.com/',
-    },
-    {
-      label: 'Filfox',
-      description: t('descriptions.filfox'),
-      href: 'https://filfox.info/',
-    },
-    {
-      label: 'Filscan',
-      description: t('descriptions.filscan'),
-      href: 'https://filscan.io/en/',
-    },
+    { label: 'Beryx', href: 'https://beryx.io/' },
+    { label: 'Blockscout (FEVM)', href: 'https://www.blockscout.com/' },
+    { label: 'Filfox', href: 'https://filfox.info/' },
+    { label: 'Filscan', href: 'https://filscan.io/en/' },
   ]
 }
 
@@ -50,19 +36,10 @@ function getCommunityItems(t: TranslationFunction): Array<ExpandedNavItem> {
       description: t('descriptions.communityHub'),
       href: PATHS.COMMUNITY_HUB.path,
     },
-    {
-      label: t('events'),
-      description: t('descriptions.events'),
-      href: FILECOIN_FOUNDATION_URLS.events.href,
-    },
-    {
-      label: 'Orbit',
-      description: t('descriptions.orbit'),
-      href: FILECOIN_FOUNDATION_URLS.orbit.href,
-    },
+    { label: t('events'), href: FILECOIN_FOUNDATION_URLS.events.href },
+    { label: 'Orbit', href: FILECOIN_FOUNDATION_URLS.orbit.href },
     {
       label: t('fipsGovernance'),
-      description: t('descriptions.fipsGovernance'),
       href: FILECOIN_FOUNDATION_URLS.governance.href,
     },
   ]
@@ -72,14 +49,9 @@ function getNetworkMonitoringItems(
   t: TranslationFunction,
 ): Array<ExpandedNavItem> {
   return [
-    {
-      label: t('networkStatus'),
-      description: t('descriptions.networkStatus'),
-      href: 'https://status.filecoin.io/',
-    },
+    { label: t('networkStatus'), href: 'https://status.filecoin.io/' },
     {
       label: t('networkHealth'),
-      description: t('descriptions.networkHealth'),
       href: 'https://dashboard.starboard.ventures/',
     },
   ]
@@ -94,16 +66,8 @@ function getDeveloperResourcesItems(
       description: t('descriptions.documentation'),
       href: FILECOIN_DOCS_URL,
     },
-    {
-      label: t('cookbook'),
-      description: t('descriptions.cookbook'),
-      href: FILECOIN_DOCS_URLS.builderCookbook,
-    },
-    {
-      label: 'GitHub',
-      description: t('descriptions.github'),
-      href: FILECOIN_URLS.github.href,
-    },
+    { label: t('cookbook'), href: FILECOIN_DOCS_URLS.builderCookbook },
+    { label: 'GitHub', href: FILECOIN_URLS.github.href },
   ]
 }
 
@@ -114,13 +78,10 @@ function getContributeItems(t: TranslationFunction): Array<ExpandedNavItem> {
       description: t('descriptions.grants'),
       href: FILECOIN_FOUNDATION_URLS.grants.href,
     },
-    {
-      label: t('bugBounty'),
-      description: t('descriptions.bugBounty'),
-      href: FILECOIN_URLS.securityBugBounty.href,
-    },
+    { label: t('bugBounty'), href: FILECOIN_URLS.securityBugBounty.href },
   ]
 }
+
 
 function getInternalNavigationItems(t: TranslationFunction): Array<NavItem> {
   return [
@@ -143,7 +104,27 @@ export function getHeaderNavigationItems(
 ): Array<NavItem | NavigationMenuItem> {
   return [
     {
-      label: t('learn'),
+      label: t('sections.products'),
+      items: [
+        {
+          title: t('sections.products'),
+          links: [
+            {
+              label: t('filecoinOnchainCloud'),
+              description: t('descriptions.filecoinOnchainCloud'),
+              href: FILECOIN_CLOUD_URL,
+            },
+            {
+              label: t('filOne'),
+              description: t('descriptions.filOne'),
+              href: FIL_ONE_URL,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: t('network'),
       items: [
         {
           title: t('sections.understandFilecoin'),
@@ -160,33 +141,26 @@ export function getHeaderNavigationItems(
             },
           ],
         },
-      ],
-    },
-    { label: t('storeData'), href: PATHS.STORE_DATA.path },
-    { label: t('provideStorage'), href: PATHS.PROVIDE_STORAGE.path },
-    {
-      label: t('developers'),
-      items: [
         {
-          title: t('sections.explore'),
+          title: t('sections.participate'),
           links: [
             {
               label: t('buildOnFilecoin'),
               description: t('descriptions.buildOnFilecoin'),
               href: PATHS.BUILD_ON_FILECOIN.path,
             },
-            ...getDeveloperResourcesItems(t),
+            {
+              label: t('provideStorage'),
+              description: t('descriptions.provideStorage'),
+              href: PATHS.PROVIDE_STORAGE.path,
+            },
           ],
         },
-        { title: t('sections.contribute'), links: getContributeItems(t) },
       ],
-    },
-    {
-      label: t('network'),
-      items: [
+      compactLinks: [
         {
           title: t('sections.blockExplorers'),
-          links: getBlockExplorerItems(t),
+          links: getBlockExplorerItems(),
         },
         {
           title: t('sections.networkMonitoring'),
@@ -195,8 +169,13 @@ export function getHeaderNavigationItems(
       ],
     },
     {
-      label: t('community'),
+      label: t('sections.resources'),
       items: [
+        {
+          title: t('sections.explore'),
+          links: getDeveloperResourcesItems(t),
+        },
+        { title: t('sections.contribute'), links: getContributeItems(t) },
         { title: t('sections.getInvolved'), links: getCommunityItems(t) },
       ],
     },
@@ -225,7 +204,7 @@ export function getFooterNavigationItems(
     },
     {
       title: t('sections.blockExplorers'),
-      items: getBlockExplorerItems(t).map(pickNavItem),
+      items: getBlockExplorerItems().map(pickNavItem),
     },
     {
       title: t('sections.community'),

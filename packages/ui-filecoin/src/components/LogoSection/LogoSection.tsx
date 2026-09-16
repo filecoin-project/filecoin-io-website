@@ -26,16 +26,9 @@ export function LogoSection({
 
   return (
     <section
-      className="logo-section flex flex-col items-center gap-20"
+      className="logo-section flex flex-col items-center gap-8"
       aria-labelledby="logo-section-title"
     >
-      <Tag
-        id="logo-section-title"
-        className="text-lg text-(--color-subheading-text)"
-      >
-        {title}
-      </Tag>
-
       <Carousel autoPlay={autoPlay}>
         <CarouselContent gradientVariant={gradientVariant}>
           {logos.map((logoItem, index) => (
@@ -48,6 +41,13 @@ export function LogoSection({
         </CarouselContent>
         <CarouselAutoScrollControls />
       </Carousel>
+
+      <Tag
+        id="logo-section-title"
+        className="text-sm text-(--color-paragraph-text)"
+      >
+        {title}
+      </Tag>
     </section>
   )
 }

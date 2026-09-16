@@ -1,12 +1,12 @@
 :root,
 .light-section {
-  --color-logo-item: theme('colors.zinc.400');
-  --color-logo-item-hover: theme('colors.zinc.500');
+  --color-logo-item: theme('colors.slate.400');
+  --color-logo-item-hover: theme('colors.slate.500');
 }
 
 .dark-section {
-  --color-logo-item: theme('colors.zinc.400');
-  --color-logo-item-hover: theme('colors.zinc.50');
+  --color-logo-item: theme('colors.slate.400');
+  --color-logo-item-hover: theme('colors.slate.50');
 }
 
 @layer components {

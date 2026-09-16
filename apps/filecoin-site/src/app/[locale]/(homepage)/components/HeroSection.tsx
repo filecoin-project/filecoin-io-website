@@ -8,14 +8,22 @@ import { PageSection } from '@filecoin-foundation/ui-filecoin/PageSection'
 import { PATHS } from '@/constants/paths'
 import { FILECOIN_CLOUD_URL } from '@/constants/siteMetadata'
 
-export function HeroSection() {
+type HeroSectionProps = {
+  latestPost?: { title: string; href: string }
+}
+
+export function HeroSection({ latestPost }: HeroSectionProps) {
   const t = useTranslations('/.hero')
 
   return (
     <PageSection backgroundVariant="transparentDark" paddingVariant="none">
-      <div className="space-y-15 py-25 md:py-30">
-        <Announcement centered href={FILECOIN_CLOUD_URL}>
-          {t('announcement')}
+      <div className="space-y-10 py-25 md:py-30">
+        <Announcement
+          centered
+          badge="New"
+          href={latestPost ? latestPost.href : FILECOIN_CLOUD_URL}
+        >
+          {latestPost ? latestPost.title : t('announcement')}
         </Announcement>
 
         <PageHeader
@@ -24,10 +32,14 @@ export function HeroSection() {
           description={t('description')}
           variant="highContrast"
           cta={[
-            <Button href={PATHS.STORE_DATA.path} variant="primary">
+            // TODO: replace "#" with the products page URL once available
+            <Button href="#" variant="primary">
               {t('cta.main')}
             </Button>,
-            <Button href={PATHS.BUILD_ON_FILECOIN.path} variant="ghost">
+            <Button
+              href={PATHS.STORE_DATA_TALK_TO_EXPERT.path}
+              variant="ghost"
+            >
               {t('cta.secondary')}
             </Button>,
           ]}

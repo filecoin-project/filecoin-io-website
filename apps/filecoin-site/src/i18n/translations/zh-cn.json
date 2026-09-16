@@ -17,7 +17,7 @@
       "title": "加入使用 Filecoin 存储的行业领袖"
     },
     "byTheNumbers": {
-      "title": "Filecoin 数据一览",
+      "title": "互联网规模的基础设施",
       "storageCapacity": {
         "subTitle": "网络存储容量",
         "description": "足以存储维基百科文本 3600 万次"
@@ -31,76 +31,54 @@
         "description": "通过 Filecoin 虚拟机 (FVM) 部署"
       }
     },
-    "reshapingData": {
-      "title": "Filecoin 正在重塑世界存储数据的方式",
-      "subTitle": "为下一代互联网奠定更好的基础。",
-      "paragraph1": "如今，少数几家公司控制着世界上大部分数据，形成了中心化的守门人，引入了单点故障。",
-      "paragraph2": "Filecoin 提供了一种根本不同的数据存储方法：将数据分布在受密码学证明保障的去中心化全球网络中，确保更高的安全性和弹性。",
-      "paragraph3": "从文化档案到科学研究，PB 级的数据已经存储在 Filecoin 上。去中心化模型赋予用户对其信息的真正自主权，为更开放、更有弹性、用户可控的互联网奠定基础。",
-      "storeDataCta": "存储数据",
-      "becomeProviderCta": "成为存储提供者"
+    "builtIntoRealProducts": {
+      "title": "已融入真实产品",
+      "description": "数据平台、档案馆和开发者工具已经在 Filecoin 上运行。看看他们使用了哪些产品，以及原因。",
+      "tablistLabel": "选择一个客户案例",
+      "productsUsedLabel": "使用的产品",
+      "viewAllCta": "查看所有案例研究"
     },
-    "ipfs": {
-      "title": "IPFS 的激励层",
-      "paragraph1": "Filecoin 为星际文件系统 (IPFS) 添加了激励性的持久存储，IPFS 是一个用于内容寻址数据的点对点网络，为数据创建了一个强大、多功能且长期的存储空间。",
-      "paragraph2": "Filecoin 使 IPFS 用户能够轻松可靠地将数据直接存储在 Filecoin 网络上。其结果是一个去中心化的存储层，开辟了全新类别的应用和用例。",
-      "learnMoreCta": "了解更多关于 IPFS"
-    },
-    "comparison": {
-      "title": "Filecoin 存储优势对比",
-      "description": "去中心化存储与传统云存储的对比",
-      "storeDataCta": "存储数据",
-      "learnMoreCta": "了解更多关于 Filecoin",
-      "traditionalCloud": "传统云存储",
-      "resilience": {
-        "filecoin": "通过全球冗余实现弹性",
-        "traditionalCloud": "单点故障"
-      },
-      "censorship": {
-        "filecoin": "设计上抗审查",
-        "traditionalCloud": "易受审查和下架影响"
-      },
-      "participation": {
-        "filecoin": "开放、无许可参与",
-        "traditionalCloud": "由企业守门人控制"
-      },
-      "storage": {
-        "filecoin": "可验证的存储承诺",
-        "traditionalCloud": "不透明的信任模型"
-      },
-      "incentives": {
-        "filecoin": "参与者的经济激励",
-        "traditionalCloud": "利润流向股东"
-      },
-      "longevity": {
-        "filecoin": "数据比机构更长久",
-        "traditionalCloud": "提供商失败则数据丢失"
+    "filecoinCloud": {
+      "eyebrow": "Filecoin 链上云",
+      "title": "一个 SDK 搞定存储、检索与支付",
+      "description": "为互联网档案馆（Internet Archive）保存数据的同一张网络，现在也是您的基础设施：通过一个 TypeScript SDK，存储带验证证明的数据、快速取回数据，并按实际用量付费。",
+      "quickstartCta": "阅读快速入门",
+      "exploreCta": "探索 Filecoin 链上云",
+      "checklist": {
+        "warmStorage": {
+          "title": "带数据持有证明的热存储",
+          "description": "提供商按固定周期证明其持有您的数据。一旦漏交证明，即失去报酬。"
+        },
+        "beam": {
+          "title": "通过 Filecoin Beam 快速检索",
+          "description": "为您存储的数据提供 CDN 级别的出口带宽，按字节付费。"
+        },
+        "pay": {
+          "title": "通过 Filecoin Pay 实现可编程支付",
+          "description": "以 USDFC 或 FIL 进行流式支付。预算、支付通道和结算均在链上完成。"
+        }
       }
     },
-    "buildForFuture": {
-      "title": "开放、可扩展、面向未来",
-      "subTitle": "去中心化、可验证的存储层，轻松扩展。",
-      "description": "驱动链上存储、dApp、数据密集型 SaaS 平台、不可变档案等。利用开源工具、原生 IPFS 集成、跨链数据桥和 FEVM 可编程智能合约加速开发。无需妥协地构建，因为您控制数据，而非中心化守门人。",
-      "startBuildingCta": "开始构建",
-      "documentationCta": "文档"
+    "oneNetwork": {
+      "title": "一个网络，适合每个团队的路径",
+      "description": "选择您使用 Filecoin 的方式：可编程原语、托管的 S3 服务，或您自行提供的存储容量。",
+      "tablistLabel": "选择您的角色"
+    },
+    "buildingBlocks": {
+      "title": "构建可验证数据产品的基石",
+      "description": "您可以自行组合的核心 Filecoin 产品，以及基于同一网络的生态系统托管服务。",
+      "viewAllCta": "查看所有存储服务"
     },
     "latestNews": {
       "title": "最新消息",
       "description": "来自构建 Filecoin 团队的洞察、更新、生态亮点和社区故事。",
       "viewAllCta": "查看所有文章"
     },
-    "community": {
-      "title": "加入充满活力的社区",
-      "description": "成为构建去中心化、高效、强大的人类信息基础设施运动的一份子。",
-      "chatOnSlack": "在 Slack 上交流",
-      "attendEvent": "参加 Filecoin 活动",
-      "getInvolvedGitHub": "在 GitHub 上参与",
-      "becomeAmbassador": "成为 Filecoin Orbit 大使",
-      "images": {
-        "conference": "一大群人参加科技大会或研讨会，演讲者在台上演讲，参会者坐在椅子和懒人沙发上，许多人在使用笔记本电脑。",
-        "panel": "一名男子在讨论小组中对着麦克风发言，面带微笑，其他参与者在旁边认真倾听。",
-        "presentation": "一名女性在现代会议室向坐着的观众做演示，几位参与者举手提问。"
-      }
+    "startBuilding": {
+      "title": "从一次调用开始，扩展到 PB 级规模",
+      "description": "阅读快速入门指南，几分钟内存储您的第一个文件，或与我们的团队讨论您的工作负载。",
+      "startCta": "开始构建",
+      "talkToSalesCta": "联系销售"
     }
   },
   "/blog": {
@@ -784,7 +762,7 @@
     "privacyPolicy": "隐私政策",
     "termsOfUse": "使用条款",
     "managedBy": "管理方",
-    "fipsGovernance": "FIPs 与治理",
+    "fipsGovernance": "治理",
     "networkStatus": "网络状态",
     "networkHealth": "网络健康",
     "documentation": "文档",
@@ -795,6 +773,7 @@
     "bugBounty": "安全漏洞赏金",
     "sections": {
       "understandFilecoin": "了解 Filecoin",
+      "participate": "参与网络",
       "explore": "探索",
       "contribute": "贡献",
       "blockExplorers": "区块浏览器",
@@ -802,11 +781,16 @@
       "getInvolved": "参与其中",
       "navigation": "导航",
       "resources": "资源",
-      "community": "社区"
+      "community": "社区",
+      "products": "产品"
     },
     "descriptions": {
       "learn": "了解 Filecoin 是什么以及它如何运作",
       "caseStudies": "查看其他人如何在现实世界中使用 Filecoin",
+      "provideStorage": "提供存储容量，在网络上赚取收益",
+      "storeData": "在 Filecoin 网络上存储您的数据",
+      "filecoinOnchainCloud": "面向链上应用的可编程存储与计算",
+      "filOne": "为 AI 时代打造的 S3 兼容对象存储",
       "buildOnFilecoin": "在 Filecoin 网络上构建应用",
       "documentation": "Filecoin 官方文档",
       "cookbook": "使用 Filecoin 和 FVM 构建的秘诀",

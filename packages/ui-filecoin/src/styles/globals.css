@@ -61,20 +61,20 @@
 :root,
 .light-section {
   /* General colors */
-  --color-text-base: theme('colors.zinc.950');
-  --color-border-base: theme('colors.zinc.950 / 15%');
-  --color-border-muted: theme('colors.zinc.950 / 10%');
+  --color-text-base: theme('colors.slate.950');
+  --color-border-base: theme('colors.slate.950 / 15%');
+  --color-border-muted: theme('colors.slate.950 / 10%');
 
   /* Component specific colors */
-  --color-subheading-text: theme('colors.zinc.600');
-  --color-subheading-text-muted: theme('colors.zinc.600');
+  --color-subheading-text: theme('colors.slate.600');
+  --color-subheading-text-muted: theme('colors.slate.600');
 
-  --color-paragraph-text: theme('colors.zinc.600');
-  --color-paragraph-text-subtle: theme('colors.zinc.500');
-  --color-paragraph-text-strong: theme('colors.zinc.800');
+  --color-paragraph-text: theme('colors.slate.600');
+  --color-paragraph-text-subtle: theme('colors.slate.500');
+  --color-paragraph-text-strong: theme('colors.slate.800');
 
   --color-card-background: theme('colors.white');
-  --color-card-background-hover: theme('colors.zinc.50');
+  --color-card-background-hover: theme('colors.slate.50');
   --color-card-heading-hover: theme('colors.brand.800');
 }
 
@@ -86,19 +86,19 @@
 
 .dark-section {
   /* General colors */
-  --color-text-base: theme('colors.zinc.50');
-  --color-border-base: theme('colors.zinc.50 / 20%');
-  --color-border-muted: theme('colors.zinc.50 / 10%');
+  --color-text-base: theme('colors.slate.50');
+  --color-border-base: theme('colors.slate.50 / 20%');
+  --color-border-muted: theme('colors.slate.50 / 10%');
 
   /* Component specific colors */
-  --color-subheading-text: theme('colors.zinc.50');
-  --color-subheading-text-muted: theme('colors.zinc.200');
+  --color-subheading-text: theme('colors.slate.50');
+  --color-subheading-text-muted: theme('colors.slate.200');
 
-  --color-paragraph-text: theme('colors.zinc.400');
-  --color-paragraph-text-subtle: theme('colors.zinc.500');
-  --color-paragraph-text-strong: theme('colors.zinc.200');
+  --color-paragraph-text: theme('colors.slate.400');
+  --color-paragraph-text-subtle: theme('colors.slate.500');
+  --color-paragraph-text-strong: theme('colors.slate.200');
 
-  --color-card-background: theme('colors.zinc.900');
-  --color-card-background-hover: theme('colors.zinc.800');
+  --color-card-background: theme('colors.slate.900');
+  --color-card-background-hover: theme('colors.slate.800');
   --color-card-heading-hover: theme('colors.brand.500');
 }

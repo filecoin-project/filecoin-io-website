@@ -8,7 +8,7 @@ const cardVariants = cva(
   {
     variants: {
       interactive: {
-        true: 'has-[a:focus]:border-brand-600 has-[a]:hover:bg-zinc-50 has-[a:focus]:bg-zinc-50',
+        true: 'has-[a:focus]:border-brand-600 has-[a]:hover:bg-slate-50 has-[a:focus]:bg-slate-50',
       },
     },
     defaultVariants: {

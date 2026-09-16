@@ -12,7 +12,7 @@ export function ID({ number }: IDProps) {
       className={clsx(
         'rounded-lg border px-2 py-1 text-sm',
         isValidId
-          ? 'border-zinc-200 text-zinc-950'
+          ? 'border-slate-200 text-slate-950'
           : 'border-red-200 text-red-500',
       )}
     >

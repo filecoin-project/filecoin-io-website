@@ -1,10 +1,10 @@
 @layer components {
   .pagination {
     & .pagination-arrow-button {
-      @apply focus:brand-outline font-medium text-zinc-600;
+      @apply focus:brand-outline font-medium text-slate-600;
 
       &:not(:disabled):hover {
-        @apply bg-zinc-100;
+        @apply bg-slate-100;
       }
     }
 

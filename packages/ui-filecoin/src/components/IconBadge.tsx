@@ -2,6 +2,10 @@ import type { Icon as PhosphorIcon } from '@phosphor-icons/react'
 import { clsx } from 'clsx'
 
 const ICON_CONFIG = {
+  xs: {
+    containerSize: 'size-6 min-w-6',
+    iconSize: 14,
+  },
   sm: {
     containerSize: 'size-10 min-w-10',
     iconSize: 20,

@@ -17,7 +17,7 @@ export function getFilecoinByTheNumbers(
       description: t('byTheNumbers.clients.description'),
     },
     {
-      title: '+5,000',
+      title: '99.9%',
       subTitle: t('byTheNumbers.smartContracts.subTitle'),
       description: t('byTheNumbers.smartContracts.description'),
     },

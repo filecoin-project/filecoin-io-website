@@ -85,7 +85,7 @@ function ButtonInner({
 
       {isExternalLink && (
         <span className="button-arrow-icon">
-          <IconComponent component={ArrowUpRightIcon} size={20} />
+          <IconComponent component={ArrowUpRightIcon} size={16} />
         </span>
       )}
     </>

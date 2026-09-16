@@ -14,7 +14,7 @@ export function ActiveStatus({ status }: StatusBadgeProps) {
           'size-2.5 rounded-full border-2',
           isActive
             ? 'bg-brand-600 border-brand-400'
-            : 'border-zinc-300 bg-zinc-500',
+            : 'border-slate-300 bg-slate-500',
         )}
         aria-hidden="true"
       />
@@ -22,7 +22,7 @@ export function ActiveStatus({ status }: StatusBadgeProps) {
       <p
         className={clsx(
           'font-medium',
-          isActive ? 'text-brand-950' : 'text-zinc-600',
+          isActive ? 'text-brand-950' : 'text-slate-600',
         )}
       >
         {isActive ? 'Active' : 'Inactive'}

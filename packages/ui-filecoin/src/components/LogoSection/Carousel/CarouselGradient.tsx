@@ -10,11 +10,11 @@ const horizontalEdgeStyles = {
   dark: [
     clsx(
       sharedStyles,
-      'left-0 w-20 bg-linear-to-r from-zinc-950 to-transparent',
+      'left-0 w-20 bg-linear-to-r from-slate-950 to-transparent',
     ),
     clsx(
       sharedStyles,
-      'right-0 w-20 bg-linear-to-l from-zinc-950 to-transparent',
+      'right-0 w-20 bg-linear-to-l from-slate-950 to-transparent',
     ),
   ],
 } as const

@@ -22,7 +22,7 @@ export async function Navigation({ backgroundVariant }: NavigationProps) {
   return (
     <Section as="header" backgroundVariant={backgroundVariant}>
       <Container>
-        <nav className="flex items-center justify-between py-8 lg:gap-24 xl:justify-start">
+        <nav className="flex items-center justify-between py-8 lg:gap-10 xl:justify-start">
           <HomeLogoIconLink />
 
           <div className="block xl:hidden">
@@ -33,8 +33,9 @@ export async function Navigation({ backgroundVariant }: NavigationProps) {
             />
           </div>
 
-          <div className="hidden xl:block xl:flex-1">
+          <div className="hidden xl:flex xl:flex-1 xl:items-center xl:justify-between">
             <DesktopNavigation />
+            <NavigationLanguageToggle />
           </div>
         </nav>
       </Container>

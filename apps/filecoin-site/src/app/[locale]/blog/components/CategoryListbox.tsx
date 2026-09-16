@@ -59,9 +59,9 @@ export function CategoryListbox() {
             <ListboxOption
               key={id}
               value={id}
-              className="group cursor-pointer data-focus:bg-zinc-100"
+              className="group cursor-pointer data-focus:bg-slate-100"
             >
-              <div className="px-4 py-3 group-data-selected:bg-zinc-100">
+              <div className="px-4 py-3 group-data-selected:bg-slate-100">
                 <div className="flex items-center gap-4">
                   <p className="font-medium text-(--color-paragraph-text) group-data-focus:text-(--color-paragraph-text-strong) group-data-selected:text-(--color-paragraph-text-strong)">
                     {displayName}

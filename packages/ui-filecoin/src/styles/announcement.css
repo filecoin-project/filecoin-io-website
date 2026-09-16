@@ -2,18 +2,22 @@
 
 :root,
 .light-section {
-  --color-announcement-background: theme('colors.zinc.100');
-  --color-announcement-background-hover: theme('colors.zinc.200');
-  --color-announcement-border: theme('colors.zinc.200');
-  --color-announcement-icon: theme('colors.zinc.700');
-  --color-announcement-icon-background: theme('colors.zinc.200');
+  --color-announcement-background: theme('colors.slate.100');
+  --color-announcement-background-hover: theme('colors.slate.200');
+  --color-announcement-border: theme('colors.slate.200');
+  --color-announcement-icon: theme('colors.slate.700');
+  --color-announcement-icon-background: theme('colors.slate.200');
+  --color-announcement-badge-background: theme('colors.slate.900');
+  --color-announcement-badge-text: theme('colors.slate.50');
 }
 
 .dark-section {
-  --color-announcement-background: theme('colors.zinc.900');
-  --color-announcement-background-hover: theme('colors.zinc.800');
-  --color-announcement-border: theme('colors.zinc.800');
-  --color-announcement-icon: theme('colors.zinc.200');
-  --color-announcement-icon-background: theme('colors.zinc.800');
-  --color-announcement-icon-background-hover: theme('colors.zinc.700');
+  --color-announcement-background: theme('colors.slate.900');
+  --color-announcement-background-hover: theme('colors.slate.800');
+  --color-announcement-border: theme('colors.slate.800');
+  --color-announcement-icon: theme('colors.slate.200');
+  --color-announcement-icon-background: theme('colors.slate.800');
+  --color-announcement-icon-background-hover: theme('colors.slate.700');
+  --color-announcement-badge-background: theme('colors.slate.300');
+  --color-announcement-badge-text: theme('colors.slate.900');
 }

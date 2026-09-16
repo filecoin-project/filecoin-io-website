@@ -29,10 +29,10 @@ const COLUMN_STYLE_CONFIG: Record<
     backgroundColor: 'bg-transparent',
   },
   disadvantage: {
-    borderColor: 'border-zinc-950/5',
-    dividerColor: 'divide-zinc-950/5',
+    borderColor: 'border-slate-950/5',
+    dividerColor: 'divide-slate-950/5',
     textColor: 'text-[var(--color-paragraph-text)]',
-    backgroundColor: 'bg-zinc-50',
+    backgroundColor: 'bg-slate-50',
   },
 }
 

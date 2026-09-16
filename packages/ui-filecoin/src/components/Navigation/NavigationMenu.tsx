@@ -1,5 +1,7 @@
 'use client'
 
+import { useRef } from 'react'
+
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { CaretDownIcon } from '@phosphor-icons/react'
 import { clsx } from 'clsx'
@@ -17,6 +19,7 @@ type PopOverProps = {
 
 const SPACE_BETWEEN_PANEL_AND_BUTTON = 24
 const SPACE_BETWEEN_PANEL_AND_VIEWPORT = 8
+const CLOSE_ON_LEAVE_DELAY_MS = 150
 
 export function NavigationMenu({
   as,
@@ -24,9 +27,39 @@ export function NavigationMenu({
   children,
   isCurrent,
 }: PopOverProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function isOpen() {
+    return buttonRef.current?.getAttribute('aria-expanded') === 'true'
+  }
+
+  function handleMouseEnter() {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    if (!isOpen()) {
+      buttonRef.current?.click()
+    }
+  }
+
+  function handleMouseLeave() {
+    closeTimeoutRef.current = setTimeout(() => {
+      if (isOpen()) {
+        buttonRef.current?.click()
+      }
+    }, CLOSE_ON_LEAVE_DELAY_MS)
+  }
+
   return (
-    <Popover as={as}>
+    <Popover
+      as={as}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <PopoverButton
+        ref={buttonRef}
         aria-label={`${label} (opens a navigation menu)`}
         className={clsx(desktopStyle, 'inline-flex items-center gap-2')}
         {...(isCurrent && { 'aria-current': 'true' })}
@@ -38,7 +71,7 @@ export function NavigationMenu({
       </PopoverButton>
       <PopoverPanel
         transition
-        className="z-10 transition duration-200 ease-out data-closed:translate-y-1 data-closed:opacity-0 data-open:translate-y-0 data-open:opacity-100"
+        className="z-10 transition duration-150 ease-out data-closed:translate-y-1 data-closed:opacity-0 data-open:translate-y-0 data-open:opacity-100"
         anchor={{
           to: 'bottom',
           gap: SPACE_BETWEEN_PANEL_AND_BUTTON,

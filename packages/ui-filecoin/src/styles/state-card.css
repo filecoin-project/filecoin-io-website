@@ -1,10 +1,10 @@
 :root,
 .light-section {
-  --state-card-border-color: var(--color-zinc-200);
-  --state-card-background-color: var(--color-zinc-100);
+  --state-card-border-color: var(--color-slate-200);
+  --state-card-background-color: var(--color-slate-100);
 }
 
 .dark-section {
-  --state-card-border-color: var(--color-zinc-700);
-  --state-card-background-color: var(--color-zinc-900);
+  --state-card-border-color: var(--color-slate-700);
+  --state-card-background-color: var(--color-slate-900);
 }

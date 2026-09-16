@@ -1,21 +1,18 @@
 import Image from 'next/image'
 
-import type { LocaleParams } from '@/i18n/types'
+import type { Locale } from '@/i18n/types'
 
-import { BookIcon } from '@phosphor-icons/react/dist/ssr'
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 import { StructuredDataScript } from '@filecoin-foundation/ui/StructuredDataScript'
-import { Button } from '@filecoin-foundation/ui-filecoin/Button'
 import { CardGrid } from '@filecoin-foundation/ui-filecoin/CardGrid'
-import { LinkCard } from '@filecoin-foundation/ui-filecoin/LinkCard'
+import { Icon } from '@filecoin-foundation/ui-filecoin/Icon'
 import { LogoSection } from '@filecoin-foundation/ui-filecoin/LogoSection/LogoSection'
 import { PageSection } from '@filecoin-foundation/ui-filecoin/PageSection'
 import { SectionContent } from '@filecoin-foundation/ui-filecoin/SectionContent'
 
 import { PATHS } from '@/constants/paths'
-import { FILECOIN_DOCS_URL } from '@/constants/siteMetadata'
 
 import { graphicsData } from '@/data/graphicsData'
 import { trustedByLogos } from '@/data/trustedByLogos'
@@ -24,46 +21,62 @@ import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
-import { CardGridContainer } from '@/components/CardGridContainer'
-import { GradientOverlay } from '@/components/GradientOverlay'
-import { ImageGrid } from '@/components/ImageGrid'
-import { Navigation } from '@/components/Navigation/Navigation'
-import { SectionContentWrapper } from '@/components/SectionContentWrapper'
-import { SectionImage } from '@/components/SectionImage'
-import { SplitSectionContent } from '@/components/SplitSectionContent'
 
-import { ComparisonTable } from './components/ComparisonTable/ComparisonTable'
+import { GradientOverlay } from '@/components/GradientOverlay'
+import { Navigation } from '@/components/Navigation/Navigation'
+
+import { BuildingBlocksSection } from './components/BuildingBlocksSection'
+import { CustomerStoriesSection } from './components/CustomerStoriesSection'
+import { FilecoinCloudSection } from './components/FilecoinCloudSection'
 import { HeroSection } from './components/HeroSection'
+import { LatestNewsSection } from './components/LatestNewsSection'
 import { MetricCard } from './components/MetricCard'
-import { getCommunityLinks } from './data/communityLinks'
+import { OneNetworkSection } from './components/OneNetworkSection'
+import { StartBuildingSection } from './components/StartBuildingSection'
+import { buildingBlocks } from './data/buildingBlocks'
+import { customerStories } from './data/customerStories'
 import { getFilecoinByTheNumbers } from './data/filecoinByTheNumbers'
-import {
-  getFilecoinColumn,
-  getTraditionalCloudColumn,
-} from './data/filecoinVsCloudComparison'
-import { getJoinVibrantCommunityImages } from './data/joinVibrantCommunityImages'
+import { oneNetworkRoles } from './data/oneNetworkRoles'
 import { generateStructuredData } from './utils/generateStructuredData'
 
-import { BlogCard } from '@/blog/components/BlogCard'
 import { getFeaturedBlogPosts } from '@/blog/utils/getFeaturedBlogPosts'
 
-type BlogProps = {
-  params: Promise<LocaleParams>
-}
-
-export default async function Home({ params }: BlogProps) {
-  const { locale } = await params
-
+export default async function Home() {
+  const locale = await getLocale()
   const t = await getTranslations(PATHS.HOME.path)
   const metadata = await getTranslatedMetadata(PATHS.HOME.path)
 
-  const featuredBlogPosts = await getFeaturedBlogPosts(locale, 3)
-
   const filecoinByTheNumbers = getFilecoinByTheNumbers(t)
-  const communityLinks = getCommunityLinks(t)
-  const communityImages = getJoinVibrantCommunityImages(t)
-  const filecoinColumn = getFilecoinColumn(t)
-  const traditionalCloudColumn = getTraditionalCloudColumn(t)
+
+  const featuredBlogPosts = await getFeaturedBlogPosts(locale as Locale, 3)
+  const [leadPost] = featuredBlogPosts
+  const latestPost = leadPost && {
+    title: leadPost.title,
+    href: `${PATHS.BLOG.path}/${leadPost.slug}`,
+  }
+
+  const customerStoriesTabs = customerStories.map((story) => ({
+    ...story,
+    logo:
+      story.logo.type === 'svg' ? (
+        <story.logo.src aria-hidden="true" className="h-4.5 w-auto shrink-0" />
+      ) : (
+        <Image
+          aria-hidden="true"
+          src={story.logo.src}
+          alt=""
+          width={64}
+          height={64}
+          quality={100}
+          className="size-4.5 shrink-0 rounded-full object-cover"
+        />
+      ),
+  }))
+
+  const oneNetworkRolesTabs = oneNetworkRoles.map((role) => ({
+    ...role,
+    icon: <Icon component={role.icon} size={20} />,
+  }))
 
   return (
     <>
@@ -71,7 +84,7 @@ export default async function Home({ params }: BlogProps) {
 
       <div className="relative isolate">
         <Navigation backgroundVariant="transparentDark" />
-        <HeroSection />
+        <HeroSection latestPost={latestPost} />
         <Image
           fill
           priority
@@ -98,7 +111,7 @@ export default async function Home({ params }: BlogProps) {
           headingTag="h2"
           title={t('byTheNumbers.title')}
         >
-          <CardGrid as="ul" variant="mdThreeWider">
+          <CardGrid as="ul" variant="mdThreeDivided">
             {filecoinByTheNumbers.map(({ title, subTitle, description }) => (
               <MetricCard
                 key={title}
@@ -111,164 +124,63 @@ export default async function Home({ params }: BlogProps) {
         </SectionContent>
       </PageSection>
 
-      <PageSection backgroundVariant="light">
-        <SectionContent headingTag="h2" title={t('reshapingData.title')}>
-          <SplitSectionContent
-            title={t('reshapingData.subTitle')}
-            description={[
-              t('reshapingData.paragraph1'),
-              t('reshapingData.paragraph2'),
-              t('reshapingData.paragraph3'),
-            ]}
-            cta={[
-              <Button href={PATHS.STORE_DATA.path} variant="primary">
-                {t('reshapingData.storeDataCta')}
-              </Button>,
-              <Button href={PATHS.PROVIDE_STORAGE.path} variant="ghost">
-                {t('reshapingData.becomeProviderCta')}
-              </Button>,
-            ]}
-          />
+      <CustomerStoriesSection
+        title={t('builtIntoRealProducts.title')}
+        description={t('builtIntoRealProducts.description')}
+        tablistLabel={t('builtIntoRealProducts.tablistLabel')}
+        productsUsedLabel={t('builtIntoRealProducts.productsUsedLabel')}
+        viewAllCta={t('builtIntoRealProducts.viewAllCta')}
+        stories={customerStoriesTabs}
+      />
 
-          <SectionImage
-            {...graphicsData.classicLibraryInterior}
-            size="compact"
-          />
-        </SectionContent>
-      </PageSection>
+      <FilecoinCloudSection
+        eyebrow={t('filecoinCloud.eyebrow')}
+        title={t('filecoinCloud.title')}
+        description={t('filecoinCloud.description')}
+        quickstartCta={t('filecoinCloud.quickstartCta')}
+        exploreCta={t('filecoinCloud.exploreCta')}
+        checklist={[
+          {
+            title: t('filecoinCloud.checklist.warmStorage.title'),
+            description: t('filecoinCloud.checklist.warmStorage.description'),
+          },
+          {
+            title: t('filecoinCloud.checklist.beam.title'),
+            description: t('filecoinCloud.checklist.beam.description'),
+          },
+          {
+            title: t('filecoinCloud.checklist.pay.title'),
+            description: t('filecoinCloud.checklist.pay.description'),
+          },
+        ]}
+      />
 
-      <PageSection backgroundVariant="light">
-        <SectionContent
-          centerCTA
-          centerTitle
-          headingTag="h2"
-          title={t('comparison.title')}
-          description={t('comparison.description')}
-          cta={[
-            <Button href={PATHS.STORE_DATA.path} variant="primary">
-              {t('comparison.storeDataCta')}
-            </Button>,
-            <Button href={PATHS.LEARN.path} variant="ghost">
-              {t('comparison.learnMoreCta')}
-            </Button>,
-          ]}
-        >
-          <div className="m-auto w-full max-w-sm md:max-w-4xl">
-            <ComparisonTable
-              columns={[filecoinColumn, traditionalCloudColumn]}
-            />
-          </div>
-        </SectionContent>
-      </PageSection>
+      <OneNetworkSection
+        title={t('oneNetwork.title')}
+        description={t('oneNetwork.description')}
+        tablistLabel={t('oneNetwork.tablistLabel')}
+        roles={oneNetworkRolesTabs}
+      />
 
-      <PageSection backgroundVariant="light">
-        <SectionContentWrapper>
-          <SectionContent
-            descriptionColorBase
-            headingTag="h2"
-            title={t('ipfs.title')}
-            description={[t('ipfs.paragraph1'), t('ipfs.paragraph2')]}
-            cta={
-              <Button href="https://ipfs.tech/" variant="primary">
-                {t('ipfs.learnMoreCta')}
-              </Button>
-            }
-          />
-          <Image
-            src={graphicsData.IPFSIllustration.data}
-            alt={graphicsData.IPFSIllustration.alt}
-            className="h-72 min-w-80 object-contain"
-          />
-        </SectionContentWrapper>
-      </PageSection>
+      <BuildingBlocksSection
+        title={t('buildingBlocks.title')}
+        description={t('buildingBlocks.description')}
+        rows={buildingBlocks}
+      />
 
-      <PageSection backgroundVariant="dark" paddingVariant="bottomCompact">
-        <SectionContent headingTag="h2" title={t('buildForFuture.title')}>
-          <SplitSectionContent
-            title={t('buildForFuture.subTitle')}
-            description={t('buildForFuture.description')}
-            cta={[
-              <Button href={PATHS.BUILD_ON_FILECOIN.path} variant="primary">
-                {t('buildForFuture.startBuildingCta')}
-              </Button>,
-              <Button
-                href={FILECOIN_DOCS_URL}
-                variant="tertiary"
-                icon={BookIcon}
-              >
-                {t('buildForFuture.documentationCta')}
-              </Button>,
-            ]}
-          />
+      <LatestNewsSection
+        title={t('latestNews.title')}
+        description={t('latestNews.description')}
+        viewAllCta={t('latestNews.viewAllCta')}
+        posts={featuredBlogPosts}
+      />
 
-          <SectionImage {...graphicsData.rocketLaunch} size="compact" />
-        </SectionContent>
-      </PageSection>
-
-      <PageSection backgroundVariant="gray">
-        <SectionContent
-          centerCTA
-          headingTag="h2"
-          title={t('latestNews.title')}
-          description={t('latestNews.description')}
-          cta={
-            <Button variant="primary" href={PATHS.BLOG.path}>
-              {t('latestNews.viewAllCta')}
-            </Button>
-          }
-        >
-          <CardGrid as="ul" variant="mdTwoLgThreeWide">
-            {featuredBlogPosts.map(
-              ({ title, slug, excerpt, tags, image, author, publishedOn }) => (
-                <BlogCard
-                  key={title}
-                  slug={slug}
-                  title={title}
-                  description={excerpt}
-                  author={author}
-                  date={publishedOn}
-                  tags={tags}
-                  image={
-                    image && {
-                      src: image.url,
-                      alt: title,
-                    }
-                  }
-                />
-              ),
-            )}
-          </CardGrid>
-        </SectionContent>
-      </PageSection>
-
-      <PageSection backgroundVariant="dark">
-        <SectionContent
-          headingTag="h2"
-          title={t('community.title')}
-          description={t('community.description')}
-        >
-          <ImageGrid variant="oneMdThree">
-            {communityImages.map(({ data, alt }) => (
-              <Image key={alt} src={data} alt={alt} />
-            ))}
-          </ImageGrid>
-
-          <CardGridContainer width="6xl">
-            <CardGrid as="ul" variant="mdTwo">
-              {communityLinks.map(({ title, href, icon }) => (
-                <LinkCard
-                  key={title}
-                  as="li"
-                  title={title}
-                  headingTag="h3"
-                  href={href}
-                  icon={{ component: icon, variant: 'filled' }}
-                />
-              ))}
-            </CardGrid>
-          </CardGridContainer>
-        </SectionContent>
-      </PageSection>
+      <StartBuildingSection
+        title={t('startBuilding.title')}
+        description={t('startBuilding.description')}
+        startCta={t('startBuilding.startCta')}
+        talkToSalesCta={t('startBuilding.talkToSalesCta')}
+      />
     </>
   )
 }

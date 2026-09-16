@@ -12,7 +12,7 @@ export type CompactAddressProps = {
 export function CompactAddress({ address, explorerUrl }: CompactAddressProps) {
   if (!isValidUrl(explorerUrl)) {
     return (
-      <span className="font-medium text-zinc-600">
+      <span className="font-medium text-slate-600">
         {truncateAddress(address)}
       </span>
     )

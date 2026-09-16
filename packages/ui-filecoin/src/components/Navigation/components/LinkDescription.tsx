@@ -3,5 +3,5 @@ type LinkDescriptionProps = {
 }
 
 export function LinkDescription({ children }: LinkDescriptionProps) {
-  return <p className="text-(--color-paragraph-text)">{children}</p>
+  return <p className="text-sm text-(--color-paragraph-text)">{children}</p>
 }
