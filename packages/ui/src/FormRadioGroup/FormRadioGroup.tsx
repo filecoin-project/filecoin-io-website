@@ -37,7 +37,7 @@ export function FormRadioGroup({
             <Radio value={option.value} className="group form-radio-input">
               <div className="form-radio-input-inner" />
             </Radio>
-            <Label className="ml-4 cursor-pointer text-zinc-600">
+            <Label className="ml-4 cursor-pointer text-slate-600">
               {option.label}
             </Label>
           </Field>

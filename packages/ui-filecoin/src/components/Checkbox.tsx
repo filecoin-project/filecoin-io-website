@@ -30,7 +30,7 @@ export function Checkbox(props: CheckboxProps) {
       <div
         className={clsx(
           TOUCH_TARGET.visibleElementSize,
-          'group-focus:outline-brand-700 group-data-checked:bg-brand-700 group-data-checked:hover:bg-brand-600 flex items-center justify-center rounded-sm border border-zinc-400 bg-white p-0.5 text-white group-focus:bg-zinc-100 group-focus:outline-2 group-focus:outline-offset-2 group-data-disabled:cursor-not-allowed hover:bg-zinc-200',
+          'group-focus:outline-brand-700 group-data-checked:bg-brand-700 group-data-checked:hover:bg-brand-600 flex items-center justify-center rounded-sm border border-slate-400 bg-white p-0.5 text-white group-focus:bg-slate-100 group-focus:outline-2 group-focus:outline-offset-2 group-data-disabled:cursor-not-allowed hover:bg-slate-200',
         )}
       >
         <span className="invisible group-data-checked:visible">

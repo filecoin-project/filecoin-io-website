@@ -1,33 +1,54 @@
 import type { StaticImageProps } from '@filecoin-foundation/utils/types/imageType'
 
+import akaveCloudHomepage from '@/assets/graphics/akave-cloud-homepage.webp'
 import astronautHelmet from '@/assets/graphics/astronaut-helmet.webp'
+import cidgravityHomepage from '@/assets/graphics/cidgravity-homepage.webp'
 import classicLibraryInterior from '@/assets/graphics/classic-library-interior.webp'
 import colorfulNebula from '@/assets/graphics/colorful-nebula.webp'
 import cupolaEarthView from '@/assets/graphics/cupola-earth-view.webp'
 import dataCenterServerRow from '@/assets/graphics/data-center-server-row.webp'
+import developersCodingTogether from '@/assets/graphics/developers-coding-together.webp'
 import digitalMediaConversionSetup from '@/assets/graphics/digital-media-conversion-setup.webp'
 import earthAtNight from '@/assets/graphics/earth-at-night.webp'
 import earthBlueEdge from '@/assets/graphics/earth-blue-edge.webp'
 import earthFromDeepSpace from '@/assets/graphics/earth-from-deep-space.webp'
+import filOneAboutPage from '@/assets/graphics/fil-one-about-page.webp'
 import filecoinMiningRig from '@/assets/graphics/filecoin-mining-rig.webp'
 import filecoinServerRack from '@/assets/graphics/filecoin-server-rack.webp'
 import filecoinStorageDevice from '@/assets/graphics/filecoin-storage-device.webp'
+import flickrAboutPage from '@/assets/graphics/flickr-about-page.webp'
 import howDataMovesThroughFilecoinCn from '@/assets/graphics/how-data-moves-through-filecoin-cn.webp'
 import howDataMovesThroughFilecoin from '@/assets/graphics/how-data-moves-through-filecoin.webp'
+import humanAndRobotHands from '@/assets/graphics/human-and-robot-hands.webp'
 import imageFallback from '@/assets/graphics/image-fallback.webp'
 import IPFSIllustration from '@/assets/graphics/IPFS-illustration.webp'
+import lighthouseUnderMilkyWay from '@/assets/graphics/lighthouse-under-milky-way.webp'
 import nasaHubbleSpaceTelescope from '@/assets/graphics/nasa-hubble-space-telescope.webp'
+import openPlanOfficeAtNight from '@/assets/graphics/open-plan-office-at-night.webp'
 import planetsShadow from '@/assets/graphics/planets-shadow.svg'
 import rocketLaunch from '@/assets/graphics/rocket-launch.webp'
 import serverBladeChassis from '@/assets/graphics/server-blade-chassis.webp'
+import serverDriveBays from '@/assets/graphics/server-drive-bays.webp'
 import solarEclipse from '@/assets/graphics/solar-eclipse.webp'
 import spiralGalaxyStarsSpace from '@/assets/graphics/spiral-galaxy-stars-space.webp'
+import starlingLabHighlights from '@/assets/graphics/starling-lab-highlights.webp'
 import starsSpinning from '@/assets/graphics/stars-spinning.webp'
+import startupTeamWhiteboard from '@/assets/graphics/startup-team-whiteboard.webp'
+import groupCollaboration from '@/assets/images/group-collaboration.webp'
+import pairProgramming from '@/assets/images/pair-programming.webp'
 
 export const graphicsData = {
+  akaveCloudHomepage: {
+    data: akaveCloudHomepage,
+    alt: 'Akave Cloud homepage with the headline “Complete your GPU cloud without building storage from scratch.” over a blue gradient.',
+  },
   astronautHelmet: {
     data: astronautHelmet,
     alt: 'Close-up of an astronaut’s helmet during a spacewalk, with the reflection showing Earth and parts of the spacecraft.',
+  },
+  cidgravityHomepage: {
+    data: cidgravityHomepage,
+    alt: 'CIDgravity homepage with the headline “Smart Solutions, Zero Friction.” and network stats on a starry night-sky background.',
   },
   classicLibraryInterior: {
     data: classicLibraryInterior,
@@ -44,6 +65,10 @@ export const graphicsData = {
   dataCenterServerRow: {
     data: dataCenterServerRow,
     alt: 'Row of black server towers with glowing blue Filecoin logos in a dark data center.',
+  },
+  developersCodingTogether: {
+    data: developersCodingTogether,
+    alt: 'A group of developers working on laptops around a wooden table, one wearing headphones with code on screen.',
   },
   digitalMediaConversionSetup: {
     data: digitalMediaConversionSetup,
@@ -77,6 +102,18 @@ export const graphicsData = {
     data: filecoinStorageDevice,
     alt: 'Black storage device with Filecoin logo and glowing green indicator lights.',
   },
+  filOneAboutPage: {
+    data: filOneAboutPage,
+    alt: 'Fil One’s About page with the headline “We believe your data belongs to you” above a short description of the service.',
+  },
+  flickrAboutPage: {
+    data: flickrAboutPage,
+    alt: 'Flickr’s About page with the headline “Photography. For everyone. Forever.” beside a collage of community photos.',
+  },
+  groupCollaboration: {
+    data: groupCollaboration,
+    alt: 'A small team gathered around a table, working together on laptops.',
+  },
   howDataMovesThroughFilecoin: {
     data: howDataMovesThroughFilecoin,
     alt: 'Diagram showing how data moves through the Filecoin network. A circular flow surrounds a globe representing the global network. On the left, a user icon labeled “User stores data” explains that users upload data to Filecoin using storage tools or services, which create storage deals with Storage Providers. Below, Storage Providers are shown committing these deals to the Filecoin blockchain; the diagram notes that the blockchain stores only the record of the deal, not the data itself. At the bottom, the Filecoin logo represents the blockchain, where Storage Providers regularly submit cryptographic storage proofs to verify they are correctly storing user data. On the right, a section labeled “Retrieval clients” explains that storage solutions or retrieval clients fetch data directly from Storage Providers. At the top right, another user icon labeled “User retrieves data” indicates that users can retrieve their stored data using a tool or storage solution of their choice. The overall graphic illustrates a decentralized, global data storage and retrieval process coordinated through Filecoin.',
@@ -85,17 +122,33 @@ export const graphicsData = {
     data: howDataMovesThroughFilecoinCn,
     alt: '图示展示了数据在 Filecoin 网络中的流转方式。一个环形流程围绕着一个代表全球网络的地球。左侧，一个标有"用户存储数据"的用户图标说明用户通过存储工具或服务将数据上传到 Filecoin，这些工具或服务与存储提供商创建存储交易。下方展示了存储提供商将这些交易提交到 Filecoin 区块链；图中指出区块链仅存储交易记录，而非数据本身。底部，Filecoin 标志代表区块链，存储提供商定期提交加密存储证明，以验证其正确存储了用户数据。右侧，标有"检索客户端"的部分说明存储解决方案或检索客户端直接从存储提供商获取数据。右上方，另一个标有"用户检索数据"的用户图标表示用户可以使用其选择的工具或存储解决方案检索已存储的数据。整体图形展示了一个通过 Filecoin 协调的去中心化全球数据存储与检索流程。',
   },
+  humanAndRobotHands: {
+    data: humanAndRobotHands,
+    alt: 'A human hand and a white robotic hand reaching toward each other against a black background, fingertips almost touching.',
+  },
   IPFSIllustration: {
     data: IPFSIllustration,
     alt: 'Illustration showing the IPFS cube logo in the center with Filecoin logos surrounding it.',
+  },
+  lighthouseUnderMilkyWay: {
+    data: lighthouseUnderMilkyWay,
+    alt: 'A white lighthouse with its lamp lit, standing against a night sky full of stars and the Milky Way.',
   },
   nasaHubbleSpaceTelescope: {
     data: nasaHubbleSpaceTelescope,
     alt: 'Image of the NASA Hubble Space Telescope in space, showing the telescope and the stars.',
   },
+  openPlanOfficeAtNight: {
+    data: openPlanOfficeAtNight,
+    alt: 'A large open-plan office in the evening, with people working at rows of monitors under hanging bulb lights.',
+  },
   planetsShadow: {
     data: planetsShadow,
     alt: '',
+  },
+  pairProgramming: {
+    data: pairProgramming,
+    alt: 'Two developers pair programming at a shared screen.',
   },
   rocketLaunch: {
     data: rocketLaunch,
@@ -105,6 +158,10 @@ export const graphicsData = {
     data: serverBladeChassis,
     alt: 'Front view of a server blade chassis with multiple slots, each marked with glowing Filecoin logos.',
   },
+  serverDriveBays: {
+    data: serverDriveBays,
+    alt: 'Close-up of a server’s front panel with rows of hot-swap drive bays and green status lights.',
+  },
   solarEclipse: {
     data: solarEclipse,
     alt: 'Solar eclipse with the sun forming a bright diamond ring behind the moon.',
@@ -113,8 +170,16 @@ export const graphicsData = {
     data: spiralGalaxyStarsSpace,
     alt: 'A detailed view of a spiral galaxy with bright stars, glowing nebulae, and swirling blue and golden star fields in deep space.',
   },
+  starlingLabHighlights: {
+    data: starlingLabHighlights,
+    alt: 'Starling Lab Highlights page listing its work documenting war crimes, beside photos of a speaker presenting on stage in front of a map.',
+  },
   starsSpinning: {
     data: starsSpinning,
     alt: 'Long-exposure photograph of the night sky showing star trails swirling in circular motion.',
+  },
+  startupTeamWhiteboard: {
+    data: startupTeamWhiteboard,
+    alt: 'A small startup team on sofas with laptops while one person talks through a sticky-note planning board.',
   },
 } as const satisfies Record<string, StaticImageProps>

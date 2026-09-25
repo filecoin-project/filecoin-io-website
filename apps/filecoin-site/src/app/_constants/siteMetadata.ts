@@ -53,6 +53,8 @@ const FILECOIN_CLOUD_VIDEO_URLS = {
 
 const FIL_FRAME_URL = 'https://github.com/FIL-Builders/fil-frame'
 
+const FIL_ONE_URL = 'https://fil.one'
+
 const FILECOIN_FOUNDATION_URL = 'https://fil.org'
 const FILECOIN_FOUNDATION_URLS = {
   ecosystemExplorer: {
@@ -154,6 +156,7 @@ export {
   BASE_DOMAIN,
   BASE_URL,
   FIL_FRAME_URL,
+  FIL_ONE_URL,
   FILECOIN_CLOUD_DOCS_URL,
   FILECOIN_CLOUD_DOCS_URLS,
   FILECOIN_CLOUD_TUTORIALS_URLS,

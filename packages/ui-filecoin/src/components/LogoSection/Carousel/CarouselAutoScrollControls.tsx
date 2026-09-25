@@ -26,7 +26,7 @@ export function CarouselAutoScrollControls() {
     <div className="mt-6 flex items-center justify-between">
       <CarouselNavigation />
       <Button
-        className="focus:brand-outline grid size-8 cursor-pointer place-items-center rounded-full bg-zinc-800 hover:bg-zinc-700 focus:bg-zinc-700"
+        className="focus:brand-outline grid size-8 cursor-pointer place-items-center rounded-full bg-slate-800 hover:bg-slate-700 focus:bg-slate-700"
         onClick={isScrolling ? stopAutoScroll : playAutoScroll}
         aria-live="polite"
       >

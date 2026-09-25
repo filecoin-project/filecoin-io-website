@@ -90,7 +90,13 @@ export function Carousel({
     const plugin = api.plugins().autoScroll
     if (!plugin) return
 
-    if (autoPlay) {
+    // AutoScroll skips its own init when there is only one scroll snap (all
+    // slides fit in the viewport). Calling play() in that state swaps in a
+    // scroll body that stop() can never restore, and embla's animation loop
+    // then throws "Cannot read properties of undefined (reading 'settled')".
+    const isScrollable = api.scrollSnapList().length > 1
+
+    if (autoPlay && isScrollable) {
       plugin.play()
     } else {
       plugin.stop()

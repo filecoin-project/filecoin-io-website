@@ -26,7 +26,7 @@
     @apply block w-full border-b py-3 placeholder:text-sm data-disabled:cursor-not-allowed;
 
     .light-section & {
-      @apply focus:border-brand-700 border-zinc-500 placeholder:text-zinc-400 hover:border-zinc-600 hover:placeholder:text-zinc-500 focus:bg-zinc-50 focus:outline-none focus:placeholder:text-zinc-500;
+      @apply focus:border-brand-700 border-slate-500 placeholder:text-slate-400 hover:border-slate-600 hover:placeholder:text-slate-500 focus:bg-slate-50 focus:outline-none focus:placeholder:text-slate-500;
 
       &[data-invalid] {
         @apply border-brand-error;
@@ -34,7 +34,7 @@
     }
 
     .dark-section & {
-      @apply focus:border-brand-500 border-zinc-400 placeholder-zinc-400 hover:border-zinc-50 focus:bg-zinc-900 focus:outline-none;
+      @apply focus:border-brand-500 border-slate-400 placeholder-slate-400 hover:border-slate-50 focus:bg-slate-900 focus:outline-none;
 
       &[data-invalid] {
         @apply border-brand-error;
@@ -43,7 +43,7 @@
   }
 
   .form-textarea-input {
-    @apply focus:border-brand-700 block min-h-32 w-full border-b border-zinc-500 py-3 placeholder:text-sm placeholder:text-zinc-400 hover:border-zinc-600 hover:placeholder:text-zinc-500 focus:bg-zinc-50 focus:outline-none focus:placeholder:text-zinc-500 data-disabled:cursor-not-allowed;
+    @apply focus:border-brand-700 block min-h-32 w-full border-b border-slate-500 py-3 placeholder:text-sm placeholder:text-slate-400 hover:border-slate-600 hover:placeholder:text-slate-500 focus:bg-slate-50 focus:outline-none focus:placeholder:text-slate-500 data-disabled:cursor-not-allowed;
 
     &[data-invalid] {
       @apply border-brand-error!;
@@ -51,11 +51,11 @@
   }
 
   .form-checkbox-input {
-    @apply group-focus:outline-brand-600 group-data-checked:bg-brand-600 group-data-checked:ring-brand-600 group-data-checked:hover:bg-brand-700 group-data-checked:hover:ring-brand-700 text-brand-100 rounded-sm bg-zinc-100 p-0.5 ring ring-zinc-600 group-focus:bg-zinc-200 group-focus:outline-2 group-focus:outline-offset-3 group-data-disabled:cursor-not-allowed hover:bg-zinc-200;
+    @apply group-focus:outline-brand-600 group-data-checked:bg-brand-600 group-data-checked:ring-brand-600 group-data-checked:hover:bg-brand-700 group-data-checked:hover:ring-brand-700 text-brand-100 rounded-sm bg-slate-100 p-0.5 ring ring-slate-600 group-focus:bg-slate-200 group-focus:outline-2 group-focus:outline-offset-3 group-data-disabled:cursor-not-allowed hover:bg-slate-200;
   }
 
   .form-radio-input {
-    @apply focus:brand-outline flex size-5 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-white hover:bg-zinc-100 focus:outline-offset-1 data-checked:border-blue-400 data-checked:bg-blue-400;
+    @apply focus:brand-outline flex size-5 cursor-pointer items-center justify-center rounded-full border border-slate-500 bg-white hover:bg-slate-100 focus:outline-offset-1 data-checked:border-blue-400 data-checked:bg-blue-400;
 
     & .form-radio-input-inner {
       @apply invisible size-2 rounded-full bg-white group-data-checked:visible;
@@ -63,7 +63,7 @@
   }
 
   .form-checkbox-input-label {
-    @apply ml-4 text-zinc-600;
+    @apply ml-4 text-slate-600;
   }
 
   .form-label {
@@ -92,10 +92,10 @@
 
   /* NOTIFICATION DIALOG */
   .notification {
-    @apply rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-950;
+    @apply rounded-lg border border-slate-200 bg-slate-50 text-slate-950;
 
     .notification-close-button {
-      @apply rounded-md text-zinc-700 hover:text-zinc-950;
+      @apply rounded-md text-slate-700 hover:text-slate-950;
     }
   }
 
@@ -116,10 +116,10 @@
 
   /* TOOLTIP */
   .tooltip {
-    @apply rounded-xl border border-zinc-200 bg-white shadow-sm;
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm;
 
     .tooltip-arrow {
-      @apply fill-zinc-200;
+      @apply fill-slate-200;
     }
   }
 }

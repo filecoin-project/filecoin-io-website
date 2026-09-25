@@ -1,6 +1,6 @@
 export function BreakpointDebugger() {
   return (
-    <div className="fixed bottom-2 right-2 z-50 rounded-sm bg-zinc-800 px-1 font-mono text-xs text-white dark:bg-zinc-100 dark:text-zinc-900">
+    <div className="fixed bottom-2 right-2 z-50 rounded-sm bg-slate-800 px-1 font-mono text-xs text-white dark:bg-slate-100 dark:text-slate-900">
       <div className="block sm:hidden">xs</div>
       <div className="hidden sm:block md:hidden">sm</div>
       <div className="hidden md:block lg:hidden">md</div>

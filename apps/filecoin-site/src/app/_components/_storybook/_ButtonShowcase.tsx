@@ -16,15 +16,15 @@ export function ButtonShowcase() {
       >
         <div className="space-y-12">
           {/* Light Section */}
-          <div className="light-section rounded-lg border border-zinc-200 bg-white p-8">
-            <h3 className="mb-8 text-lg font-semibold text-zinc-950">
+          <div className="light-section rounded-lg border border-slate-200 bg-white p-8">
+            <h3 className="mb-8 text-lg font-semibold text-slate-950">
               Light Section
             </h3>
 
             <div className="space-y-6">
               {/* Primary Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-600">
+                <p className="mb-3 text-sm font-medium text-slate-600">
                   Primary Button
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -49,7 +49,7 @@ export function ButtonShowcase() {
 
               {/* Ghost Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-600">
+                <p className="mb-3 text-sm font-medium text-slate-600">
                   Ghost Button
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -74,7 +74,7 @@ export function ButtonShowcase() {
 
               {/* Tertiary Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-600">
+                <p className="mb-3 text-sm font-medium text-slate-600">
                   Tertiary Button
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -100,15 +100,15 @@ export function ButtonShowcase() {
           </div>
 
           {/* Dark Section */}
-          <div className="dark-section rounded-lg bg-zinc-900 p-8">
-            <h3 className="mb-8 text-lg font-semibold text-zinc-50">
+          <div className="dark-section rounded-lg bg-slate-900 p-8">
+            <h3 className="mb-8 text-lg font-semibold text-slate-50">
               Dark Section
             </h3>
 
             <div className="space-y-6">
               {/* Primary Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-400">
+                <p className="mb-3 text-sm font-medium text-slate-400">
                   Primary Button
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -133,7 +133,7 @@ export function ButtonShowcase() {
 
               {/* Ghost Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-400">
+                <p className="mb-3 text-sm font-medium text-slate-400">
                   Ghost Button
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -158,7 +158,7 @@ export function ButtonShowcase() {
 
               {/* Tertiary Button */}
               <div>
-                <p className="mb-3 text-sm font-medium text-zinc-400">
+                <p className="mb-3 text-sm font-medium text-slate-400">
                   Tertiary Button
                 </p>
                 <div className="flex flex-wrap gap-4">

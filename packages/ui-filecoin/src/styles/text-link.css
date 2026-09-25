@@ -1,10 +1,10 @@
 :root,
 .light-section {
-  --color-cta-link-text: theme('colors.zinc.600');
+  --color-cta-link-text: theme('colors.slate.600');
 }
 
 .dark-section {
-  --color-cta-link-text: theme('colors.zinc.300');
+  --color-cta-link-text: theme('colors.slate.300');
 }
 
 @layer components {
@@ -20,7 +20,7 @@
     }
 
     .dark-section &:hover {
-      @apply text-zinc-300;
+      @apply text-slate-300;
     }
   }
 

@@ -1,14 +1,14 @@
 :root,
 .light-section {
-  --color-icon-button-border: theme('colors.zinc.300');
-  --color-icon-button-border-hover: theme('colors.zinc.400');
-  --color-icon-button-background-hover: theme('colors.zinc.100');
+  --color-icon-button-border: theme('colors.slate.300');
+  --color-icon-button-border-hover: theme('colors.slate.400');
+  --color-icon-button-background-hover: theme('colors.slate.100');
 }
 
 .dark-section {
-  --color-icon-button-border: theme('colors.zinc.600');
-  --color-icon-button-border-hover: theme('colors.zinc.500');
-  --color-icon-button-background-hover: theme('colors.zinc.700');
+  --color-icon-button-border: theme('colors.slate.600');
+  --color-icon-button-border-hover: theme('colors.slate.500');
+  --color-icon-button-background-hover: theme('colors.slate.700');
 }
 
 @utility icon-button {

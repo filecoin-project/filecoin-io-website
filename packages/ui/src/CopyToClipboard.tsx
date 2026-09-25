@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@headlessui/react'
+import type { Icon as PhosphorIcon } from '@phosphor-icons/react'
 import { LinkIcon } from '@phosphor-icons/react/dist/ssr'
 import * as Sentry from '@sentry/nextjs'
 import { clsx } from 'clsx'
@@ -22,6 +23,8 @@ type CopyToClipboardProps = {
   text: string
   notificationTitle: string
   ariaLabel: string
+  icon?: PhosphorIcon
+  tooltipDescription?: string
 }
 
 const TOUCH_TARGET: TouchTarget = {
@@ -32,6 +35,8 @@ export function CopyToClipboard({
   text,
   notificationTitle,
   ariaLabel = 'Copy link to clipboard',
+  icon = LinkIcon,
+  tooltipDescription = 'Copy link to clipboard',
 }: CopyToClipboardProps) {
   const [, copy] = useCopyToClipboard()
 
@@ -61,7 +66,7 @@ export function CopyToClipboard({
         onClose={dialog.close}
         message={dialog.message}
       />
-      <Tooltip description="Copy link to clipboard" side="bottom">
+      <Tooltip description={tooltipDescription} side="bottom">
         <Button
           className={clsx(
             'copy-to-clipboard-button focus:brand-outline cursor-pointer',
@@ -70,7 +75,7 @@ export function CopyToClipboard({
           onClick={() => handleCopy(text)}
           aria-label={ariaLabel}
         >
-          <Icon component={LinkIcon} size={32} weight="light" />
+          <Icon component={icon} size={32} weight="light" />
         </Button>
       </Tooltip>
     </>

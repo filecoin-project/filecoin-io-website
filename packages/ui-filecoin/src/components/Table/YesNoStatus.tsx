@@ -15,7 +15,7 @@ export function YesNoStatus({ status }: ProviderTableInpiStatusProps) {
     <div className="flex items-center gap-1.5">
       <Icon
         size={20}
-        className={clsx(isYes ? 'text-brand-600' : 'text-zinc-600')}
+        className={clsx(isYes ? 'text-brand-600' : 'text-slate-600')}
       />
       <span>{text}</span>
     </div>

@@ -47,7 +47,7 @@ export function StorageProviderCard({
 
   return (
     <Tag>
-      <article className="focus-within:brand-outline relative flex h-full flex-col justify-between space-y-10 overflow-hidden rounded-2xl border border-(--color-border-muted) p-8 focus-within:bg-zinc-50 hover:bg-zinc-50">
+      <article className="focus-within:brand-outline relative flex h-full flex-col justify-between space-y-10 overflow-hidden rounded-2xl border border-(--color-border-muted) p-8 focus-within:bg-slate-50 hover:bg-slate-50">
         <div className="space-y-8">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">

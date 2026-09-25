@@ -29,7 +29,7 @@ type PlayButtonProps = {
 
 function PlayButton({ text }: PlayButtonProps) {
   return (
-    <div className="flex items-center space-x-2 rounded-full bg-zinc-800 px-6 py-4 text-(--color-logo-item)">
+    <div className="flex items-center space-x-2 rounded-full bg-slate-800 px-6 py-4 text-(--color-logo-item)">
       <Icon component={PlayCircleIcon} color="inherit" size={20} />
       <span className="text-base text-(--color-text-base)">{text}</span>
     </div>
@@ -45,7 +45,7 @@ function Placeholder({ text }: PlaceholderProps) {
     <div
       role="status"
       aria-live="polite"
-      className="flex aspect-video items-center justify-center bg-zinc-900"
+      className="flex aspect-video items-center justify-center bg-slate-900"
     >
       <p>{text}</p>
     </div>
