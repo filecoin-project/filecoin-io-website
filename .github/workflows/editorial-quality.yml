@@ -1,0 +1,68 @@
+name: Editorial quality
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: editorial-quality-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  content:
+    name: Content quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Check changed content
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -o pipefail
+          git diff --name-only --diff-filter=ACMRT -z "$PR_BASE_SHA" HEAD -- apps/filecoin-site/content | node scripts/check-content.mjs
+
+  dependency-review:
+    name: Dependency review
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
+  code-style:
+    name: Code style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check:versions
+      - name: Check formatting of changed code and configuration
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mapfile -d '' -t changed < <(git diff --name-only --diff-filter=ACMRT -z "$PR_BASE_SHA" HEAD)
+          files=()
+          for file in "${changed[@]}"; do
+            case "$file" in
+              *.ts|*.tsx|*.js|*.jsx|*.mjs|*.css|*.json|*.yml|*.yaml) files+=("$file") ;;
+            esac
+          done
+          if ((${#files[@]})); then npx prettier --check "${files[@]}"; fi

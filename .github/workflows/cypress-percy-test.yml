@@ -7,9 +7,6 @@ on:
       - "packages/**"
     branches: [main]
   pull_request:
-    paths:
-      - "apps/**"
-      - "packages/**"
     branches: [main]
 
 permissions:

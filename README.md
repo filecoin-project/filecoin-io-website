@@ -61,6 +61,8 @@ npm run fix:versions
 
 ## Development Guidelines
 
+Content editors and reviewers: follow the [editorial review and merge guide](docs/editorial-review.md).
+
 To maintain the quality and consistency of the codebase, contributors are encouraged to follow these practices.
 
 ### Component Organization

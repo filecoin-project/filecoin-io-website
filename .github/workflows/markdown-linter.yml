@@ -2,21 +2,28 @@ name: Markdown Linter
 
 on:
   pull_request:
-    paths:
-      - apps/**/*.md
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v6
-
-      - name: Run markdownlint
-        uses: davidanson/markdownlint-cli2-action@v23
+      - uses: actions/checkout@v6
         with:
-          globs: |
-            **/*.md
-            !**/node_modules/**/*.md
-          config: ".markdownlint.jsonc"
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Lint changed Markdown
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -o pipefail
+          git diff --name-only --diff-filter=ACMRT -z "$PR_BASE_SHA" HEAD -- '*.md' | \
+            xargs -0 -r -- npx markdownlint-cli2 --config .markdownlint.jsonc

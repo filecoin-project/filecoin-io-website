@@ -1,39 +1,19 @@
-## 📝 Description
+## What changed
 
-Please include a summary of the changes. Provide context and motivation for the change, and describe what problem it solves.
+List the pages or features changed and why.
 
-- **Type:** Bug fix / New feature / Documentation / Refactor
+## Review notes
 
-## 🛠️ Key Changes
+- Source for new factual claims:
+- Translation source and language reviewer, if applicable:
+- Anything the reviewer should look at closely:
 
-- [Change 1 - Brief description]
-- [Change 2 - Brief description]
-- ...
+## Before merging
 
-## 📌 To-Do Before Merging
+- [ ] I checked the Vercel preview on desktop and mobile.
+- [ ] I checked images, links, headings, and metadata on changed pages.
+- [ ] I requested a human review of wording and claims. For code, configuration, or workflow changes, I requested a site maintainer review.
 
-- [ ] [Task 1 - Brief description]
-- [ ] [Task 2 - Brief description]
-- ...
+Screenshots or a short recording for visual changes:
 
-## 🧪 How to Test
-
-- **Setup:** [Setup details]
-- **Steps to Test:**
-  1. [Step 1 - Brief description]
-  2. [Step 2 - Brief description]
-  3. ...
-- **Expected Results:** [Outcome]
-- **Additional Notes:** [Additional info]
-
-## 📸 Screenshots
-
-Attach if there are UI changes.
-
-## 🔖 Resources
-
-Feel free to share any references to documentation, libraries, blog posts, or other resources that you consulted or used during the implementation of the changes.
-
-- [Resource 1]
-- [Resource 2]
-- ...
+See `docs/editorial-review.md` for the full process.
