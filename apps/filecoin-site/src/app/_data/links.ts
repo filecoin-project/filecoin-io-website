@@ -20,6 +20,12 @@ export const STORE = '/store-data'
 export const CONTACT = '#contact'
 
 /**
+ * The "Partner with us" link under the homepage's logo strip: opens the partnership form
+ * (`PartnerDialog`, mounted in the site layout) in place. Submissions land in their own sheet.
+ */
+export const PARTNER = '#partner'
+
+/**
  * The storage provider intake form, for "Talk to Our Team" on the Provide Storage page.
  * Submissions land on the same Google Sheet as the contact form, on their own tab.
  */

@@ -9,6 +9,7 @@ import * as footerEn from '@/data/footer'
 import * as homeEn from '@/data/home'
 import * as navEn from '@/data/nav'
 import * as newsEn from '@/data/news'
+import * as partnerEn from '@/data/partner'
 import * as pricingEn from '@/data/pricing'
 import * as agentsEn from '@/data/products/agents'
 import * as archivalStorageEn from '@/data/products/archival-storage'
@@ -23,6 +24,7 @@ import * as footerZh from '@/data/zh-cn/footer'
 import * as homeZh from '@/data/zh-cn/home'
 import * as navZh from '@/data/zh-cn/nav'
 import * as newsZh from '@/data/zh-cn/news'
+import * as partnerZh from '@/data/zh-cn/partner'
 import * as pricingZh from '@/data/zh-cn/pricing'
 import * as agentsZh from '@/data/zh-cn/products/agents'
 import * as archivalStorageZh from '@/data/zh-cn/products/archival-storage'
@@ -58,6 +60,7 @@ const EN = {
   provideStorage: provideStorageEn,
   providerForm: providerFormEn,
   contact: contactEn,
+  partner: partnerEn,
   dataStorage: dataStorageEn,
   warmStorage: warmStorageEn,
   archivalStorage: archivalStorageEn,
@@ -77,6 +80,7 @@ const ZH = {
   provideStorage: provideStorageZh,
   providerForm: providerFormZh,
   contact: contactZh,
+  partner: partnerZh,
   dataStorage: dataStorageZh,
   warmStorage: warmStorageZh,
   archivalStorage: archivalStorageZh,

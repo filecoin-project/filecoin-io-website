@@ -89,15 +89,21 @@ Submissions post to `/api/contact`, which validates them and appends a row to a
 Google Sheet through a Google Apps Script web app bound to that sheet.
 `/provide-storage/onboarding` is the storage provider intake form; copy and
 options live in `src/app/_data/provider-form.ts`, and it posts to
-`/api/provider`, which writes to its own sheet. Set each sheet up once:
+`/api/provider`, which writes to its own sheet. "Partner with us" under the
+homepage's logo strip (`PARTNER` in `links.ts`, `#partner`) opens the
+partnership form (`PartnerDialog`); copy and options live in
+`src/app/_data/partner.ts`, and it posts to `/api/partner`, which writes to a
+third sheet. The two dialogs are `FormDialog` with their fields. Set each sheet
+up once:
 
 1. Create a Google Sheet. Extensions → Apps Script, paste in
    `scripts/contact-sheet/Code.gs`, save.
 2. Deploy → New deployment → Web app, "Execute as: Me", "Who has access:
    Anyone". Authorise it, then copy the web app URL (`…/exec`).
-3. Put that URL in `CONTACT_SHEET_WEBHOOK_URL` (contact form) or
-   `PROVIDER_SHEET_WEBHOOK_URL` (provider form): `.env.local` locally, and the
-   Vercel project's environment variables for deployments.
+3. Put that URL in `CONTACT_SHEET_WEBHOOK_URL` (contact form),
+   `PROVIDER_SHEET_WEBHOOK_URL` (provider form) or `PARTNER_SHEET_WEBHOOK_URL`
+   (partnership form): `.env.local` locally, and the Vercel project's
+   environment variables for deployments.
 
 Without the variable, `next dev` logs each submission to the terminal and the
 form still reports success; a production build answers 503 and the form shows
@@ -141,7 +147,8 @@ helpers are in `src/app/_utils/focAttribution.ts`.
   (`product`: `agent-skills`, `ipfs-pinning`, `data-storage` for `/products/warm-storage`,
   `backups-archives`, `store-data`, `pricing`); `cta_click` on every link that carries
   `data-foc-cta` (`foc_ref`, `nav_group`, `link_type`, `hop_source`); `sales_form_submitted`
-  when the contact dialog's form is sent (`form`, `intent` as the English option, `hop_source`;
+  when the contact or partnership dialog's form is sent (`form` is `contact` or `partner`,
+  `intent` as the English option, `hop_source`;
   nothing a visitor typed). Every event also carries the first-touch labels. Register these
   properties in the Plausible site settings (custom properties) and add the four events as
   goals, or they stay invisible in reports.

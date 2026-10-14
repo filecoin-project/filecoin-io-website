@@ -12,6 +12,7 @@
 const WEBHOOKS = {
   contact: 'CONTACT_SHEET_WEBHOOK_URL',
   provider: 'PROVIDER_SHEET_WEBHOOK_URL',
+  partner: 'PARTNER_SHEET_WEBHOOK_URL',
 } as const
 
 export async function appendToSheet(

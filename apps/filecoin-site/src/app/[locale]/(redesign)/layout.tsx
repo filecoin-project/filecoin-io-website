@@ -17,6 +17,7 @@ import { ORGANIZATION_SCHEMA_BASE } from '@/constants/structuredDataConstants'
 
 import ContactDialog from '@/components/layout/ContactDialog'
 import { FocAttribution } from '@/components/layout/FocAttribution'
+import PartnerDialog from '@/components/layout/PartnerDialog'
 import SiteFooter from '@/components/layout/SiteFooter'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SmoothScroll from '@/components/layout/SmoothScroll'
@@ -90,6 +91,7 @@ export default async function RedesignLayout({
           <SiteFooter locale={locale} />
           {locale === CHINESE_LOCALE && <TranslationNotice />}
           <ContactDialog locale={locale} />
+          <PartnerDialog locale={locale} />
           <SmoothScroll />
           <FocAttribution />
         </PlausibleProvider>

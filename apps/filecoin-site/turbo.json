@@ -13,7 +13,8 @@
         "HUBSPOT_PORTAL_ID",
         "HUBSPOT_STORE_DATA_FORM_ID",
         "CONTACT_SHEET_WEBHOOK_URL",
-        "PROVIDER_SHEET_WEBHOOK_URL"
+        "PROVIDER_SHEET_WEBHOOK_URL",
+        "PARTNER_SHEET_WEBHOOK_URL"
       ],
       "outputs": [".next/**", "!.next/cache/**"]
     }

@@ -19,6 +19,7 @@ import { ORGANIZATION_SCHEMA_BASE } from '@/constants/structuredDataConstants'
 import { Footer } from '@/components/Footer/Footer'
 import ContactDialog from '@/components/layout/ContactDialog'
 import { FocAttribution } from '@/components/layout/FocAttribution'
+import PartnerDialog from '@/components/layout/PartnerDialog'
 import SiteHeader from '@/components/layout/SiteHeader'
 
 // Initialize UI config before any components render
@@ -78,6 +79,7 @@ export function SiteLayout({
               <Footer />
               {notice}
               <ContactDialog locale={locale} />
+              <PartnerDialog locale={locale} />
               <FocAttribution />
             </PlausibleProvider>
 

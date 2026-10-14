@@ -1,6 +1,6 @@
 /**
  * Google Apps Script for the site's forms. Each form has its own Google Sheet with this same
- * script bound to it: the contact form ("Talk to sales") and the storage provider intake form
+ * script bound to it: the contact form ("Talk to sales"), the storage provider intake form and the partnership form
  * (/provide-storage/onboarding).
  *
  * The site's /api/contact and /api/provider routes POST each submission to their sheet's
@@ -14,7 +14,8 @@
  *      browsers. Deploying asks you to authorise the script to edit the sheet.)
  *   3. Copy the web app URL (https://script.google.com/macros/s/…/exec) into the sheet's
  *      environment variable: CONTACT_SHEET_WEBHOOK_URL for the contact form's sheet,
- *      PROVIDER_SHEET_WEBHOOK_URL for the provider form's. In .env.local locally, and in the
+ *      PROVIDER_SHEET_WEBHOOK_URL for the provider form's, PARTNER_SHEET_WEBHOOK_URL for the
+ *      partnership form's. In .env.local locally, and in the
  *      Vercel project's environment variables for deployments.
  *
  * Editing this script later needs a new deployment (Deploy → Manage deployments → edit → new
@@ -52,6 +53,21 @@ var FORMS = {
     ],
     row: function (data) {
       return [data.fullName, data.email, data.company, data.operation, data.capacity, data.goals, data.page];
+    },
+  },
+  partner: {
+    sheet: "Partners",
+    headers: [
+      "Submitted at",
+      "Full name",
+      "Work email",
+      "Company / Organization",
+      "Type of partnership",
+      "What they'd like to explore",
+      "Page",
+    ],
+    row: function (data) {
+      return [data.fullName, data.email, data.company, data.type, data.details, data.page];
     },
   },
 };

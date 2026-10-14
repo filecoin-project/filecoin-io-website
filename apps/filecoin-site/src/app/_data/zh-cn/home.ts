@@ -6,12 +6,11 @@ import * as en from '@/data/home'
 import type {
   AgentLogo,
   Feature,
-  PartnerLogo,
   StartCard,
   UseCase,
   CostBar,
 } from '@/data/home'
-import { CONSOLE, CONTACT, DOCS, STORE } from '@/data/links'
+import { CONSOLE, CONTACT, DOCS, PARTNER, STORE } from '@/data/links'
 
 const zh = (path: string) => localePath('zh-cn', path)
 
@@ -28,8 +27,14 @@ export const HERO = {
   secondary: { label: '预约通话', href: CONTACT, ref: 'home-hero-talk-sales' },
 } as const
 
-export const TRUSTED_BY: { caption: string; logos: PartnerLogo[] } = {
+export const TRUSTED_BY: typeof en.TRUSTED_BY = {
   caption: '守护全球最重要数据的团队都在使用',
+  partner: {
+    prompt: '有意与 Filecoin 合作？',
+    label: '与我们合作',
+    href: PARTNER,
+    ref: 'home-partner',
+  },
   logos: en.TRUSTED_BY.logos,
 }
 

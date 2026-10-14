@@ -1,7 +1,7 @@
 // Homepage copy and figures for the new build, section by section in page order.
 // Figures are placeholders taken from the Figma file until the live numbers are wired up.
 
-import { CONSOLE, CONTACT, DOCS, STORE } from '@/data/links'
+import { CONSOLE, CONTACT, DOCS, PARTNER, STORE } from '@/data/links'
 
 export const HERO = {
   announcement: {
@@ -34,8 +34,19 @@ export type PartnerLogo = {
  * Logo strip under the hero. Sizes are the SVGs' own dimensions. Every logo here needs the
  * partner's written approval before it ships; keep the approvals thread with the brand team.
  */
-export const TRUSTED_BY: { caption: string; logos: PartnerLogo[] } = {
+export const TRUSTED_BY: {
+  caption: string
+  logos: PartnerLogo[]
+  /** The partnerships line under the logos: a prompt and the link that opens the form. */
+  partner: { prompt: string; label: string; href: string; ref: string }
+} = {
   caption: "Trusted by teams preserving the world's most important data",
+  partner: {
+    prompt: 'Interested in partnering with Filecoin?',
+    label: 'Partner with us',
+    href: PARTNER,
+    ref: 'home-partner',
+  },
   logos: [
     {
       name: 'Internet Archive',
