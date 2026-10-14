@@ -90,6 +90,13 @@ export const TRUSTED_BY: {
       width: 89.125,
       height: 31,
     },
+    {
+      name: 'Dapper Labs',
+      href: 'https://www.dapperlabs.com',
+      src: '/assets/logos/dapper-labs.svg',
+      width: 134,
+      height: 22,
+    },
     // OpenSea, Reuters and Wikipedia are out until their logo approvals are on record; the SVGs
     // stay in public/logos so they can be put back as one line each. Dapper and Blackbird are
     // approved and waiting on logo assets.
