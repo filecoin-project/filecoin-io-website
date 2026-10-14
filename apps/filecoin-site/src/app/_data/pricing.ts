@@ -52,11 +52,12 @@ export const WARM_STORAGE: Offer = {
 
 export const ARCHIVAL_STORAGE: Offer = {
   name: 'Filecoin Archival Storage',
-  body: 'For data you keep for years but rarely open.',
+  body: 'Keep your data secure with an affordable, independent layer of storage redundancy.',
   // Confirm with MPG before launch: the old site said $4, Slack said $2, possibly with two
   // copies required. $2 with two copies is used here until it is confirmed.
   price: { from: 'From', amount: '$2.00', unit: 'per TB per month' },
-  bestFor: 'Backups, media archives and old datasets',
+  bestFor:
+    'Long-term backups, disaster recovery, media archives, and static or infrequently accessed data.',
   features: [
     'Room to grow from terabytes to petabytes',
     'Set up with our team around how much you have and how often you need it back',

@@ -41,9 +41,9 @@ export const WARM_STORAGE: Offer = {
 
 export const ARCHIVAL_STORAGE: Offer = {
   name: 'Filecoin 归档存储',
-  body: '适合长期保存但很少打开的数据。',
+  body: '以经济实惠、独立的冗余存储层，保障你的数据安全。',
   price: { from: '起价', amount: '$2.00', unit: '每 TB 每月' },
-  bestFor: '备份、媒体档案和旧数据集',
+  bestFor: '长期备份、灾难恢复、媒体档案，以及静态或不常访问的数据。',
   features: [
     '从 TB 级扩展到 PB 级的空间',
     '根据你的数据量和取回频率，与我们的团队一起配置',
