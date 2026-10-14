@@ -26,7 +26,7 @@ import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
 import { CardGridContainer } from '@/components/CardGridContainer'
 import { ImageGrid } from '@/components/ImageGrid'
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 import { SimpleCardWithImage } from '@/components/SimpleCardWithImage'
 import { SimpleCardWithLogo } from '@/components/SimpleCardWithLogo'
 
@@ -62,7 +62,7 @@ export default async function BuildOnFilecoin() {
         structuredData={generateStructuredData(metadata, filecoinFeatures)}
       />
 
-      <Navigation backgroundVariant="dark" />
+      <HeaderSpacer />
 
       <HeroSection />
 

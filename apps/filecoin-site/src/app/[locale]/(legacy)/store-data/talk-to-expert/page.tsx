@@ -10,7 +10,7 @@ import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 
 import { StoreDataForm } from './components/StoreDataForm'
 
@@ -19,7 +19,7 @@ export default async function TalkToExpertPage() {
 
   return (
     <>
-      <Navigation backgroundVariant="light" />
+      <HeaderSpacer tone="light" />
       <PageSection backgroundVariant="light">
         <div className="max-w-4xl">
           <Heading tag="h1" variant="section-heading">

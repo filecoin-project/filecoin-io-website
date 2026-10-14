@@ -25,7 +25,7 @@ import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
 import { ImageGrid } from '@/components/ImageGrid'
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 import { SectionImage } from '@/components/SectionImage'
 import { SimpleCardWithImage } from '@/components/SimpleCardWithImage'
 import { SimpleCardWithLogo } from '@/components/SimpleCardWithLogo'
@@ -58,7 +58,7 @@ export default async function CommunityHub({ params }: BlogProps) {
       <StructuredDataScript structuredData={ORGANIZATION_SCHEMA_BASE} />
 
       <div className="relative isolate">
-        <Navigation backgroundVariant="transparentDark" />
+        <HeaderSpacer />
         <PageSection backgroundVariant="transparentDark">
           <PageHeader
             variant="highContrast"

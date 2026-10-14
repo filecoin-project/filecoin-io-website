@@ -16,7 +16,7 @@ import { graphicsData } from '@/data/graphicsData'
 import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 
 import { getBlogPostData, getBlogPostsData } from '../utils/getBlogPostData'
 import { translateBlogCategory } from '../utils/translateBlogCategory'
@@ -46,7 +46,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <StructuredDataScript
         structuredData={generateStructuredData(data, locale)}
       />
-      <Navigation backgroundVariant="light" />
+      <HeaderSpacer tone="light" />
       <PageSection backgroundVariant="light" paddingVariant="topCompact">
         <div className="mx-auto max-w-3xl">
           <BlogPostHeader

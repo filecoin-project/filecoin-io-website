@@ -17,7 +17,7 @@ import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 
 import { BlogPageHeader } from './components/BlogPageHeader'
 import { BlogPostList } from './components/BlogPostList'
@@ -43,7 +43,7 @@ export default async function Blog({ params }: BlogProps) {
       <StructuredDataScript
         structuredData={generateStructuredData(metadata, sortedPosts)}
       />
-      <Navigation backgroundVariant="light" />
+      <HeaderSpacer tone="light" />
 
       <PageSection backgroundVariant="light" paddingVariant="topCompact">
         <BlogPageHeader

@@ -10,8 +10,12 @@ The homepage, `/store-data`, `/pricing`, `/provide-storage` (with its form at
 redesigned site, each also in Chinese under `/zh-cn`. They live in the
 `src/app/[locale]/(redesign)` route group with their own root layout (the new
 header, footer, contact dialog and smooth scrolling) and stylesheet, so they
-never share CSS with the pages still on `ui-filecoin`, which sit in
-`src/app/[locale]/(legacy)`. Moving between the two groups is a full page load.
+share no CSS with the pages still on `ui-filecoin`, which sit in
+`src/app/[locale]/(legacy)`, except the header: `src/app/_styles/site-header.css`
+holds what the new header needs and both stylesheets import it, so the legacy
+pages show the same fixed header (each page puts a `HeaderSpacer` where its
+old navigation was, carrying the header tone). Moving between the two groups
+is a full page load.
 
 ### Where things are
 

@@ -8,9 +8,8 @@ import { hasLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 
 import { ROOT_METADATA } from '@/constants/siteMetadata'
-import { TRANSLATION_NOTICE_TEXT } from '@/constants/translationNotice'
 
-import { PersistedBanner } from '@/components/PersistedBanner'
+import { TranslationNotice } from '@/components/layout/TranslationNotice'
 import { SiteLayout } from '@/components/SiteLayout'
 
 import '@/styles/globals.css'
@@ -37,11 +36,7 @@ export default async function RootLayout({
   return (
     <SiteLayout
       locale={locale}
-      banner={
-        locale === CHINESE_LOCALE && (
-          <PersistedBanner text={TRANSLATION_NOTICE_TEXT} />
-        )
-      }
+      notice={locale === CHINESE_LOCALE && <TranslationNotice />}
     >
       {children}
     </SiteLayout>

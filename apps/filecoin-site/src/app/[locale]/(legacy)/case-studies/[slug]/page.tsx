@@ -11,11 +11,10 @@ import type { SlugParams } from '@filecoin-foundation/utils/types/paramsTypes'
 import { PATHS } from '@/constants/paths'
 import { ORGANIZATION_NAME } from '@/constants/siteMetadata'
 
-
 import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 
 import { PageHeader } from '../components/PageHeader'
 import { getCaseStudyData, getCaseStudiesData } from '../utils/getCaseStudyData'
@@ -50,7 +49,7 @@ export default async function CaseStudyArticle(props: CaseStudyArticleProps) {
   return (
     <>
       <StructuredDataScript structuredData={generateStructuredData(data)} />
-      <Navigation backgroundVariant="dark" />
+      <HeaderSpacer />
       <PageSection backgroundVariant="dark">
         <PageHeader
           title={title}

@@ -27,7 +27,7 @@ import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
 import { GradientOverlay } from '@/components/GradientOverlay'
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 import { SectionImage } from '@/components/SectionImage'
 import { SplitSectionContent } from '@/components/SplitSectionContent'
 import { YouTubeVideoEmbed } from '@/components/YoutubeVideoEmbed'
@@ -52,7 +52,7 @@ export default async function Learn() {
     <>
       <StructuredDataScript structuredData={generateStructuredData(metadata)} />
       <div className={clsx('relative isolate', backgroundVariants.dark)}>
-        <Navigation backgroundVariant="transparentDark" />
+        <HeaderSpacer />
         <PageSection backgroundVariant="transparentDark">
           <PageHeader
             variant="highContrast"

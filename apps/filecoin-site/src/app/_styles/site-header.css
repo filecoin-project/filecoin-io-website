@@ -1,0 +1,66 @@
+/*
+ * What the redesign's header needs from a stylesheet: SiteHeader, its menus (with their
+ * buttons), the contact dialog it opens, the language switch and the translation notice. Both root layouts' stylesheets import it, so the header
+ * is the same on the redesigned and the legacy pages.
+ */
+@theme {
+  --color-brand: #0090ff;
+  --color-paper: #f2f2f2;
+  --color-carbon: #141414;
+  --color-graphite: #2b2b2b;
+  --color-ink: #111111;
+
+  /* Aspekta's weight in the design: headings, titles and buttons. */
+  --font-weight-book: 480;
+
+  --text-h3: clamp(1.5rem, 1.412rem + 0.376vw, 1.75rem); /* 24 → 28 */
+  --text-body: clamp(1rem, 0.956rem + 0.188vw, 1.125rem); /* 16 → 18 */
+  --text-button: clamp(0.9375rem, 0.916rem + 0.094vw, 1rem); /* 15 → 16 */
+  --text-small: clamp(0.875rem, 0.831rem + 0.188vw, 1rem); /* 14 → 16 */
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  :root {
+    /* Side gutter around the 1200px content column (20px on phones to 40px from 1024px). */
+    --gutter: clamp(1.25rem, 0.528rem + 3.082vw, 2.5rem);
+    /* The fixed header's height, 72px to 88px. */
+    --header-h: clamp(4.5rem, 4.148rem + 1.502vw, 5.5rem);
+  }
+
+  html {
+    /* In-page links land a section just under the fixed header. */
+    scroll-padding-top: var(--header-h);
+  }
+}
+
+/*
+ * Header colours. Dark by default. A page whose top is light marks its <main> (or, on the legacy
+ * pages, its HeaderSpacer) with data-header-tone="light" and the bar turns dark-on-light, except
+ * while the mobile menu (a dark sheet) is open. CSS only, so the right tone is there on first paint.
+ */
+:root {
+  --hdr-fg: oklch(98.4% 0.003 247.858);
+  --hdr-hover: rgb(255 255 255 / 0.08);
+  --hdr-glass: rgb(2 6 24 / 0.72);
+  --hdr-border: rgb(255 255 255 / 0.06);
+  --hdr-chip: oklch(27.4% 0.006 286.033);
+  --hdr-chip-fg: oklch(98.5% 0 0);
+}
+
+html:has([data-header-tone='light']) .site-header:not([data-menu-open]) {
+  --hdr-fg: var(--color-ink);
+  --hdr-hover: rgb(0 0 0 / 0.06);
+  --hdr-glass: rgb(255 255 255 / 0.76);
+  --hdr-border: rgb(0 0 0 / 0.06);
+  --hdr-chip: var(--color-carbon);
+  --hdr-chip-fg: #fff;
+}
+
+/* Content column: 1200px max with a fluid gutter. */
+@utility container-site {
+  width: min(100% - 2 * var(--gutter), 75rem);
+  margin-inline: auto;
+}

@@ -8,6 +8,8 @@
 @source '../../_components/sections';
 @source '../../_components/ui';
 
+@import '../../_styles/site-header.css';
+
 @theme inline {
   /* The site's fonts have no Chinese glyphs; on /zh-cn those fall through to the system's CJK face. */
   --font-sans:
@@ -78,10 +80,6 @@
 
 @layer base {
   :root {
-    /* Side gutter around the 1200px content column (20px on phones to 40px from 1024px). */
-    --gutter: clamp(1.25rem, 0.528rem + 3.082vw, 2.5rem);
-    /* The fixed header's height, 72px to 88px. */
-    --header-h: clamp(4.5rem, 4.148rem + 1.502vw, 5.5rem);
     /* Width of the text column in the split sections; their light/dark edge lines up. */
     --panel: clamp(23rem, 38vw, 33rem);
   }
@@ -89,8 +87,6 @@
   html {
     background-color: var(--color-slate-950);
     color-scheme: dark;
-    /* In-page links land a section just under the fixed header (Lenis reads this too). */
-    scroll-padding-top: var(--header-h);
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
   }
@@ -111,29 +107,6 @@
     outline: 2px solid var(--color-brand);
     outline-offset: 3px;
   }
-}
-
-/*
- * Header colours. Dark by default (the homepage opens on a dark hero). A page whose top is light
- * marks its <main> with data-header-tone="light" and the bar turns dark-on-light, except while
- * the mobile menu (a dark sheet) is open. CSS only, so the right tone is there on first paint.
- */
-:root {
-  --hdr-fg: oklch(98.4% 0.003 247.858);
-  --hdr-hover: rgb(255 255 255 / 0.08);
-  --hdr-glass: rgb(2 6 24 / 0.72);
-  --hdr-border: rgb(255 255 255 / 0.06);
-  --hdr-chip: oklch(27.4% 0.006 286.033);
-  --hdr-chip-fg: oklch(98.5% 0 0);
-}
-
-html:has(main[data-header-tone='light']) .site-header:not([data-menu-open]) {
-  --hdr-fg: var(--color-ink);
-  --hdr-hover: rgb(0 0 0 / 0.06);
-  --hdr-glass: rgb(255 255 255 / 0.76);
-  --hdr-border: rgb(0 0 0 / 0.06);
-  --hdr-chip: var(--color-carbon);
-  --hdr-chip-fg: #fff;
 }
 
 /*
@@ -159,12 +132,6 @@ html:has(main[data-footer-tone='carbon']) .site-footer {
 
 /* Pinned scroll sections need a wide and tall enough viewport; below this they stack. */
 @custom-variant pin (@media (width >= 64rem) and (height >= 40rem));
-
-/* Content column: 1200px max with a fluid gutter. */
-@utility container-site {
-  width: min(100% - 2 * var(--gutter), 75rem);
-  margin-inline: auto;
-}
 
 /*
  * Page-load intro. Pure CSS so it starts before hydration and stays smooth while the

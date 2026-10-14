@@ -16,7 +16,7 @@ import { createMetadata } from '@/utils/createMetadata'
 import { getLocalePath } from '@/utils/getLocalePath'
 import { getTranslatedMetadata } from '@/utils/getTranslatedMetadata'
 
-import { Navigation } from '@/components/Navigation/Navigation'
+import { HeaderSpacer } from '@/components/layout/HeaderSpacer'
 
 import { CaseStudiesGrid } from './components/CaseStudiesGrid'
 import { PageHeader } from './components/PageHeader'
@@ -44,7 +44,7 @@ export default async function CaseStudies({ params }: CaseStudiesProps) {
       <StructuredDataScript
         structuredData={generateStructuredData(metadata, featuredCaseStudies)}
       />
-      <Navigation backgroundVariant="dark" />
+      <HeaderSpacer />
       <PageSection backgroundVariant="dark">
         <PageHeader
           variant="highContrast"
