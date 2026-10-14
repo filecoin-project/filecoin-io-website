@@ -23,7 +23,8 @@ export function Field({
   className?: string
 }) {
   return (
-    <div className={clsx('flex flex-col gap-2', className)}>
+    // Bottom-aligned, so a label that wraps lifts its own label, not its neighbour's field.
+    <div className={clsx('flex flex-col justify-end gap-2', className)}>
       <label htmlFor={htmlFor} className={labelClassName}>
         {label}
       </label>
