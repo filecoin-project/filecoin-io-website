@@ -9,7 +9,6 @@ import {
 
 import type { LinkCardData } from '@filecoin-foundation/ui-filecoin/LinkCard'
 
-
 import { PATHS } from '@/constants/paths'
 
 export function getResilientInternetCta(t: TranslationFunction) {

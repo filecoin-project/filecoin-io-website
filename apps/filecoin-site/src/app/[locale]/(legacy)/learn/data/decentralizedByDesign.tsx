@@ -10,7 +10,6 @@ import {
 import type { CardData } from '@filecoin-foundation/ui-filecoin/Card'
 import { ExternalTextLink } from '@filecoin-foundation/ui-filecoin/TextLink/ExternalTextLink'
 
-
 import {
   FILECOIN_CLOUD_DOCS_URLS,
   FILECOIN_DOCS_URLS,

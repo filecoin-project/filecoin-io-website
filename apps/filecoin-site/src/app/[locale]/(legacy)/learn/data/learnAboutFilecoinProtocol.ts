@@ -2,7 +2,6 @@ import type { TranslationFunction } from '@/i18n/types'
 
 import type { SimpleCardData } from '@filecoin-foundation/ui-filecoin/SimpleCard'
 
-
 import { FILECOIN_DOCS_URL, FILECOIN_DOCS_URLS } from '@/constants/siteMetadata'
 
 export function getLearnAboutFilecoinProtocol(t: TranslationFunction) {

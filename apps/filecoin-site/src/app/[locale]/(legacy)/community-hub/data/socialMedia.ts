@@ -12,7 +12,6 @@ import type { LinkCardData } from '@filecoin-foundation/ui-filecoin/LinkCard'
 
 import { FILECOIN_URLS } from '@/constants/siteMetadata'
 
-
 const {
   slack,
   twitter,

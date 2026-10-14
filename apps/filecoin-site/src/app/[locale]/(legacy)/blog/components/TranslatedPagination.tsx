@@ -7,7 +7,10 @@ import {
   type PaginationProps,
 } from '@filecoin-foundation/ui-filecoin/Pagination'
 
-import { getPaginationDirections, getPaginationLabels } from '../data/pagination'
+import {
+  getPaginationDirections,
+  getPaginationLabels,
+} from '../data/pagination'
 
 type TranslatedPaginationProps = Pick<
   PaginationProps,

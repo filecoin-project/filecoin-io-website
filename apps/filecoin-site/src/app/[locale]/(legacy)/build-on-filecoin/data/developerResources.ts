@@ -9,7 +9,6 @@ import {
 
 import { FILECOIN_DOCS_URL, FILECOIN_DOCS_URLS } from '@/constants/siteMetadata'
 
-
 export function getDeveloperResources(t: TranslationFunction) {
   return [
     {

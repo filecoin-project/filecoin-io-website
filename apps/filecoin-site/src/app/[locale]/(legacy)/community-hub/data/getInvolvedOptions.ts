@@ -9,7 +9,6 @@ import {
 
 import { FILECOIN_FOUNDATION_URLS } from '@/constants/siteMetadata'
 
-
 export function getGetInvolvedOptions(t: TranslationFunction) {
   return [
     {
