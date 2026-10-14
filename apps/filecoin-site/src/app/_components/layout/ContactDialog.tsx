@@ -15,8 +15,11 @@ import type { Locale } from '@/i18n/locales'
 import { XIcon } from '@phosphor-icons/react/dist/ssr'
 import clsx from 'clsx'
 import { useLenis } from 'lenis/react'
+import { usePlausible } from 'next-plausible'
 
 import { CONTACT } from '@/data/links'
+
+import { labelProps, readStoredTouch, sitePath } from '@/utils/focAttribution'
 
 import Button from '@/components/ui/Button'
 import {
@@ -41,6 +44,7 @@ export default function ContactDialog({ locale = 'en' }: { locale?: Locale }) {
   const formRef = useRef<HTMLFormElement>(null)
   const firstFieldRef = useRef<HTMLInputElement>(null)
   const lenis = useLenis()
+  const plausible = usePlausible()
   const id = useId()
   const [open, setOpen] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
@@ -134,6 +138,19 @@ export default function ContactDialog({ locale = 'en' }: { locale?: Locale }) {
       })
       if (!response.ok) throw new Error(`HTTP ${response.status}`)
       setStatus('sent')
+      // Funnel tracking: a sent form, with the intent as its English option (no personal data).
+      const intent = data.get('intent')
+      plausible('sales_form_submitted', {
+        props: {
+          form: 'contact',
+          intent:
+            copy('en').contact.INTENT_OPTIONS[
+              INTENT_OPTIONS.indexOf(intent as (typeof INTENT_OPTIONS)[number])
+            ] ?? '(not set)',
+          hop_source: sitePath(location.pathname),
+          ...labelProps(readStoredTouch()),
+        },
+      })
     } catch {
       setStatus('error')
     }

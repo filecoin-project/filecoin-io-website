@@ -12,28 +12,11 @@ import {
   labelProps,
   linkType,
   PRODUCT_PAGES,
+  readStoredTouch,
   sitePath,
+  storeTouch,
   type FirstTouch,
 } from '@/utils/focAttribution'
-
-const STORAGE_KEY = 'foc_ft'
-
-function readTouch(): FirstTouch | null {
-  try {
-    const raw = sessionStorage.getItem(STORAGE_KEY)
-    return raw ? (JSON.parse(raw) as FirstTouch) : null
-  } catch {
-    return null
-  }
-}
-
-function writeTouch(touch: FirstTouch) {
-  try {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(touch))
-  } catch {
-    // Storage blocked: the labels last for this page only.
-  }
-}
 
 /**
  * The website side of the product funnel tracking, mounted once in each root layout:
@@ -54,14 +37,14 @@ export function FocAttribution() {
 
   // Landing: the first touch, kept for the visit.
   useEffect(() => {
-    let touch = readTouch()
+    let touch = readStoredTouch()
     if (!touch) {
       // A referral from our own docs or Console with nothing recorded counts as direct.
       touch =
         firstTouch(location.href, document.referrer) ??
         firstTouch(location.href, '')
       if (touch) {
-        writeTouch(touch)
+        storeTouch(touch)
         plausible('journey_start', {
           props: { ...labelProps(touch), ref_domain: touch.ref_domain },
         })

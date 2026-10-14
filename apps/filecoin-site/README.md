@@ -140,9 +140,11 @@ helpers are in `src/app/_utils/focAttribution.ts`.
   `first_touch_medium`, `ref_domain`); `product_page_view` on each funnel entry page
   (`product`: `agent-skills`, `ipfs-pinning`, `data-storage` for `/products/warm-storage`,
   `backups-archives`, `store-data`, `pricing`); `cta_click` on every link that carries
-  `data-foc-cta` (`foc_ref`, `nav_group`, `link_type`, `hop_source`). Every event also carries
-  the first-touch labels. Register these properties in the Plausible site settings (custom
-  properties) and add the three events as goals, or they stay invisible in reports.
+  `data-foc-cta` (`foc_ref`, `nav_group`, `link_type`, `hop_source`); `sales_form_submitted`
+  when the contact dialog's form is sent (`form`, `intent` as the English option, `hop_source`;
+  nothing a visitor typed). Every event also carries the first-touch labels. Register these
+  properties in the Plausible site settings (custom properties) and add the four events as
+  goals, or they stay invisible in reports.
 - **Which links.** A link sends `cta_click` when it has a `ref` in the copy
   (`src/app/_data`, same values in the Chinese twins): the header menus (`nav_group` is the
   menu's id: `products`, `network`, `build`, `discover`), the footer (`footer`), and the page

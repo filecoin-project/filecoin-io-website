@@ -231,3 +231,24 @@ export function labelProps(touch: FirstTouch | null) {
     first_touch_medium: touch?.first_touch_medium ?? '(unknown)',
   }
 }
+
+const STORAGE_KEY = 'foc_ft'
+
+/** The visit's first touch, as kept in sessionStorage; null when none is recorded or storage is blocked. */
+export function readStoredTouch(): FirstTouch | null {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY)
+    return raw ? (JSON.parse(raw) as FirstTouch) : null
+  } catch {
+    return null
+  }
+}
+
+/** Keeps the first touch for the visit. Without storage the labels last for this page only. */
+export function storeTouch(touch: FirstTouch): void {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(touch))
+  } catch {
+    // Storage blocked.
+  }
+}
