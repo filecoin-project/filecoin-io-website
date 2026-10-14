@@ -3,11 +3,10 @@ import type { CSSProperties } from 'react'
 import { copy } from '@/i18n/copy'
 import type { Locale } from '@/i18n/locales'
 
+import { ArrowRightIcon } from '@phosphor-icons/react/dist/ssr'
 import clsx from 'clsx'
 
 import type { PartnerLogo } from '@/data/home'
-
-import ButtonLink from '@/components/ui/ButtonLink'
 
 function Logos({
   copy,
@@ -84,21 +83,25 @@ export default function TrustedBy({ locale = 'en' }: { locale?: Locale }) {
         >
           {TRUSTED_BY.caption}
         </p>
-        <div
-          className="intro-fade -mt-[0.75rem] flex flex-col items-center gap-4 text-center"
+        <p
+          className="intro-fade -mt-[1.5rem] text-center text-[0.9141rem] leading-[1.4286] text-slate-400"
           style={{ '--delay': '1200ms' } as CSSProperties}
         >
-          <p className="text-[0.9141rem] leading-[1.4286] text-slate-400">
-            {TRUSTED_BY.partner.prompt}
-          </p>
-          <ButtonLink
+          {TRUSTED_BY.partner.prompt}{' '}
+          <a
             href={TRUSTED_BY.partner.href}
             data-foc-cta={TRUSTED_BY.partner.ref}
-            variant="primary"
+            className="group/partner inline-flex items-center gap-1 rounded-sm font-semibold text-slate-50 transition-colors duration-200 ease-out hover:text-white"
           >
-            {TRUSTED_BY.partner.label}
-          </ButtonLink>
-        </div>
+            <span className="ease-out-quint bg-[linear-gradient(currentColor,currentColor)] bg-size-[0%_1px] bg-left-bottom bg-no-repeat pb-0.5 transition-[background-size] duration-400 group-hover/partner:bg-size-[100%_1px] motion-reduce:transition-none">
+              {TRUSTED_BY.partner.label}
+            </span>
+            <ArrowRightIcon
+              aria-hidden="true"
+              className="ease-out-quint size-4 shrink-0 transition-transform duration-300 group-hover/partner:translate-x-0.5"
+            />
+          </a>
+        </p>
       </div>
     </section>
   )

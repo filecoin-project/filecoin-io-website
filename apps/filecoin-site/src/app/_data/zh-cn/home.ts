@@ -31,7 +31,7 @@ export const TRUSTED_BY: typeof en.TRUSTED_BY = {
   caption: '守护全球最重要数据的团队都在使用',
   partner: {
     prompt: '有意与 Filecoin 合作？',
-    label: '与我们合作',
+    label: '与我们聊聊',
     href: PARTNER,
     ref: 'home-partner',
   },

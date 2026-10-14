@@ -43,7 +43,7 @@ export const TRUSTED_BY: {
   caption: "Trusted by teams preserving the world's most important data",
   partner: {
     prompt: 'Interested in partnering with Filecoin?',
-    label: 'Partner with us',
+    label: 'Chat with us',
     href: PARTNER,
     ref: 'home-partner',
   },
