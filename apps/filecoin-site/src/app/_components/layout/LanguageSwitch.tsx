@@ -13,6 +13,17 @@ const ITEM =
   'rounded-[4px] px-2.5 py-1.5 text-base leading-[1.4375] font-semibold'
 
 /**
+ * The locale cookie next-intl's middleware reads (its default name). It is written before the
+ * link is followed: with `localePrefix: 'as-needed'`, a request for the unprefixed English URL
+ * is otherwise sent back to the language the cookie remembers.
+ */
+const LOCALE_COOKIE = 'NEXT_LOCALE'
+
+function rememberLocale(locale: Locale) {
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=31536000; samesite=lax`
+}
+
+/**
  * EN / 中文, as on filecoin.io. The current language is a chip; the other is a link to the same
  * page in that language (see `switchHref`). Rendered in the header on wide screens and at the
  * foot of the mobile menu.
@@ -26,6 +37,7 @@ export default function LanguageSwitch({
 }) {
   const pathname = usePathname()
   const { HEADER } = copy(locale).ui
+
   return (
     <nav
       aria-label={HEADER.language}
@@ -52,6 +64,7 @@ export default function LanguageSwitch({
               ITEM,
               'text-(--hdr-fg) transition-colors duration-200 ease-out hover:bg-(--hdr-hover)',
             )}
+            onClick={() => rememberLocale(target)}
           >
             {HEADER.languages[target]}
           </a>
