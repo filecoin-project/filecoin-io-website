@@ -142,6 +142,9 @@ const FILECOIN_URLS = {
   },
 } as const
 
+/** The share image of pages that set none: the homepage's line over the planet, 1200 × 630. */
+const OG_IMAGE = '/assets/images/og-image.jpg'
+
 const ROOT_METADATA = {
   title: {
     template: `${ORGANIZATION_NAME} | %s`,
@@ -164,6 +167,7 @@ export {
   FILECOIN_FOUNDATION_URL,
   FILECOIN_FOUNDATION_URLS,
   FILECOIN_URLS,
+  OG_IMAGE,
   ORGANIZATION_NAME,
   ROOT_METADATA,
 }
