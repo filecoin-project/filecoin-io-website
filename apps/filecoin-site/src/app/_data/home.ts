@@ -3,14 +3,22 @@
 
 import { CONSOLE, CONTACT, DOCS, PARTNER, STORE } from '@/data/links'
 
+type Announcement = {
+  badge: string
+  label: string
+  /** Shown on phones, where the full title would wrap; screen readers always get `label`. */
+  shortLabel: string
+  href: string
+}
+
 export const HERO = {
+  /** `null` hides the pill; a translation can drop it when the linked post has no version in that language. */
   announcement: {
     badge: 'New',
     label: 'Real World Assets Are Onchain. What About the Data Behind Them?',
-    /** Shown on phones, where the full title would wrap; screen readers always get `label`. */
     shortLabel: 'Real World Assets Are Onchain.',
     href: '/blog/Real-world-assets-are-onchain-What-about-the-data-behind-them',
-  },
+  } as Announcement | null,
   /** Two lines on wider screens; wraps freely on phones. */
   title: ["Storing the internet's", 'most valuable information'],
   body: "Filecoin is the world's largest open storage network, built to keep data secure and sovereign.",

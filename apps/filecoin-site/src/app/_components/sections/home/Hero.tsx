@@ -126,7 +126,7 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
         className="container-site flex flex-col items-center pt-[calc(var(--header-h)+clamp(4.5rem,3.268rem+5.258vw,8rem))] pb-[clamp(5rem,3.944rem+4.507vw,8rem)] text-center"
         style={{ y: copyY, opacity: copyOpacity }}
       >
-        <Announcement announcement={HERO.announcement} />
+        {HERO.announcement && <Announcement announcement={HERO.announcement} />}
 
         <h1
           id="hero-title"
