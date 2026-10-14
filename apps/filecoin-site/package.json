@@ -50,7 +50,7 @@
     "schema-dts": "^2.0.0",
     "swr": "^2.4.1",
     "thinking-orbs": "^0.3.2",
-    "tinacms": "^3.4.1",
+    "tinacms": "^3.14.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
