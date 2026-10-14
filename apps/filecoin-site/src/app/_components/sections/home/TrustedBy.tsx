@@ -30,7 +30,7 @@ function Logos({
       {logos.map((logo, i) => (
         <li
           key={logo.name}
-          className="intro grid h-[2.0894rem] w-[6.9652rem] shrink-0 place-items-center"
+          className="intro grid h-[2.0894rem] min-w-[6.9652rem] shrink-0 place-items-center"
           style={{ '--delay': `${820 + i * 60}ms` } as CSSProperties}
         >
           <a

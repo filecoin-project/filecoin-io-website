@@ -72,16 +72,16 @@ export const TRUSTED_BY: {
     {
       name: 'Smithsonian',
       href: 'https://www.si.edu',
-      src: '/assets/logos/smithsonian.svg',
-      width: 80.84,
-      height: 36,
+      src: '/assets/logos/smithsonian.png',
+      width: 144.6,
+      height: 20,
     },
     {
       name: 'University of Maryland',
       href: 'https://geog.umd.edu',
       src: '/assets/logos/university-of-maryland.svg',
-      width: 111.444,
-      height: 20.7487,
+      width: 176,
+      height: 32.77,
     },
     {
       name: 'Phala',
