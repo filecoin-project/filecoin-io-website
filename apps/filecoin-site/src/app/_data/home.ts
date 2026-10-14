@@ -3,7 +3,22 @@
 
 import { CONSOLE, CONTACT, DOCS, PARTNER, STORE } from '@/data/links'
 
-export const HERO = {
+/** The pill above the hero title, linking to a post; `null` leaves it out (the Chinese edition). */
+export type HeroAnnouncement = {
+  badge: string
+  label: string
+  /** Shown on phones, where the full title would wrap; screen readers always get `label`. */
+  shortLabel: string
+  href: string
+}
+
+export const HERO: {
+  announcement: HeroAnnouncement | null
+  title: readonly string[]
+  body: string
+  primary: { label: string; href: string; ref: string }
+  secondary: { label: string; href: string; ref: string }
+} = {
   announcement: {
     badge: 'New',
     label: 'Real World Assets Are Onchain. What About the Data Behind Them?',

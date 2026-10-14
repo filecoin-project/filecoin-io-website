@@ -14,13 +14,9 @@ import { CONSOLE, CONTACT, DOCS, PARTNER, STORE } from '@/data/links'
 
 const zh = (path: string) => localePath('zh-cn', path)
 
-export const HERO = {
-  announcement: {
-    badge: '新',
-    label: '现实世界资产已上链，背后的数据呢？',
-    shortLabel: '现实世界资产已上链。',
-    href: '/blog/Real-world-assets-are-onchain-What-about-the-data-behind-them',
-  },
+export const HERO: typeof en.HERO = {
+  // The announcement links to an English-only post, so the Chinese hero has none.
+  announcement: null,
   title: ['保存互联网上', '最有价值的信息'],
   body: 'Filecoin 是全球最大的开放存储网络，让数据安全、自主可控。',
   primary: { label: '存储数据', href: zh(STORE), ref: 'home-hero-store-data' },
