@@ -1,9 +1,9 @@
 /**
  * Google Apps Script for the site's forms. Each form has its own Google Sheet with this same
- * script bound to it: the contact form ("Talk to sales"), the storage provider intake form and the partnership form
- * (/provide-storage/onboarding).
+ * script bound to it: the contact form ("Talk to sales"), the storage provider intake form
+ * (/provide-storage/onboarding) and the partnership form ("Partner With Us", on the homepage).
  *
- * The site's /api/contact and /api/provider routes POST each submission to their sheet's
+ * The site's /api/contact, /api/provider and /api/partner routes POST each submission to their sheet's
  * deployment as JSON, with a `form` field saying which form it is; this appends it as a row on
  * that form's tab (created with its header row on the first submission). Set up each sheet once:
  *
