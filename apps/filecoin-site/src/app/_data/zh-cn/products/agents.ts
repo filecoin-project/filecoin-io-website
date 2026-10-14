@@ -56,8 +56,8 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       body: '切换模型或交接给队友？让 Agent 的上下文保持完整，随时随地都能接着用。',
       link: {
         label: '了解更多',
-        href: AGENTS_DOCS,
-        ref: 'agent-skills-uses-docs-2',
+        href: 'https://github.com/FIL-Builders/filecoin-clawdi',
+        ref: 'agent-skills-share-sessions',
       },
     },
     {

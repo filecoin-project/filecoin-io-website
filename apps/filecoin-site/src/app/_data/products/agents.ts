@@ -65,8 +65,8 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       body: 'Switching models or handing over to a teammate? Keep your agent’s context intact and easy to pick up anywhere.',
       link: {
         label: 'Learn More',
-        href: AGENTS_DOCS,
-        ref: 'agent-skills-uses-docs-2',
+        href: 'https://github.com/FIL-Builders/filecoin-clawdi',
+        ref: 'agent-skills-share-sessions',
       },
     },
     {
