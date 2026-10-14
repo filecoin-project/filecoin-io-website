@@ -18,6 +18,8 @@
     "prepare": "test \"$CI\" = \"true\" || husky"
   },
   "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "glob": "^13.0.6",
     "husky": "^9.1.7",
     "markdownlint-cli2": "^0.22.0",

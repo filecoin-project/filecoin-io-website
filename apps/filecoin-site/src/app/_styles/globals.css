@@ -4,6 +4,12 @@
 @source '../../../../../node_modules/@filecoin-foundation/ui';
 @source '../../../../../node_modules/@filecoin-foundation/ui-filecoin';
 
+/* The redesigned pages have their own stylesheet (src/app/[locale]/(redesign)/globals.css). */
+@source not '../_components/layout';
+@source not '../_components/sections';
+@source not '../_components/ui';
+@source not '../[locale]/(redesign)';
+
 @utility prose {
   & blockquote {
     @apply border-brand-600 border-l-2;

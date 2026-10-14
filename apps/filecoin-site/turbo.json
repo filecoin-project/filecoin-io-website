@@ -12,7 +12,8 @@
         "VERCEL_GIT_COMMIT_REF",
         "HUBSPOT_PORTAL_ID",
         "HUBSPOT_STORE_DATA_FORM_ID",
-        "HUBSPOT_PROVIDE_STORAGE_FORM_ID"
+        "CONTACT_SHEET_WEBHOOK_URL",
+        "PROVIDER_SHEET_WEBHOOK_URL"
       ],
       "outputs": [".next/**", "!.next/cache/**"]
     }

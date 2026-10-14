@@ -57,6 +57,26 @@ export const PATHS = {
     path: '/provide-storage/onboarding',
     label: 'Onboarding',
   },
+  PRICING: {
+    path: '/pricing',
+    label: 'Pricing',
+  },
+  PRODUCTS_WARM_STORAGE: {
+    path: '/products/warm-storage',
+    label: 'Warm Storage',
+  },
+  PRODUCTS_AGENTS: {
+    path: '/products/agents',
+    label: 'Filecoin for Agents',
+  },
+  PRODUCTS_IPFS: {
+    path: '/products/ipfs',
+    label: 'IPFS',
+  },
+  PRODUCTS_ARCHIVAL_STORAGE: {
+    path: '/products/archival-storage',
+    label: 'Archival Storage',
+  },
 } as const satisfies Record<string, PathConfig>
 
 const RSS_ROUTE = `/rss.xml`

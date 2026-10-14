@@ -2,9 +2,9 @@ import { tests } from '@filecoin-foundation/cypress/support'
 
 import { BASE_URL } from '@/constants/siteMetadata'
 
-import { getPageTestData } from '@/cypress/utils/getPageTestData'
+import { getRedesignPageTestData } from '@/cypress/utils/getRedesignPageTestData'
 
-const { en, zhCn } = getPageTestData('STORE_DATA')
+const { en, zhCn } = getRedesignPageTestData('STORE_DATA')
 
 describe('Store Data Page', () => {
   it(tests.metadata.prompt, () => {

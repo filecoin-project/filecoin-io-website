@@ -2,9 +2,9 @@ import { tests } from '@filecoin-foundation/cypress/support'
 
 import { BASE_URL } from '@/constants/siteMetadata'
 
-import { getPageTestData } from '@/cypress/utils/getPageTestData'
+import { getRedesignPageTestData } from '@/cypress/utils/getRedesignPageTestData'
 
-const { en, zhCn } = getPageTestData('PROVIDE_STORAGE')
+const { en, zhCn } = getRedesignPageTestData('PROVIDE_STORAGE')
 
 const excludedLinks = ['ndlabs.io']
 
