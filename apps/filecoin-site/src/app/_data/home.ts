@@ -111,12 +111,13 @@ export const COST_COMPARISON: {
   axisLabel: 'Data per $100 (in TB)',
   max: 20,
   step: 5,
-  // Filecoin and AWS S3 are set so the 4.6X headline holds (20 / 4.35); the other two are
-  // read off the bar heights in the design. Confirm all four before launch.
+  // Filecoin and AWS S3 are set so the 4.6X headline holds (20 / 4.35); Backblaze B2 is its list
+  // price ($6.95 per TB per month, so 14.4 TB per $100); Filebase is read off the bar height in
+  // the design. Confirm all four before launch.
   bars: [
     { label: 'Filecoin', value: 20, highlight: true },
+    { label: 'Backblaze B2', value: 14.4 },
     { label: 'Filebase', value: 7.1 },
-    { label: 'Pinata', value: 5.4 },
     { label: 'AWS S3', value: 4.35 },
   ],
 }

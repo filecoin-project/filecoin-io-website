@@ -115,11 +115,12 @@ export const PRICING: {
   max: 25,
   step: 5,
   // AWS S3 is its standard tier list price; Filecoin is set so the 78% headline holds (5 / 23).
-  // Filebase and Pinata are read off the bar heights in the design. Confirm all four before launch.
+  // Backblaze B2 is its list price; Filebase is read off the bar height in the design. Confirm
+  // all four before launch.
   bars: [
     { label: 'Filecoin', value: 5, highlight: true },
+    { label: 'Backblaze B2', value: 6.95 },
     { label: 'Filebase', value: 15 },
-    { label: 'Pinata', value: 20 },
     { label: 'AWS S3', value: 23 },
   ],
 }
