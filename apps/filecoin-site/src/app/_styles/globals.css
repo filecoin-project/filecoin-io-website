@@ -1,8 +1,17 @@
 @import 'tailwindcss';
 @import '@filecoin-foundation/ui-filecoin/styles';
+@import './site-header.css';
 
 @source '../../../../../node_modules/@filecoin-foundation/ui';
 @source '../../../../../node_modules/@filecoin-foundation/ui-filecoin';
+
+/* The redesigned pages have their own stylesheet (src/app/[locale]/(redesign)/globals.css); only their header is shared. */
+@source '../_components/layout';
+@source '../_components/ui/Button.tsx';
+@source '../_components/ui/ButtonLink.tsx';
+@source '../_components/ui/FormField.tsx';
+@source not '../_components/sections';
+@source not '../[locale]/(redesign)';
 
 @utility prose {
   & blockquote {

@@ -5,7 +5,8 @@
     "noEmit": true,
     "jsx": "preserve",
     "paths": {
-      "@/*": ["./src/app/[locale]/*"],
+      "@/*": ["./src/app/[locale]/(legacy)/*"],
+      "@/fonts": ["./src/app/_fonts/index.ts"],
       "@/assets/*": ["./public/assets/*"],
       "@/components/*": ["./src/app/_components/*"],
       "@/constants/*": ["./src/app/_constants/*"],

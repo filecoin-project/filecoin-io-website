@@ -3,7 +3,6 @@ import type { TranslationFunction } from '@/i18n/types'
 import type {
   ExpandedNavItem,
   NavItem,
-  NavigationMenuItem,
 } from '@filecoin-foundation/ui-filecoin/Navigation/types'
 
 import { PATHS } from '@/constants/paths'
@@ -130,76 +129,6 @@ function getInternalNavigationItems(t: TranslationFunction): Array<NavItem> {
     { label: t('provideStorage'), href: PATHS.PROVIDE_STORAGE.path },
     { label: t('buildOnFilecoin'), href: PATHS.BUILD_ON_FILECOIN.path },
     { label: t('communityHub'), href: PATHS.COMMUNITY_HUB.path },
-    { label: t('blog'), href: PATHS.BLOG.path },
-  ]
-}
-
-export function getMobileNavigationItems(t: TranslationFunction) {
-  return getInternalNavigationItems(t)
-}
-
-export function getHeaderNavigationItems(
-  t: TranslationFunction,
-): Array<NavItem | NavigationMenuItem> {
-  return [
-    {
-      label: t('learn'),
-      items: [
-        {
-          title: t('sections.understandFilecoin'),
-          links: [
-            {
-              label: t('learn'),
-              description: t('descriptions.learn'),
-              href: PATHS.LEARN.path,
-            },
-            {
-              label: t('caseStudies'),
-              description: t('descriptions.caseStudies'),
-              href: PATHS.CASE_STUDIES.path,
-            },
-          ],
-        },
-      ],
-    },
-    { label: t('storeData'), href: PATHS.STORE_DATA.path },
-    { label: t('provideStorage'), href: PATHS.PROVIDE_STORAGE.path },
-    {
-      label: t('developers'),
-      items: [
-        {
-          title: t('sections.explore'),
-          links: [
-            {
-              label: t('buildOnFilecoin'),
-              description: t('descriptions.buildOnFilecoin'),
-              href: PATHS.BUILD_ON_FILECOIN.path,
-            },
-            ...getDeveloperResourcesItems(t),
-          ],
-        },
-        { title: t('sections.contribute'), links: getContributeItems(t) },
-      ],
-    },
-    {
-      label: t('network'),
-      items: [
-        {
-          title: t('sections.blockExplorers'),
-          links: getBlockExplorerItems(t),
-        },
-        {
-          title: t('sections.networkMonitoring'),
-          links: getNetworkMonitoringItems(t),
-        },
-      ],
-    },
-    {
-      label: t('community'),
-      items: [
-        { title: t('sections.getInvolved'), links: getCommunityItems(t) },
-      ],
-    },
     { label: t('blog'), href: PATHS.BLOG.path },
   ]
 }

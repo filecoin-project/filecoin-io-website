@@ -17,6 +17,10 @@ import { BASE_DOMAIN } from '@/constants/siteMetadata'
 import { ORGANIZATION_SCHEMA_BASE } from '@/constants/structuredDataConstants'
 
 import { Footer } from '@/components/Footer/Footer'
+import ContactDialog from '@/components/layout/ContactDialog'
+import { FocAttribution } from '@/components/layout/FocAttribution'
+import PartnerDialog from '@/components/layout/PartnerDialog'
+import SiteHeader from '@/components/layout/SiteHeader'
 
 // Initialize UI config before any components render
 setUIConfig({
@@ -43,13 +47,14 @@ const aspekta = localFont({
 
 type SiteLayoutProps = {
   children: React.ReactNode
-  banner?: React.ReactNode
+  /** Rendered after the footer: the translation notice on Chinese pages. */
+  notice?: React.ReactNode
   locale?: Locale
 }
 
 export function SiteLayout({
   children,
-  banner,
+  notice,
   locale = DEFAULT_LOCALE,
 }: SiteLayoutProps) {
   return (
@@ -69,9 +74,13 @@ export function SiteLayout({
               trackFileDownloads
               domain={BASE_DOMAIN}
             >
-              {banner}
+              <SiteHeader locale={locale} />
               <main>{children}</main>
               <Footer />
+              {notice}
+              <ContactDialog locale={locale} />
+              <PartnerDialog locale={locale} />
+              <FocAttribution />
             </PlausibleProvider>
 
             {process.env.NODE_ENV === 'development' && <BreakpointDebugger />}

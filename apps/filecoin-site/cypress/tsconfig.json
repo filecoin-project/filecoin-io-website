@@ -3,7 +3,9 @@
   "compilerOptions": {
     "baseUrl": "..",
     "paths": {
-      "@/*": ["src/app/[locale]/*"],
+      "@/*": ["src/app/[locale]/(legacy)/*"],
+      "@/components/*": ["src/app/_components/*"],
+      "@/data/*": ["src/app/_data/*"],
       "@/constants/*": ["src/app/_constants/*"],
       "@/cypress/*": ["cypress/*"],
       "@/i18n/*": ["src/i18n/*"],
