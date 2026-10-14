@@ -23,7 +23,7 @@ export const HERO = {
   body: 'Filecoin storage providers hold your files, and you keep using the IPFS tools you already know.',
   primary: {
     label: 'Start Pinning',
-    href: 'https://github.com/filecoin-project/filecoin-pin',
+    href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
   },
   secondary: { label: 'Migrate from IPFS', href: MIGRATION_GUIDE },
 } as const

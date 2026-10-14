@@ -13,7 +13,6 @@ import { pageSeo } from '@/data/seo'
 
 import { generateRedesignStructuredData } from '@/utils/generateRedesignStructuredData'
 
-import StartCards from '@/components/sections/home/StartCards'
 import ArchiveStack from '@/components/sections/product/ArchiveStack'
 import ClosingCta from '@/components/sections/product/ClosingCta'
 import FeatureCards from '@/components/sections/product/FeatureCards'
@@ -32,7 +31,7 @@ export default async function ArchivalStoragePage({
   params,
 }: ArchivalStoragePageProps) {
   const locale = toLocale((await params).locale)
-  const { HERO, SET_UP, START, USES } = copy(locale).archivalStorage
+  const { HERO, SET_UP, USES } = copy(locale).archivalStorage
 
   return (
     <>
@@ -47,7 +46,6 @@ export default async function ArchivalStoragePage({
         <ProductHero {...HERO} bodyWidth="narrow" art={<ArchiveStack />} />
         <FeatureCards id="archival-uses-title" {...USES} />
         <ClosingCta id="set-up-title" {...SET_UP} />
-        <StartCards cards={START} locale={locale} />
       </main>
     </>
   )

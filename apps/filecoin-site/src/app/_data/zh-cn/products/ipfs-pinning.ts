@@ -22,7 +22,7 @@ export const HERO = {
   body: 'Filecoin 存储提供者保存你的文件，你继续使用熟悉的 IPFS 工具。',
   primary: {
     label: '开始固定',
-    href: 'https://github.com/filecoin-project/filecoin-pin',
+    href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
   },
   secondary: { label: '从 IPFS 迁移', href: MIGRATION_GUIDE },
 } as const

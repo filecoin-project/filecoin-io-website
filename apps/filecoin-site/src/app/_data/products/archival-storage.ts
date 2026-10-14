@@ -1,11 +1,9 @@
 // Archival Storage page copy, section by section in page order (Figma 432:17733 to 432:18190).
-// `href: null` marks a destination that does not exist yet; the closing "Start building today"
-// cards are the homepage's (START_CARDS).
+// Every call to action on the page is "Schedule a call".
 
 import { PATHS } from '@/constants/paths'
 
-import { offHome, START_CARDS, type StartCard } from '@/data/home'
-import { CONTACT, DOCS } from '@/data/links'
+import { CONTACT } from '@/data/links'
 
 import type { FeatureCard } from '@/components/sections/product/FeatureCards'
 
@@ -19,7 +17,6 @@ export const HERO = {
   title: ['A place to keep your backups', 'for years, for much less cost'],
   body: 'Backups, media libraries, and records on Filecoin archival storage for data that you need to keep but barely touch.',
   primary: { label: 'Schedule a call', href: TALK_TO_US },
-  secondary: { label: 'Read Docs', href: DOCS },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -29,19 +26,16 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       art: 'backups-and-records',
       title: 'Backups and records',
       body: 'Database backups, system snapshots, and record files that you don’t need every day.',
-      link: { label: 'Learn More', href: null },
     },
     {
       art: 'media-archives',
       title: 'Media archives',
       body: 'Video libraries and raw footage that need to be preserved.',
-      link: { label: 'Learn More', href: null },
     },
     {
       art: 'datasets-and-models',
       title: 'Datasets and models',
       body: 'Training data and model checkpoints from past projects.',
-      link: { label: 'Learn More', href: null },
     },
   ],
 }
@@ -51,6 +45,3 @@ export const SET_UP = {
   body: 'Tell us how much data you have and how often you’d need it back. We’ll come back with a plan.',
   primary: { label: 'Schedule a call', href: TALK_TO_US },
 } as const
-
-/** The homepage's closing cards; "Get started" points at the homepage's two-step section. */
-export const START: StartCard[] = offHome(START_CARDS.cards)
