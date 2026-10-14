@@ -20,8 +20,16 @@ export const HERO = {
   /** Each line starts on its own line; it still wraps on its own on narrow screens. */
   title: ['Everyday storage, built for', 'data you read often'],
   body: 'Keep files, datasets, and media online and ready to retrieve, without being locked in to one provider.',
-  primary: { label: 'Start Building', href: START_BUILDING },
-  secondary: { label: 'Schedule a call', href: CONTACT },
+  primary: {
+    label: 'Start Building',
+    href: START_BUILDING,
+    ref: 'data-storage-start-building-hero',
+  },
+  secondary: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'data-storage-talk-sales-hero',
+  },
 } as const
 
 export const BUILT_FOR: { title: string; body: string; cards: FeatureCard[] } =
@@ -51,7 +59,7 @@ export const INTEGRATE: {
   title: string
   body: string
   examples: CodeExample[]
-  docs: { label: string; href: string }
+  docs: { label: string; href: string; ref?: string }
 } = {
   title: 'Three ways to use warm storage',
   body: 'Pick the one that fits how you work: the command line, your own code, or your agent.',
@@ -71,6 +79,7 @@ export const INTEGRATE: {
       docs: {
         label: 'Documentation',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+        ref: 'data-storage-example-docs',
       },
     },
     {
@@ -94,7 +103,7 @@ export const INTEGRATE: {
       prompt: { label: AGENT_PROMPT.label, lines: AGENT_PROMPT.lines },
     },
   ],
-  docs: { label: 'Documentation', href: DOCS },
+  docs: { label: 'Documentation', href: DOCS, ref: 'data-storage-docs' },
 }
 
 export const PRICING: {
@@ -127,6 +136,14 @@ export const PRICING: {
 
 export const CLOSING = {
   title: ['Data that stays yours,', 'wherever it lives'],
-  primary: { label: 'Start Building', href: START_BUILDING },
-  secondary: { label: 'Schedule a call', href: CONTACT },
+  primary: {
+    label: 'Start Building',
+    href: START_BUILDING,
+    ref: 'data-storage-start-building-closing',
+  },
+  secondary: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'data-storage-talk-sales-closing',
+  },
 } as const

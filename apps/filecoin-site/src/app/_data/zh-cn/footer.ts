@@ -13,30 +13,38 @@ export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: '了解', href: zh('/learn') },
       { label: '案例研究', href: zh('/case-studies') },
-      { label: '存储数据', href: zh(STORE) },
+      { label: '存储数据', href: zh(STORE), ref: 'footer-store-data' },
       { label: '提供存储', href: zh('/provide-storage') },
-      { label: '开始在 Filecoin 上构建', href: START_BUILDING, external: true },
+      {
+        label: '开始在 Filecoin 上构建',
+        href: START_BUILDING,
+        ref: 'footer-start-building',
+        external: true,
+      },
       { label: '博客', href: zh('/blog') },
     ],
   },
   {
     title: '资源',
     links: [
-      { label: '文档', href: DOCS, external: true },
+      { label: '文档', href: DOCS, ref: 'footer-docs', external: true },
       {
         label: '开发手册',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook',
+        ref: 'footer-cookbook',
         external: true,
       },
       {
         label: 'GitHub',
         href: 'https://github.com/filecoin-project',
+        ref: 'footer-github',
         external: true,
       },
       { label: '资助', href: 'https://fil.org/grants', external: true },
       {
         label: '安全漏洞赏金',
         href: 'https://immunefi.com/bug-bounty/filecoin/',
+        ref: 'footer-security',
         external: true,
       },
       {
@@ -47,11 +55,13 @@ export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
       {
         label: '网络状态',
         href: 'https://status.filecoin.io/',
+        ref: 'footer-status',
         external: true,
       },
       {
         label: '网络健康',
         href: 'https://dashboard.starboard.ventures/',
+        ref: 'footer-metrics',
         external: true,
       },
     ],

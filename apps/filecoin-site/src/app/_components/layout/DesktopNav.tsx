@@ -259,6 +259,7 @@ export default function DesktopNav({
           <li>
             <NavAnchor
               link={pricing}
+              navGroup="products"
               className="block rounded-[4px] px-2.5 py-1.5 text-base leading-[1.4375] font-semibold text-(--hdr-fg) transition-colors duration-200 ease-out hover:bg-(--hdr-hover)"
             />
           </li>

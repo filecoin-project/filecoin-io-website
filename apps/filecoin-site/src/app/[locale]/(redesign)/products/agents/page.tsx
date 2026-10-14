@@ -51,7 +51,7 @@ export default async function AgentsPage({ params }: AgentsPageProps) {
         <FeatureCards id="agent-uses-title" {...USES} />
         <SkillsCta id="skills-title" {...SKILLS} locale={locale} />
         <Callout id="training-title" {...TRAINING} />
-        <StartCards cards={START} locale={locale} />
+        <StartCards cards={START} locale={locale} focPrefix="agent-skills" />
       </main>
     </>
   )

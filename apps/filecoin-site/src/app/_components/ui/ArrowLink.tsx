@@ -33,9 +33,12 @@ export default function ArrowLink({
   context,
   tabIndex,
   className,
+  focRef,
 }: {
   href: string | null
   label: string
+  /** The link's foc_ref for click tracking (`data-foc-cta`). */
+  focRef?: string
   /** Read after the label by screen readers, so repeated "Learn More" links stay distinct. */
   context?: ReactNode
   tabIndex?: number
@@ -45,6 +48,7 @@ export default function ArrowLink({
     <SiteLink
       href={href}
       tabIndex={tabIndex}
+      data-foc-cta={focRef}
       className={clsx(
         'group/arrow font-heading text-body font-book text-ink inline-flex items-center gap-1 rounded-sm leading-[1.15] tracking-[-0.02em]',
         className,

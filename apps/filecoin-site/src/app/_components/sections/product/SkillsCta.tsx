@@ -21,7 +21,7 @@ export default function SkillsCta({
     body: string
     code?: string
     badge?: string
-    link?: { label: string; href: string }
+    link?: { label: string; href: string; ref?: string }
   }[]
 }) {
   return (
@@ -66,7 +66,11 @@ export default function SkillsCta({
                     </span>
                   )}
                   {option.link && (
-                    <ButtonLink href={option.link.href} variant="white">
+                    <ButtonLink
+                      href={option.link.href}
+                      data-foc-cta={option.link.ref}
+                      variant="white"
+                    >
                       {option.link.label}
                     </ButtonLink>
                   )}

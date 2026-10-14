@@ -24,8 +24,13 @@ export const HERO = {
   primary: {
     label: 'Start Pinning',
     href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+    ref: 'ipfs-pinning-start-pinning',
   },
-  secondary: { label: 'Migrate from IPFS', href: MIGRATION_GUIDE },
+  secondary: {
+    label: 'Migrate from IPFS',
+    href: MIGRATION_GUIDE,
+    ref: 'ipfs-pinning-migrate-guide',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -38,19 +43,28 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       link: {
         label: 'Learn More',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+        ref: 'ipfs-pinning-read-docs',
       },
     },
     {
       art: 'pin-migrate-from-another-service',
       title: 'Migrate from another pinning service',
       body: 'Move your whole archive to Filecoin in one go. Your CIDs and links keep working.',
-      link: { label: 'Learn More', href: MIGRATION_GUIDE },
+      link: {
+        label: 'Learn More',
+        href: MIGRATION_GUIDE,
+        ref: 'ipfs-pinning-migration-docs',
+      },
     },
     {
       art: 'pin-with-your-agents',
       title: 'Pin with your agents',
       body: 'Add the Filecoin skill to your agent, then ask it to pin a file or folder. It runs the commands and hands you back the CID.',
-      link: { label: 'Learn More', href: '/products/agents' },
+      link: {
+        label: 'Learn More',
+        href: '/products/agents',
+        ref: 'ipfs-pinning-agents',
+      },
     },
   ],
 }
@@ -85,7 +99,11 @@ export const MIGRATE = {
   sectionId: MIGRATE_ID,
   title: ['Moving a big IPFS archive?'],
   body: 'For archives over 500 GB, we’ll help you plan the migration so your CIDs and links don’t break.',
-  primary: { label: 'Chat with us', href: CONTACT },
+  primary: {
+    label: 'Chat with us',
+    href: CONTACT,
+    ref: 'ipfs-pinning-plan-migration',
+  },
 } as const
 
 /** The homepage's closing cards; "Get started" points at the homepage's two-step section. */

@@ -14,7 +14,11 @@ const TALK_TO_US = CONTACT
 export const HERO = {
   title: ['长年保存备份的地方，', '成本低得多'],
   body: '备份、媒体库和记录放在 Filecoin 归档存储，适合需要保留但几乎不动的数据。',
-  primary: { label: '预约通话', href: TALK_TO_US },
+  primary: {
+    label: '预约通话',
+    href: TALK_TO_US,
+    ref: 'backups-archives-talk-sales-hero',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -41,5 +45,9 @@ export const USES: { title: string; cards: FeatureCard[] } = {
 export const SET_UP = {
   title: ['归档存储由我们与你一起', '按需求配置'],
   body: '告诉我们你有多少数据、多久需要取回一次，我们会给出方案。',
-  primary: { label: '预约通话', href: TALK_TO_US },
+  primary: {
+    label: '预约通话',
+    href: TALK_TO_US,
+    ref: 'backups-archives-talk-sales-closing',
+  },
 } as const

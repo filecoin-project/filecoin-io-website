@@ -25,8 +25,16 @@ export const HERO = {
   ],
   label: 'Agent 负责干活。Filecoin 负责保存。',
   body: '让你的 Agent 能够发布它构建的成果、跨会话共享上下文，并记录每一次操作。',
-  primary: { label: '安装技能', href: SKILLS_REPO },
-  secondary: { label: '阅读文档', href: AGENTS_DOCS },
+  primary: {
+    label: '安装技能',
+    href: SKILLS_REPO,
+    ref: 'agent-skills-install',
+  },
+  secondary: {
+    label: '阅读文档',
+    href: AGENTS_DOCS,
+    ref: 'agent-skills-read-docs',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -36,13 +44,21 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       art: 'publish-artifacts',
       title: '发布成果',
       body: '你的 Agent 能生成报告、仪表盘、落地页等各种成果；借助“发布”技能，你可以得到一个可分享给任何人的链接。',
-      link: { label: '了解更多', href: AGENTS_DOCS },
+      link: {
+        label: '了解更多',
+        href: AGENTS_DOCS,
+        ref: 'agent-skills-uses-docs-1',
+      },
     },
     {
       art: 'share-sessions',
       title: '共享会话',
       body: '切换模型或交接给队友？让 Agent 的上下文保持完整，随时随地都能接着用。',
-      link: { label: '了解更多', href: AGENTS_DOCS },
+      link: {
+        label: '了解更多',
+        href: AGENTS_DOCS,
+        ref: 'agent-skills-uses-docs-2',
+      },
     },
     {
       art: 'keep-a-record',
@@ -61,7 +77,11 @@ export const SKILLS = {
       title: '技能',
       body: '现成的 Agent 技能，用于在 Filecoin 上存储和检索。可直接放进 Claude、ChatGPT 或任何支持技能的 Agent。',
       code: 'filecoin-project/filecoin-skills',
-      link: { label: '在 GitHub 查看', href: SKILLS_REPO },
+      link: {
+        label: '在 GitHub 查看',
+        href: SKILLS_REPO,
+        ref: 'agent-skills-view-github',
+      },
     },
     {
       title: 'CLI',
@@ -82,5 +102,5 @@ export const START: StartCard[] = offHome(START_CARDS.cards)
 export const TRAINING = {
   title: '在海量数据上训练模型？',
   body: '对于数据量超过 100 TB 的团队，我们可以为你的流水线搭建合适的方案以降低成本。',
-  cta: { label: '与我们聊聊', href: CONTACT },
+  cta: { label: '与我们聊聊', href: CONTACT, ref: 'agent-skills-talk-sales' },
 } as const

@@ -42,7 +42,7 @@ export type ScrollStep = {
   body: string
   art: ReactNode
   /** A link under the body, e.g. "Learn More" to the step's own page (`href: null` until it exists). */
-  link?: { label: string; href: string | null }
+  link?: { label: string; href: string | null; ref?: string }
 }
 
 /**
@@ -222,6 +222,7 @@ export default function ScrollSteps({
                     {step.link && (
                       <ArrowLink
                         href={step.link.href}
+                        focRef={step.link.ref}
                         label={step.link.label}
                         context={`about ${step.title}`}
                         // A closed step's link is hidden while pinned, so keep it out of the tab order.

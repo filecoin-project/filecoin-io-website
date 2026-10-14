@@ -16,7 +16,11 @@ export const HERO = {
   // Broken to leave room for the animated stack on the right.
   title: ['A place to keep your backups', 'for years, for much less cost'],
   body: 'Backups, media libraries, and records on Filecoin archival storage for data that you need to keep but barely touch.',
-  primary: { label: 'Schedule a call', href: TALK_TO_US },
+  primary: {
+    label: 'Schedule a call',
+    href: TALK_TO_US,
+    ref: 'backups-archives-talk-sales-hero',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -43,5 +47,9 @@ export const USES: { title: string; cards: FeatureCard[] } = {
 export const SET_UP = {
   title: ['Archival storage is set up with you', 'for your needs'],
   body: 'Tell us how much data you have and how often you’d need it back. We’ll come back with a plan.',
-  primary: { label: 'Schedule a call', href: TALK_TO_US },
+  primary: {
+    label: 'Schedule a call',
+    href: TALK_TO_US,
+    ref: 'backups-archives-talk-sales-closing',
+  },
 } as const

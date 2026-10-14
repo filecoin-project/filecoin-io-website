@@ -123,3 +123,33 @@ python3 scripts/illustrations/build_cards.py
 The globe's land outlines (`public/assets/data/land-110m.json`, Natural Earth
 1:110m) are rebuilt with `python3 scripts/globe/build-land.py`; provider
 locations are in `src/app/_data/globe.ts`.
+
+### Product funnel tracking
+
+The website side of the "Filecoin Product Funnel Tracking" plan: Plausible custom events with
+label properties, and campaign parameters on the links that leave for the docs or the Console.
+`FocAttribution` (`src/app/_components/layout`) is mounted in both root layouts; the pure
+helpers are in `src/app/_utils/focAttribution.ts`.
+
+- **First touch.** On landing, the visit's labels are worked out from `utm_*` (type
+  `campaign`), else the referrer (`organic` for a search engine, `referral` otherwise, `direct`
+  with none; a referral from our own docs or Console keeps the first touch already recorded).
+  They are kept in `sessionStorage` under `foc_ft` for the visit. Labels only: no visitor ID is
+  created, stored or sent.
+- **Events.** `journey_start` once per visit (`ft_type`, `entry_page`, `first_touch_source`,
+  `first_touch_medium`, `ref_domain`); `product_page_view` on each funnel entry page
+  (`product`: `agent-skills`, `ipfs-pinning`, `data-storage` for `/products/warm-storage`,
+  `backups-archives`, `store-data`, `pricing`); `cta_click` on every link that carries
+  `data-foc-cta` (`foc_ref`, `nav_group`, `link_type`, `hop_source`). Every event also carries
+  the first-touch labels. Register these properties in the Plausible site settings (custom
+  properties) and add the three events as goals, or they stay invisible in reports.
+- **Which links.** A link sends `cta_click` when it has a `ref` in the copy
+  (`src/app/_data`, same values in the Chinese twins): the header menus (`nav_group` is the
+  menu's id: `products`, `network`, `build`, `discover`), the footer (`footer`), and the page
+  calls to action (`in-page`). The provide-storage, explorer, blog, learn and community links
+  have no `ref`, so they send nothing. `link_type` is `sales` for the contact dialog,
+  `decorate` for the docs, Console, filecoin.cloud and fil.one, `exit` for any other site and
+  `redirect` for a page of this site.
+- **Decoration.** A `decorate` link gets, at click time, the visit's `utm_*` (or
+  `utm_source=filecoin.io&utm_medium=website`), `foc_ref`, `foc_ft` (the first-touch type) and
+  `foc_entry` (the entry page). Parameters the link already has are kept.

@@ -18,8 +18,16 @@ const AGENT_PROMPT = HOME_GET_STARTED.prompt
 export const HERO = {
   title: ['日常存储，', '为常读数据而建'],
   body: '让文件、数据集和媒体保持在线、随时可取，且不被单一提供者锁定。',
-  primary: { label: '开始构建', href: START_BUILDING },
-  secondary: { label: '预约通话', href: CONTACT },
+  primary: {
+    label: '开始构建',
+    href: START_BUILDING,
+    ref: 'data-storage-start-building-hero',
+  },
+  secondary: {
+    label: '预约通话',
+    href: CONTACT,
+    ref: 'data-storage-talk-sales-hero',
+  },
 } as const
 
 export const BUILT_FOR: { title: string; body: string; cards: FeatureCard[] } =
@@ -49,7 +57,7 @@ export const INTEGRATE: {
   title: string
   body: string
   examples: CodeExample[]
-  docs: { label: string; href: string }
+  docs: { label: string; href: string; ref?: string }
 } = {
   title: '使用温存储的三种方式',
   body: '选择最适合你工作方式的一种：命令行、你自己的代码，或你的 Agent。',
@@ -69,6 +77,7 @@ export const INTEGRATE: {
       docs: {
         label: '文档',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+        ref: 'data-storage-example-docs',
       },
     },
     {
@@ -92,7 +101,7 @@ export const INTEGRATE: {
       prompt: { label: AGENT_PROMPT.label, lines: AGENT_PROMPT.lines },
     },
   ],
-  docs: { label: '文档', href: DOCS },
+  docs: { label: '文档', href: DOCS, ref: 'data-storage-docs' },
 }
 
 export const PRICING: {
@@ -117,6 +126,14 @@ export const PRICING: {
 
 export const CLOSING = {
   title: ['数据始终属于你，', '无论存在哪里'],
-  primary: { label: '开始构建', href: START_BUILDING },
-  secondary: { label: '预约通话', href: CONTACT },
+  primary: {
+    label: '开始构建',
+    href: START_BUILDING,
+    ref: 'data-storage-start-building-closing',
+  },
+  secondary: {
+    label: '预约通话',
+    href: CONTACT,
+    ref: 'data-storage-talk-sales-closing',
+  },
 } as const

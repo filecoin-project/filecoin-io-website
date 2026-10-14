@@ -44,6 +44,7 @@ export default function GetStarted({ locale = 'en' }: { locale?: Locale }) {
             {/* The whole card opens the console; the title is the link's name, the picture stays described. */}
             <SiteLink
               href={account.href}
+              data-foc-cta={account.ref}
               aria-label={LABELS.inConsole(account.title)}
               className={`${CARD} group/card block aspect-[31/22] transition-[box-shadow,scale] duration-300 ease-out hover:shadow-[0_2px_12px_rgb(0_0_0/0.12)] active:scale-[0.99]`}
             >
@@ -60,6 +61,7 @@ export default function GetStarted({ locale = 'en' }: { locale?: Locale }) {
             </SiteLink>
             <ButtonLink
               href={account.href}
+              data-foc-cta={account.ref}
               variant="ink"
               className="mt-item w-40"
             >

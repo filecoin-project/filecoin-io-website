@@ -15,8 +15,16 @@ export const HERO = {
   /** Each line starts on its own line; it still wraps on its own on narrow screens. */
   title: ['Store data with integrity,', 'for less'],
   body: 'Open, verifiable storage for all your data from files, videos to backups. Check your data’s integrity any time, and take it anywhere.',
-  primary: { label: 'Start Building', href: START_BUILDING },
-  secondary: { label: 'Schedule a call', href: CONTACT },
+  primary: {
+    label: 'Start Building',
+    href: START_BUILDING,
+    ref: 'store-data-start-building-hero',
+  },
+  secondary: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'store-data-talk-sales-hero',
+  },
 } as const
 
 export const INTEGRITY: { title: string; body: string; cards: FeatureCard[] } =
@@ -45,7 +53,7 @@ export const INTEGRITY: { title: string; body: string; cards: FeatureCard[] } =
 export type StoragePlan = {
   title: string
   points: string[]
-  link: { label: string; href: string | null }
+  link: { label: string; href: string | null; ref?: string }
 }
 
 export const STORAGE_PLANS: {
@@ -63,7 +71,11 @@ export const STORAGE_PLANS: {
         'Multiple independent copies by default',
         'Optional CDN layer for faster delivery',
       ],
-      link: { label: 'Learn More', href: '/products/warm-storage' },
+      link: {
+        label: 'Learn More',
+        href: '/products/warm-storage',
+        ref: 'store-data-plan-warm-storage',
+      },
     },
     {
       title: 'Archival Storage',
@@ -72,7 +84,11 @@ export const STORAGE_PLANS: {
         'Scales to petabytes across independent providers',
         'Set up with our team for large volumes',
       ],
-      link: { label: 'Learn More', href: '/products/archival-storage' },
+      link: {
+        label: 'Learn More',
+        href: '/products/archival-storage',
+        ref: 'store-data-plan-archival-storage',
+      },
     },
     {
       title: 'Enterprise Storage',
@@ -81,7 +97,11 @@ export const STORAGE_PLANS: {
         'Works with the S3 SDKs and CLIs you already use',
         'Client-side encryption and access control',
       ],
-      link: { label: 'Learn More', href: 'https://fil.one' },
+      link: {
+        label: 'Learn More',
+        href: 'https://fil.one',
+        ref: 'store-data-plan-filone',
+      },
     },
   ],
 }
@@ -99,7 +119,7 @@ export type CodeExample = {
   comment?: string
   code: CodeLine[]
   /** This snippet's own documentation link, in place of the block's shared one. */
-  docs?: { label: string; href: string }
+  docs?: { label: string; href: string; ref?: string }
   /**
    * Shown as the homepage's prompt card (label, Copy pill, monospace lines) in place of the code
    * and the documentation link.
@@ -111,7 +131,7 @@ export const GET_STARTED: {
   title: string
   body: string
   examples: CodeExample[]
-  docs: { label: string; href: string }
+  docs: { label: string; href: string; ref?: string }
 } = {
   title: 'Get started and store your first data',
   body: 'Upload, retrieve, and pin with a few lines of code.',
@@ -150,11 +170,19 @@ export const GET_STARTED: {
       ],
     },
   ],
-  docs: { label: 'Documentation', href: DOCS },
+  docs: { label: 'Documentation', href: DOCS, ref: 'store-data-docs' },
 }
 
 export const CLOSING = {
   title: ['Full Control on how you store data,', 'lower cost on your bill'],
-  primary: { label: 'Start Building', href: START_BUILDING },
-  secondary: { label: 'Schedule a call', href: CONTACT },
+  primary: {
+    label: 'Start Building',
+    href: START_BUILDING,
+    ref: 'store-data-start-building-closing',
+  },
+  secondary: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'store-data-talk-sales-closing',
+  },
 } as const

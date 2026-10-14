@@ -51,7 +51,7 @@ export default function CodeExamples({
 }: {
   id: string
   examples: CodeExample[]
-  docs: { label: string; href: string }
+  docs: { label: string; href: string; ref?: string }
   locale?: Locale
 }) {
   const { LABELS, COPY_BUTTON } = copy(locale).ui
@@ -240,6 +240,7 @@ export default function CodeExamples({
               {!example.prompt && (
                 <PillLink
                   href={(example.docs ?? docs).href}
+                  focRef={(example.docs ?? docs).ref}
                   className="mt-auto self-end"
                 >
                   {(example.docs ?? docs).label}

@@ -16,8 +16,8 @@ export const HERO = {
   /** Each line starts on its own line; it still wraps on its own on narrow screens. */
   title: ['Open storage you control,', 'at a lower cost'],
   body: 'Filecoin is an open storage network. Your data stays portable, stored with more than one provider, and under your control. It’s used by teams from enterprise platforms to simple onramps.',
-  primary: TALK,
-  secondary: { label: 'Store data', href: STORE },
+  primary: { ...TALK, ref: 'pricing-talk-sales-hero' },
+  secondary: { label: 'Store data', href: STORE, ref: 'pricing-store-data' },
 } as const
 
 export type Offer = {
@@ -28,7 +28,7 @@ export type Offer = {
   price: { from: string; amount: string; unit: string; note?: string }
   bestFor: string
   features: string[]
-  cta: { label: string; href: string }
+  cta: { label: string; href: string; ref?: string }
   /** Kept for the Warm Storage page's card; the pricing page's cards have none. */
   tags?: string[]
 }
@@ -43,7 +43,11 @@ export const WARM_STORAGE: Offer = {
     'Fetch files from anywhere, with faster delivery as an option',
     'Pay month by month for what you store',
   ],
-  cta: { label: 'Get started', href: 'https://filecoin.cloud/' },
+  cta: {
+    label: 'Get started',
+    href: 'https://filecoin.cloud/',
+    ref: 'pricing-warm-get-started',
+  },
 }
 
 export const ARCHIVAL_STORAGE: Offer = {
@@ -57,7 +61,11 @@ export const ARCHIVAL_STORAGE: Offer = {
     'Room to grow from terabytes to petabytes',
     'Set up with our team around how much you have and how often you need it back',
   ],
-  cta: { label: 'Schedule a call', href: CONTACT },
+  cta: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'pricing-archival-talk-sales',
+  },
 }
 
 export const ENTERPRISE_STORAGE: Offer = {
@@ -76,7 +84,11 @@ export const ENTERPRISE_STORAGE: Offer = {
     'Control who can see and change each bucket',
     'Lock in capacity for 1, 3 or 5 years',
   ],
-  cta: { label: 'Visit Fil One', href: FIL_ONE },
+  cta: {
+    label: 'Visit Fil One',
+    href: FIL_ONE,
+    ref: 'pricing-enterprise-filone',
+  },
 }
 
 /** The hero's plan card: each plan by a short name, priced as its card below. */
@@ -100,7 +112,7 @@ export const PLANS: { title: string; body: string; offers: Offer[] } = {
 export const CHOOSE = {
   title: ['Not sure what storage', 'solution to choose?'],
   body: "Tell us about your needs, and we'll guide you to the Filecoin solution that fits best.",
-  primary: TALK,
+  primary: { ...TALK, ref: 'pricing-talk-sales-closing' },
 } as const
 
 /** The homepage's closing cards; "Get started" points at the homepage's two-step section. */

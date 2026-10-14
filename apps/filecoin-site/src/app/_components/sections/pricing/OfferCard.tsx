@@ -110,7 +110,11 @@ export default function OfferCard({
         <div aria-hidden="true" className="hidden lg:block" />
 
         <div className="mt-auto">
-          <ButtonLink href={offer.cta.href} variant="ink">
+          <ButtonLink
+            href={offer.cta.href}
+            data-foc-cta={offer.cta.ref}
+            variant="ink"
+          >
             {offer.cta.label}
           </ButtonLink>
         </div>

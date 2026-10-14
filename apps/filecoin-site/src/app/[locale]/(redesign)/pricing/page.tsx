@@ -70,7 +70,7 @@ export default async function PricingPage({ params }: PricingPageProps) {
           </div>
         </section>
         <ClosingCta id="choose-title" {...CHOOSE} />
-        <StartCards cards={START} locale={locale} />
+        <StartCards cards={START} locale={locale} focPrefix="pricing" />
       </main>
     </>
   )

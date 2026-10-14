@@ -14,8 +14,12 @@ export const HERO = {
   /** Two lines on wider screens; wraps freely on phones. */
   title: ["Storing the internet's", 'most valuable information'],
   body: "Filecoin is the world's largest open storage network, built to keep data secure and sovereign.",
-  primary: { label: 'Store data', href: STORE },
-  secondary: { label: 'Schedule a call', href: CONTACT },
+  primary: { label: 'Store data', href: STORE, ref: 'home-hero-store-data' },
+  secondary: {
+    label: 'Schedule a call',
+    href: CONTACT,
+    ref: 'home-hero-talk-sales',
+  },
 } as const
 
 export type PartnerLogo = {
@@ -133,6 +137,8 @@ export type UseCase = {
   body: string
   /** The use case's own page. `null` renders a placeholder link until that page is built. */
   href: string | null
+  /** The link's foc_ref for click tracking (`data-foc-cta`). */
+  ref?: string
 }
 
 /** "Store and serve" section: pinned on desktop, stepping through one use case per scroll stretch. */
@@ -152,30 +158,35 @@ export const STORAGE_USE_CASES: {
       title: 'Warm',
       body: 'Store datasets, AI training data and video libraries, and retrieve them on demand. And for data providers, you can provide paid access to your datasets.',
       href: '/products/warm-storage',
+      ref: 'home-use-case-data-storage',
     },
     {
       id: 'backup-archives',
       title: 'Archival',
       body: 'Keep backups, media archives, and records you need to hold onto for years.',
       href: '/products/archival-storage',
+      ref: 'home-use-case-backup-archives',
     },
     {
       id: 'agent-storage',
       title: 'Agent',
       body: 'Let your agents publish what they build, share sessions across tools, and keep a record of every action.',
       href: '/products/agents',
+      ref: 'home-use-case-agent-storage',
     },
     {
       id: 'ipfs',
       title: 'IPFS',
       body: 'Pin your IPFS content on Filecoin. Your CIDs, IPNS names and gateway links keep working, backed by verifiable storage.',
       href: '/products/ipfs',
+      ref: 'home-use-case-ipfs',
     },
     {
       id: 'enterprise',
       title: 'Enterprise',
       body: 'S3-compatible object storage from Fil One. Use the S3 SDKs and CLIs you already have, with client-side encryption and access control.',
       href: 'https://fil.one',
+      ref: 'home-use-case-enterprise',
     },
   ],
 }
@@ -232,6 +243,7 @@ export const GET_STARTED = {
   account: {
     title: 'Create your account',
     href: CONSOLE,
+    ref: 'home-get-started-console',
     caption: 'Sign up in the Filecoin Console to set up your account',
     image: {
       src: '/assets/illustrations/console-funds.svg',
@@ -300,6 +312,8 @@ export type StartCard = {
   title: string
   body: string
   href: string | null
+  /** The link's foc_ref for click tracking (`data-foc-cta`). */
+  ref?: string
 }
 
 /** For the same cards on other pages: any in-page anchor points back at the homepage. */
@@ -319,18 +333,21 @@ export const START_CARDS: { title: string; body: string; cards: StartCard[] } =
         title: 'Documentation',
         body: 'Read our quickstart guide',
         href: DOCS,
+        ref: 'start-docs',
       },
       {
         icon: '/assets/icons/start/get-started.svg',
         title: 'Get started',
         body: 'Store your files in minutes',
         href: STORE,
+        ref: 'start-store-data',
       },
       {
         icon: '/assets/icons/start/talk-to-sales.svg',
         title: 'Talk to sales',
         body: 'Talk to us and find the right fit',
         href: CONTACT,
+        ref: 'start-talk-sales',
       },
     ],
   }

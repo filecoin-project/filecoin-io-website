@@ -6,6 +6,8 @@ import { DOCS } from './links'
 export type NavLink = {
   label: string
   href: string | null
+  /** The link's foc_ref for click tracking (`data-foc-cta`); a link without one sends no event. */
+  ref?: string
   title?: string
   /** Small pill after the label, e.g. "Coming soon". */
   badge?: string
@@ -21,8 +23,12 @@ export type NavGroup = {
   links: NavLink[]
 }
 
+export type NavGroupId = 'products' | 'network' | 'build' | 'discover'
+
 export type NavSection = {
   label: string
+  /** The `nav_group` sent with clicks on the section's links. */
+  id: NavGroupId
   /** Columns of groups, laid out left to right. */
   columns: NavGroup[][]
   aside?: { heading: string; link: NavLink }
@@ -33,6 +39,7 @@ export type NavVariant = 'home' | 'inner'
 /** Products and solutions in one menu. */
 const PRODUCTS: NavSection = {
   label: 'Products',
+  id: 'products',
   columns: [
     [
       {
@@ -41,21 +48,25 @@ const PRODUCTS: NavSection = {
           {
             label: 'Warm Storage',
             href: '/products/warm-storage',
+            ref: 'nav-products-warm-storage',
             note: 'Keep frequently used data online and ready to retrieve.',
           },
           {
             label: 'IPFS Storage',
             href: '/products/ipfs',
+            ref: 'nav-products-ipfs',
             note: 'Store files on Filecoin with the IPFS tools you know.',
           },
           {
             label: 'Archival Storage',
             href: '/products/archival-storage',
+            ref: 'nav-products-archival-storage',
             note: 'Preserve backups and records you rarely need to access.',
           },
           {
             label: 'Enterprise Storage w/ Fil.one',
             href: 'https://fil.one',
+            ref: 'nav-products-filone',
             note: 'S3-compatible storage with fast reads and predictable pricing.',
           },
         ],
@@ -68,17 +79,20 @@ const PRODUCTS: NavSection = {
           {
             label: 'Agents Skills',
             href: '/products/agents',
+            ref: 'nav-products-agents',
             note: 'Help agents publish work and share context across sessions.',
             badge: 'NEW',
           },
           {
             label: 'Pay Console',
             href: 'https://pay.filecoin.cloud/console',
+            ref: 'nav-products-console',
             note: 'Manage your Filecoin services and billing.',
           },
           {
             label: 'Pricing',
             href: '/pricing',
+            ref: 'nav-products-pricing',
             note: 'Compare warm, archival, and enterprise storage pricing.',
           },
         ],
@@ -89,13 +103,22 @@ const PRODUCTS: NavSection = {
 
 const NETWORK: NavSection = {
   label: 'Network',
+  id: 'network',
   columns: [
     [
       {
         links: [
           { label: 'Provide Storage', href: '/provide-storage' },
-          { label: 'Network Status', href: 'https://status.filecoin.io/' },
-          { label: 'Metrics', href: 'https://dashboard.starboard.ventures/' },
+          {
+            label: 'Network Status',
+            href: 'https://status.filecoin.io/',
+            ref: 'nav-network-status',
+          },
+          {
+            label: 'Metrics',
+            href: 'https://dashboard.starboard.ventures/',
+            ref: 'nav-network-metrics',
+          },
         ],
       },
     ],
@@ -118,16 +141,22 @@ const NETWORK: NavSection = {
 
 const BUILD: NavSection = {
   label: 'Build',
+  id: 'build',
   columns: [
     [
       {
         links: [
-          { label: 'Quickstart', href: DOCS },
-          { label: 'Github', href: 'https://github.com/filecoin-project' },
-          { label: 'Docs', href: DOCS },
+          { label: 'Quickstart', href: DOCS, ref: 'nav-build-quickstart' },
+          {
+            label: 'Github',
+            href: 'https://github.com/filecoin-project',
+            ref: 'nav-build-github',
+          },
+          { label: 'Docs', href: DOCS, ref: 'nav-build-docs' },
           {
             label: 'Security',
             href: 'https://immunefi.com/bug-bounty/filecoin/',
+            ref: 'nav-build-security',
           },
         ],
       },
@@ -137,6 +166,7 @@ const BUILD: NavSection = {
 
 const DISCOVER: NavSection = {
   label: 'Discover',
+  id: 'discover',
   columns: [
     [
       {
@@ -159,7 +189,11 @@ export const NAV: Record<NavVariant, NavSection[]> = {
   inner: SECTIONS,
 }
 
-export const PRICING: NavLink = { label: 'Pricing', href: '/pricing' }
+export const PRICING: NavLink = {
+  label: 'Pricing',
+  href: '/pricing',
+  ref: 'nav-pricing',
+}
 export const JOIN_NETWORK: NavLink = {
   label: 'Provide Storage',
   href: '/provide-storage',

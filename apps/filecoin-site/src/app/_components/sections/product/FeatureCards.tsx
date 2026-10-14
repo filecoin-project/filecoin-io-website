@@ -11,7 +11,9 @@ export type FeatureCard = {
   title: string
   body: string
   /** A "Learn More" pill (`href: null` until the page exists), or a "Coming soon" label. */
-  link?: { label: string; href: string | null } | { label: string; soon: true }
+  link?:
+    | { label: string; href: string | null; ref?: string }
+    | { label: string; soon: true }
 }
 
 /**
@@ -59,6 +61,7 @@ export default function FeatureCards({
                         ) : (
                           <PillLink
                             href={card.link.href}
+                            focRef={card.link.ref}
                             context={`about ${card.title}`}
                           >
                             {card.link.label}

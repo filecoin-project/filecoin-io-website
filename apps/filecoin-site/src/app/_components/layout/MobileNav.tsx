@@ -226,6 +226,7 @@ export default function MobileNav({
                 >
                   <NavAnchor
                     link={pricing}
+                    navGroup="products"
                     className="font-heading font-book block py-4 text-2xl tracking-[-0.02em] text-slate-50"
                     onNavigate={onClose}
                   />
@@ -240,6 +241,7 @@ export default function MobileNav({
                 <div className="grid grid-cols-2 gap-3">
                   <ButtonLink
                     href={HERO.primary.href}
+                    data-foc-cta={HERO.primary.ref}
                     variant="primary"
                     className="w-full"
                   >
@@ -247,6 +249,7 @@ export default function MobileNav({
                   </ButtonLink>
                   <ButtonLink
                     href={HERO.secondary.href}
+                    data-foc-cta={HERO.secondary.ref}
                     variant="secondary"
                     className="w-full"
                   >

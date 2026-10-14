@@ -49,7 +49,7 @@ export default async function IpfsPage({ params }: IpfsPageProps) {
           locale={locale}
         />
         <ClosingCta id="migrate-title" {...MIGRATE} />
-        <StartCards cards={START} locale={locale} />
+        <StartCards cards={START} locale={locale} focPrefix="ipfs-pinning" />
       </main>
     </>
   )

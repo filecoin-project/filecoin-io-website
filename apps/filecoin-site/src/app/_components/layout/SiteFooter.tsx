@@ -41,6 +41,8 @@ function FooterAnchor({
   return (
     <a
       href={link.href}
+      data-foc-cta={link.ref}
+      data-foc-nav={link.ref ? 'footer' : undefined}
       {...(link.external
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {})}

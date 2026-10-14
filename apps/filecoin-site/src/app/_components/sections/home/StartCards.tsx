@@ -14,7 +14,13 @@ import SiteLink from '@/components/ui/SiteLink'
 export default function StartCards({
   cards,
   locale = 'en',
-}: { cards?: StartCard[]; locale?: Locale } = {}) {
+  focPrefix = 'home',
+}: {
+  cards?: StartCard[]
+  locale?: Locale
+  /** Prefixes the cards' foc_refs with the page they are on, e.g. "pricing-start-docs". */
+  focPrefix?: string
+} = {}) {
   const { START_CARDS } = copy(locale).home
   const { title, body } = START_CARDS
   cards ??= START_CARDS.cards
@@ -41,6 +47,7 @@ export default function StartCards({
             <Reveal key={card.title} as="li" delay={i * 80} amount={0.3}>
               <SiteLink
                 href={card.href}
+                data-foc-cta={card.ref && `${focPrefix}-${card.ref}`}
                 className="group/card ease-out-quint relative flex min-h-[clamp(10rem,8.239rem+7.512vw,15rem)] flex-col justify-between gap-10 rounded-3xl bg-linear-to-br from-white/70 to-white/35 p-6 shadow-[0_2px_6px_rgb(0_0_0/0.16)] ring-1 ring-white/70 transition-[translate,box-shadow,background-color] duration-300 ring-inset hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_36px_-12px_rgb(0_0_0/0.22)] active:translate-y-0 active:duration-150 motion-reduce:hover:translate-y-0"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}

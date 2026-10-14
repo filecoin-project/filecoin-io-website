@@ -18,8 +18,8 @@ const FIL_ONE = 'https://fil.one'
 export const HERO = {
   title: ['由你掌控的开放存储，', '成本更低'],
   body: 'Filecoin 是一个开放的存储网络。你的数据保持可迁移，由多个提供者存储，并始终由你掌控。从企业平台到简单的接入工具，各类团队都在使用它。',
-  primary: TALK,
-  secondary: { label: '存储数据', href: zh(STORE) },
+  primary: { ...TALK, ref: 'pricing-talk-sales-hero' },
+  secondary: { label: '存储数据', href: zh(STORE), ref: 'pricing-store-data' },
 } as const
 
 export const WARM_STORAGE: Offer = {
@@ -32,7 +32,11 @@ export const WARM_STORAGE: Offer = {
     '随处获取文件，可选更快的分发',
     '按月为存储的数据付费',
   ],
-  cta: { label: '开始使用', href: 'https://filecoin.cloud/' },
+  cta: {
+    label: '开始使用',
+    href: 'https://filecoin.cloud/',
+    ref: 'pricing-warm-get-started',
+  },
 }
 
 export const ARCHIVAL_STORAGE: Offer = {
@@ -44,7 +48,7 @@ export const ARCHIVAL_STORAGE: Offer = {
     '从 TB 级扩展到 PB 级的空间',
     '根据你的数据量和取回频率，与我们的团队一起配置',
   ],
-  cta: { label: '预约通话', href: CONTACT },
+  cta: { label: '预约通话', href: CONTACT, ref: 'pricing-archival-talk-sales' },
 }
 
 export const ENTERPRISE_STORAGE: Offer = {
@@ -58,7 +62,11 @@ export const ENTERPRISE_STORAGE: Offer = {
     '控制谁可以查看和修改每个存储桶',
     '锁定 1、3 或 5 年的容量',
   ],
-  cta: { label: '访问 Fil One', href: FIL_ONE },
+  cta: {
+    label: '访问 Fil One',
+    href: FIL_ONE,
+    ref: 'pricing-enterprise-filone',
+  },
 }
 
 export const HERO_PLANS = [
@@ -81,7 +89,7 @@ export const PLANS: { title: string; body: string; offers: Offer[] } = {
 export const CHOOSE = {
   title: ['不确定该选', '哪种存储方案？'],
   body: '告诉我们你的需求，我们会为你推荐最合适的 Filecoin 方案。',
-  primary: TALK,
+  primary: { ...TALK, ref: 'pricing-talk-sales-closing' },
 } as const
 
 export const START: StartCard[] = offHome(START_CARDS.cards)

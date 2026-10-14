@@ -11,7 +11,7 @@ export default function Callout({
   id: string
   title: string
   body: string
-  cta: { label: string; href: string }
+  cta: { label: string; href: string; ref?: string }
 }) {
   return (
     <section
@@ -31,7 +31,7 @@ export default function Callout({
           </p>
         </Reveal>
         <Reveal delay={90} className="mt-6">
-          <ButtonLink href={cta.href} variant="ink">
+          <ButtonLink href={cta.href} data-foc-cta={cta.ref} variant="ink">
             {cta.label}
           </ButtonLink>
         </Reveal>

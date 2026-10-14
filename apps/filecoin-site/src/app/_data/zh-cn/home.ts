@@ -24,8 +24,8 @@ export const HERO = {
   },
   title: ['保存互联网上', '最有价值的信息'],
   body: 'Filecoin 是全球最大的开放存储网络，让数据安全、自主可控。',
-  primary: { label: '存储数据', href: zh(STORE) },
-  secondary: { label: '预约通话', href: CONTACT },
+  primary: { label: '存储数据', href: zh(STORE), ref: 'home-hero-store-data' },
+  secondary: { label: '预约通话', href: CONTACT, ref: 'home-hero-talk-sales' },
 } as const
 
 export const TRUSTED_BY: { caption: string; logos: PartnerLogo[] } = {
@@ -72,30 +72,35 @@ export const STORAGE_USE_CASES: {
       title: '温存储',
       body: '存储数据集、AI 训练数据和视频库，按需检索。数据提供方还可以对数据集提供付费访问。',
       href: zh('/products/warm-storage'),
+      ref: 'home-use-case-data-storage',
     },
     {
       id: 'backup-archives',
       title: '归档存储',
       body: '保存需要留存多年的备份、媒体档案和记录。',
       href: zh('/products/archival-storage'),
+      ref: 'home-use-case-backup-archives',
     },
     {
       id: 'agent-storage',
       title: 'Agent',
       body: '让你的 Agent 发布它构建的成果、跨工具共享会话，并记录每一次操作。',
       href: zh('/products/agents'),
+      ref: 'home-use-case-agent-storage',
     },
     {
       id: 'ipfs',
       title: 'IPFS',
       body: '把 IPFS 内容固定到 Filecoin。你的 CID、IPNS 名称和网关链接照常可用，并由可验证的存储提供支撑。',
       href: zh('/products/ipfs'),
+      ref: 'home-use-case-ipfs',
     },
     {
       id: 'enterprise',
       title: '企业级',
       body: '来自 Fil One 的 S3 兼容对象存储。使用你已有的 S3 SDK 和 CLI，支持客户端加密和访问控制。',
       href: 'https://fil.one',
+      ref: 'home-use-case-enterprise',
     },
   ],
 }
@@ -147,6 +152,7 @@ export const GET_STARTED = {
   account: {
     title: '创建账户',
     href: CONSOLE,
+    ref: 'home-get-started-console',
     caption: '在 Filecoin 控制台注册并设置账户',
     image: {
       src: '/assets/illustrations/console-funds.svg',
@@ -189,18 +195,21 @@ export const START_CARDS: { title: string; body: string; cards: StartCard[] } =
         title: '文档',
         body: '阅读快速入门指南',
         href: DOCS,
+        ref: 'start-docs',
       },
       {
         icon: '/assets/icons/start/get-started.svg',
         title: '开始使用',
         body: '几分钟内存储你的文件',
         href: zh(STORE),
+        ref: 'start-store-data',
       },
       {
         icon: '/assets/icons/start/talk-to-sales.svg',
         title: '联系销售',
         body: '与我们交流，找到最合适的方案',
         href: CONTACT,
+        ref: 'start-talk-sales',
       },
     ],
   }

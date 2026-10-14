@@ -14,10 +14,13 @@ export default function NavAnchor({
   link,
   className,
   onNavigate,
+  navGroup,
   children,
 }: {
   link: NavLink
   className?: string
+  /** The `nav_group` sent with a click on the link. */
+  navGroup?: string
   onNavigate?: () => void
   children?: ReactNode
 }) {
@@ -34,6 +37,8 @@ export default function NavAnchor({
     <a
       className={className}
       href={link.href}
+      data-foc-cta={link.ref}
+      data-foc-nav={link.ref ? navGroup : undefined}
       title={link.title}
       onClick={onNavigate}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}

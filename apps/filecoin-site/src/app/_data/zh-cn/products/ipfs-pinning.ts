@@ -23,8 +23,13 @@ export const HERO = {
   primary: {
     label: '开始固定',
     href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+    ref: 'ipfs-pinning-start-pinning',
   },
-  secondary: { label: '从 IPFS 迁移', href: MIGRATION_GUIDE },
+  secondary: {
+    label: '从 IPFS 迁移',
+    href: MIGRATION_GUIDE,
+    ref: 'ipfs-pinning-migrate-guide',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -37,19 +42,28 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       link: {
         label: '了解更多',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook/filecoin-pin/getting-started',
+        ref: 'ipfs-pinning-read-docs',
       },
     },
     {
       art: 'pin-migrate-from-another-service',
       title: '从其他固定服务迁移',
       body: '一次性把整个归档迁移到 Filecoin。你的 CID 和链接照常可用。',
-      link: { label: '了解更多', href: MIGRATION_GUIDE },
+      link: {
+        label: '了解更多',
+        href: MIGRATION_GUIDE,
+        ref: 'ipfs-pinning-migration-docs',
+      },
     },
     {
       art: 'pin-with-your-agents',
       title: '用你的 Agent 固定',
       body: '为 Agent 添加 Filecoin 技能，然后让它固定文件或文件夹。它会运行命令并把 CID 交还给你。',
-      link: { label: '了解更多', href: zh('/products/agents') },
+      link: {
+        label: '了解更多',
+        href: zh('/products/agents'),
+        ref: 'ipfs-pinning-agents',
+      },
     },
   ],
 }
@@ -83,7 +97,11 @@ export const MIGRATE = {
   sectionId: MIGRATE_ID,
   title: ['要迁移大型 IPFS 归档？'],
   body: '对于超过 500 GB 的归档，我们会帮你规划迁移，确保 CID 和链接不会失效。',
-  primary: { label: '与我们聊聊', href: CONTACT },
+  primary: {
+    label: '与我们聊聊',
+    href: CONTACT,
+    ref: 'ipfs-pinning-plan-migration',
+  },
 } as const
 
 export const START: StartCard[] = offHome(START_CARDS.cards)

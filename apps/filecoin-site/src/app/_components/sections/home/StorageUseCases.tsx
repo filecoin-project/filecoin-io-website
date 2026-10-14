@@ -35,12 +35,12 @@ export default function StorageUseCases({
       id="store-and-serve"
       title={title}
       intro={intro}
-      steps={steps.map(({ id, title, body, href }) => ({
+      steps={steps.map(({ id, title, body, href, ref }) => ({
         id,
         title,
         body,
         art: ART[id],
-        link: { label: linkLabel, href },
+        link: { label: linkLabel, href, ref },
       }))}
     />
   )

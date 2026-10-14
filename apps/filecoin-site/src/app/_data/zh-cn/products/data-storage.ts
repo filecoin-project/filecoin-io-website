@@ -15,8 +15,16 @@ export const TITLE = '数据存储'
 export const HERO = {
   title: ['以完整性存储数据，', '成本更低'],
   body: '面向文件、视频、备份等所有数据的开放、可验证存储。随时检查数据完整性，随时带走。',
-  primary: { label: '开始构建', href: START_BUILDING },
-  secondary: { label: '预约通话', href: CONTACT },
+  primary: {
+    label: '开始构建',
+    href: START_BUILDING,
+    ref: 'store-data-start-building-hero',
+  },
+  secondary: {
+    label: '预约通话',
+    href: CONTACT,
+    ref: 'store-data-talk-sales-hero',
+  },
 } as const
 
 export const INTEGRITY: { title: string; body: string; cards: FeatureCard[] } =
@@ -57,7 +65,11 @@ export const STORAGE_PLANS: {
         '默认保留多个独立副本',
         '可选 CDN 层，加速分发',
       ],
-      link: { label: '了解更多', href: zh('/products/warm-storage') },
+      link: {
+        label: '了解更多',
+        href: zh('/products/warm-storage'),
+        ref: 'store-data-plan-warm-storage',
+      },
     },
     {
       title: '归档存储',
@@ -66,7 +78,11 @@ export const STORAGE_PLANS: {
         '可跨独立提供者扩展到 PB 级',
         '大容量需求由我们的团队协助配置',
       ],
-      link: { label: '了解更多', href: zh('/products/archival-storage') },
+      link: {
+        label: '了解更多',
+        href: zh('/products/archival-storage'),
+        ref: 'store-data-plan-archival-storage',
+      },
     },
     {
       title: '企业级存储',
@@ -75,7 +91,11 @@ export const STORAGE_PLANS: {
         '兼容你已在使用的 S3 SDK 和 CLI',
         '客户端加密和访问控制',
       ],
-      link: { label: '了解更多', href: 'https://fil.one' },
+      link: {
+        label: '了解更多',
+        href: 'https://fil.one',
+        ref: 'store-data-plan-filone',
+      },
     },
   ],
 }
@@ -84,7 +104,7 @@ export const GET_STARTED: {
   title: string
   body: string
   examples: CodeExample[]
-  docs: { label: string; href: string }
+  docs: { label: string; href: string; ref?: string }
 } = {
   title: '开始使用，存储你的第一份数据',
   body: '几行代码即可上传、检索和固定。',
@@ -123,11 +143,19 @@ export const GET_STARTED: {
       ],
     },
   ],
-  docs: { label: '文档', href: DOCS },
+  docs: { label: '文档', href: DOCS, ref: 'store-data-docs' },
 }
 
 export const CLOSING = {
   title: ['完全掌控数据的存储方式，', '账单成本更低'],
-  primary: { label: '开始构建', href: START_BUILDING },
-  secondary: { label: '预约通话', href: CONTACT },
+  primary: {
+    label: '开始构建',
+    href: START_BUILDING,
+    ref: 'store-data-start-building-closing',
+  },
+  secondary: {
+    label: '预约通话',
+    href: CONTACT,
+    ref: 'store-data-talk-sales-closing',
+  },
 } as const

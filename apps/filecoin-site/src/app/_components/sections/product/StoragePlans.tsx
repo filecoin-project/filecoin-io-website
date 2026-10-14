@@ -55,6 +55,7 @@ export default function StoragePlans({
                 </ul>
                 <PillLink
                   href={plan.link.href}
+                  focRef={plan.link.ref}
                   context={`about ${plan.title}`}
                   className="mt-auto self-start"
                 >

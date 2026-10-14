@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import RotatingPhrase from '@/components/sections/product/RotatingPhrase'
 import ButtonLink from '@/components/ui/ButtonLink'
 
-type Action = { label: string; href: string }
+type Action = { label: string; href: string; ref?: string }
 
 /** A title line that opens with phrases taking turns ("Claude does the" …) before fixed words. */
 export type RotatingLine = { rotate: readonly string[]; rest: string }
@@ -117,6 +117,7 @@ export default function ProductHero({
           <div className="mt-[clamp(2rem,1.824rem+0.751vw,2.5rem)] flex flex-wrap gap-[clamp(0.75rem,0.486rem+1.127vw,1.5rem)]">
             <ButtonLink
               href={primary.href}
+              data-foc-cta={primary.ref}
               variant="ink"
               className="intro"
               style={delay(600)}
@@ -126,6 +127,7 @@ export default function ProductHero({
             {secondary && (
               <ButtonLink
                 href={secondary.href}
+                data-foc-cta={secondary.ref}
                 variant="white"
                 className="intro"
                 style={delay(660)}

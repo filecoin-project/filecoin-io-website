@@ -34,8 +34,16 @@ export const HERO = {
   ],
   label: 'Agents do the work. Filecoin keeps it.',
   body: 'Give your agents the ability to publish what they build, share context across sessions, and keep a record of every action.',
-  primary: { label: 'Install Skills', href: SKILLS_REPO },
-  secondary: { label: 'Read Docs', href: AGENTS_DOCS },
+  primary: {
+    label: 'Install Skills',
+    href: SKILLS_REPO,
+    ref: 'agent-skills-install',
+  },
+  secondary: {
+    label: 'Read Docs',
+    href: AGENTS_DOCS,
+    ref: 'agent-skills-read-docs',
+  },
 } as const
 
 export const USES: { title: string; cards: FeatureCard[] } = {
@@ -45,13 +53,21 @@ export const USES: { title: string; cards: FeatureCard[] } = {
       art: 'publish-artifacts',
       title: 'Publish Artifacts',
       body: 'Your agent creates everything from reports to dashboards to landing pages, with “Publish skill” you can get a link to share with anyone.',
-      link: { label: 'Learn More', href: AGENTS_DOCS },
+      link: {
+        label: 'Learn More',
+        href: AGENTS_DOCS,
+        ref: 'agent-skills-uses-docs-1',
+      },
     },
     {
       art: 'share-sessions',
       title: 'Share Sessions',
       body: 'Switching models or handing over to a teammate? Keep your agent’s context intact and easy to pick up anywhere.',
-      link: { label: 'Learn More', href: AGENTS_DOCS },
+      link: {
+        label: 'Learn More',
+        href: AGENTS_DOCS,
+        ref: 'agent-skills-uses-docs-2',
+      },
     },
     {
       art: 'keep-a-record',
@@ -70,7 +86,11 @@ export const SKILLS = {
       title: 'Skills',
       body: 'Ready-made agent skills for storing and retrieving on Filecoin. Drop them into Claude, ChatGPT, or any agent that reads skills.',
       code: 'filecoin-project/filecoin-skills',
-      link: { label: 'View on GitHub', href: SKILLS_REPO },
+      link: {
+        label: 'View on GitHub',
+        href: SKILLS_REPO,
+        ref: 'agent-skills-view-github',
+      },
     },
     {
       title: 'CLI',
@@ -92,5 +112,5 @@ export const START: StartCard[] = offHome(START_CARDS.cards)
 export const TRAINING = {
   title: 'Training models on massive data?',
   body: 'For teams with over 100 TB of data we can build the right setup for your pipeline to reduce costs.',
-  cta: { label: 'Chat with us', href: CONTACT },
+  cta: { label: 'Chat with us', href: CONTACT, ref: 'agent-skills-talk-sales' },
 } as const

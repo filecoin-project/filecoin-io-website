@@ -3,7 +3,13 @@ import { DOCS, START_BUILDING, STORE } from './links'
 // Footer links, carried over from the current filecoin.io footer (the earlier snapshot's
 // `src/app/_components/Footer.tsx`). Links to other sites open in a new tab and carry an arrow.
 
-export type FooterLink = { label: string; href: string; external?: boolean }
+export type FooterLink = {
+  label: string
+  href: string
+  external?: boolean
+  /** The link's foc_ref for click tracking (`data-foc-cta`); a link without one sends no event. */
+  ref?: string
+}
 
 export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
   {
@@ -11,11 +17,12 @@ export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: 'Learn', href: '/learn' },
       { label: 'Case Studies', href: '/case-studies' },
-      { label: 'Store Data', href: STORE },
+      { label: 'Store Data', href: STORE, ref: 'footer-store-data' },
       { label: 'Provide Storage', href: '/provide-storage' },
       {
         label: 'Start Building on Filecoin',
         href: START_BUILDING,
+        ref: 'footer-start-building',
         external: true,
       },
       { label: 'Blog', href: '/blog' },
@@ -24,21 +31,29 @@ export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Resources',
     links: [
-      { label: 'Documentation', href: DOCS, external: true },
+      {
+        label: 'Documentation',
+        href: DOCS,
+        ref: 'footer-docs',
+        external: true,
+      },
       {
         label: 'Cookbook',
         href: 'https://docs.filecoin.io/build-on-filecoin/cookbook',
+        ref: 'footer-cookbook',
         external: true,
       },
       {
         label: 'GitHub',
         href: 'https://github.com/filecoin-project',
+        ref: 'footer-github',
         external: true,
       },
       { label: 'Grants', href: 'https://fil.org/grants', external: true },
       {
         label: 'Security Bug Bounty',
         href: 'https://immunefi.com/bug-bounty/filecoin/',
+        ref: 'footer-security',
         external: true,
       },
       {
@@ -49,11 +64,13 @@ export const FOOTER_GROUPS: { title: string; links: FooterLink[] }[] = [
       {
         label: 'Network Status',
         href: 'https://status.filecoin.io/',
+        ref: 'footer-status',
         external: true,
       },
       {
         label: 'Network Health',
         href: 'https://dashboard.starboard.ventures/',
+        ref: 'footer-metrics',
         external: true,
       },
     ],

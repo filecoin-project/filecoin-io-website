@@ -1,7 +1,7 @@
 import ButtonLink from '@/components/ui/ButtonLink'
 import Reveal from '@/components/ui/Reveal'
 
-type Action = { label: string; href: string }
+type Action = { label: string; href: string; ref?: string }
 
 /**
  * A centred call to action on the dark carbon: a heading, an optional line of copy, and one or
@@ -53,11 +53,19 @@ export default function ClosingCta({
           delay={90}
           className="mt-[clamp(2rem,1.824rem+0.751vw,2.5rem)] flex flex-wrap justify-center gap-[clamp(0.75rem,0.486rem+1.127vw,1.5rem)]"
         >
-          <ButtonLink href={primary.href} variant="white">
+          <ButtonLink
+            href={primary.href}
+            data-foc-cta={primary.ref}
+            variant="white"
+          >
             {primary.label}
           </ButtonLink>
           {secondary && (
-            <ButtonLink href={secondary.href} variant="secondary">
+            <ButtonLink
+              href={secondary.href}
+              data-foc-cta={secondary.ref}
+              variant="secondary"
+            >
               {secondary.label}
             </ButtonLink>
           )}

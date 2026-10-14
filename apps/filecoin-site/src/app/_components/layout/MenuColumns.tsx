@@ -40,10 +40,12 @@ function Group({
   group,
   products = false,
   onNavigate,
+  navGroup,
 }: {
   group: NavGroup
   products?: boolean
   onNavigate?: () => void
+  navGroup: string
 }) {
   return (
     <div>
@@ -52,6 +54,7 @@ function Group({
           <NavAnchor
             link={group.headingLink}
             className={clsx(LINK, 'font-semibold')}
+            navGroup={navGroup}
             onNavigate={onNavigate}
           >
             <LinkContent link={group.headingLink} />
@@ -70,7 +73,12 @@ function Group({
         <ul className={products ? 'space-y-3' : 'space-y-0.5'}>
           {group.links.map((link) => (
             <li key={link.label}>
-              <NavAnchor link={link} className={LINK} onNavigate={onNavigate}>
+              <NavAnchor
+                link={link}
+                className={LINK}
+                navGroup={navGroup}
+                onNavigate={onNavigate}
+              >
                 <LinkContent link={link} products={products} />
               </NavAnchor>
             </li>
@@ -117,6 +125,7 @@ export default function MenuColumns({
               key={g}
               group={group}
               products={products}
+              navGroup={section.id}
               onNavigate={onNavigate}
             />
           ))}
@@ -127,6 +136,7 @@ export default function MenuColumns({
           className={clsx(layout === 'row' && 'border-l border-white/8 pl-10')}
         >
           <Group
+            navGroup={section.id}
             group={{
               heading: section.aside.heading,
               links: [section.aside.link],

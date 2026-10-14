@@ -16,6 +16,7 @@ import { BASE_DOMAIN, ROOT_METADATA } from '@/constants/siteMetadata'
 import { ORGANIZATION_SCHEMA_BASE } from '@/constants/structuredDataConstants'
 
 import ContactDialog from '@/components/layout/ContactDialog'
+import { FocAttribution } from '@/components/layout/FocAttribution'
 import SiteFooter from '@/components/layout/SiteFooter'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SmoothScroll from '@/components/layout/SmoothScroll'
@@ -90,6 +91,7 @@ export default async function RedesignLayout({
           {locale === CHINESE_LOCALE && <TranslationNotice />}
           <ContactDialog locale={locale} />
           <SmoothScroll />
+          <FocAttribution />
         </PlausibleProvider>
       </body>
     </html>

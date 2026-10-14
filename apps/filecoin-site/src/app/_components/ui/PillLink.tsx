@@ -39,9 +39,12 @@ export default function PillLink({
   children,
   context,
   className,
+  focRef,
 }: {
   href: string | null
   children: string
+  /** The link's foc_ref for click tracking (`data-foc-cta`). */
+  focRef?: string
   /** Read after the label by screen readers, so repeated "Learn More" links stay distinct. */
   context?: ReactNode
   className?: string
@@ -49,6 +52,7 @@ export default function PillLink({
   return (
     <SiteLink
       href={href}
+      data-foc-cta={focRef}
       className={clsx(
         PILL,
         'group/pill text-carbon pr-[clamp(1.125rem,1.037rem+0.376vw,1.375rem)] pl-[clamp(1.25rem,1.162rem+0.376vw,1.5rem)] leading-[1.15]',

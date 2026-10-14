@@ -160,6 +160,7 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
         <div className="mt-[clamp(2rem,1.824rem+0.751vw,2.5rem)] flex flex-wrap justify-center gap-[clamp(0.75rem,0.486rem+1.127vw,1.5rem)]">
           <ButtonLink
             href={HERO.primary.href}
+            data-foc-cta={HERO.primary.ref}
             variant="primary"
             className="intro"
             style={delay(640)}
@@ -168,6 +169,7 @@ export default function Hero({ locale = 'en' }: { locale?: Locale }) {
           </ButtonLink>
           <ButtonLink
             href={HERO.secondary.href}
+            data-foc-cta={HERO.secondary.ref}
             variant="secondary"
             className="intro"
             style={delay(700)}
