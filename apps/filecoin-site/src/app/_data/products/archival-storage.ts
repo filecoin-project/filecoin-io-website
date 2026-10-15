@@ -1,5 +1,5 @@
 // Archival Storage page copy, section by section in page order (Figma 432:17733 to 432:18190).
-// Every call to action on the page is "Schedule a call".
+// Like Warm Storage: "Start Building" (the FCSS docs) and "Schedule a call" in the hero and the closing.
 
 import { PATHS } from '@/constants/paths'
 
@@ -12,11 +12,20 @@ export const TITLE = 'Archival Storage'
 
 const TALK_TO_US = CONTACT
 
+/** Filecoin Cold Storage Service, the archival tier, in the Onchain Cloud docs. */
+export const ARCHIVAL_DOCS =
+  'https://docs.filecoin.io/build-on-filecoin/filecoin-onchain-cloud/fcss'
+
 export const HERO = {
   // Broken to leave room for the animated stack on the right.
   title: ['A place to keep your backups', 'for years, for much less cost'],
   body: 'Backups, media libraries, and records on Filecoin archival storage for data that you need to keep but barely touch.',
   primary: {
+    label: 'Start Building',
+    href: ARCHIVAL_DOCS,
+    ref: 'backups-archives-start-building-hero',
+  },
+  secondary: {
     label: 'Schedule a call',
     href: TALK_TO_US,
     ref: 'backups-archives-talk-sales-hero',
@@ -48,6 +57,11 @@ export const SET_UP = {
   title: ['Archival storage is set up with you', 'for your needs'],
   body: 'Tell us how much data you have and how often you’d need it back. We’ll come back with a plan.',
   primary: {
+    label: 'Start Building',
+    href: ARCHIVAL_DOCS,
+    ref: 'backups-archives-start-building-closing',
+  },
+  secondary: {
     label: 'Schedule a call',
     href: TALK_TO_US,
     ref: 'backups-archives-talk-sales-closing',
