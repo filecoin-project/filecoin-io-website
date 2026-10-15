@@ -1,8 +1,7 @@
 // Destinations shared across the site's pages.
 
 /** Every "Docs" / "Documentation" / "Read the docs" link. */
-export const DOCS =
-  'https://docs.filecoin.io/build-on-filecoin/filecoin-onchain-cloud/synapse-quickstart'
+export const DOCS = 'https://docs.filecoin.io/getting-started/quickstart'
 
 /** Every "Start building" button: the quickstart. */
 export const START_BUILDING = DOCS
