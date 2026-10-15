@@ -8,6 +8,8 @@ export type Article = {
   dateTime: string
   author?: string
   href: string
+  /** The post's 16:9 cover from /uploads; cards without one show the shared fallback art. */
+  image?: string
 }
 
 export const NEWS: {
@@ -31,6 +33,7 @@ export const NEWS: {
       date: 'Oct 15, 2026',
       dateTime: '2026-10-15',
       href: '/blog/New-Products-and-Reward-Mechanics-Optimize-the-Filecoin-Network-for-Enterprises-and-Agents',
+      image: '/uploads/blog-new-products-reward-mechanics.webp',
     },
     {
       title: 'New IPFS Tools Launch on Filecoin',

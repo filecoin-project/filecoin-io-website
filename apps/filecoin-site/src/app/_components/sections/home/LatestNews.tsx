@@ -35,10 +35,10 @@ export default function LatestNews({ locale = 'en' }: { locale?: Locale }) {
                   aria-label={LABELS.readMore(article.title)}
                   className="group block h-full rounded-2xl"
                 >
-                  {/* The original shared fallback art is decorative; the title names the link. */}
+                  {/* The cover is decorative; the title names the link. Posts without one use the shared fallback art. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/assets/images/image-fallback.120ac424.webp"
+                    src={article.image ?? '/assets/images/image-fallback.120ac424.webp'}
                     alt=""
                     width={1920}
                     height={1080}
