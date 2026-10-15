@@ -18,7 +18,7 @@ related_article_1: content/blog/posts/longhash-ventures-demo-day-nft-and-media-s
 related_article_2: ""
 related_article_3: ""
 share_image: /uploads/fil-blog-longhash-demo-1.webp
-title: "Filecoin Frontier Accelerator Demo Day: DeFi & Consumer Tech "
+title: "Filecoin Frontier Accelerator Demo Day: DeFi & Consumer Tech"
 ---
 
 On April 23, the Filecoin Frontier Accelerator II powered by LongHash Ventures, hosted a demo day to showcase the 11 teams that completed the 3-month accelerator program. During the program, the teams received hands-on venture support, world-class mentorship, dedicated resources from the Filecoin community, and a $20,000 grant to continue building on the Filecoin network. This post profiles the startups building DeFi and consumer tech solutions with or on Filecoin’s technology: **Atomica, Ownership Labs, Sinso Technology**, and **Vera AI.**

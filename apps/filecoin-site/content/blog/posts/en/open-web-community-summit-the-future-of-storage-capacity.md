@@ -19,7 +19,7 @@ related_article_1: ""
 related_article_2: ""
 related_article_3: ""
 share_image: /uploads/fil-blog-2021-07-15-open-web-summit.webp
-title: "Open Web Community Summit: The Future of Storage Capacity "
+title: "Open Web Community Summit: The Future of Storage Capacity"
 _template: blog_detail
 ---
 
