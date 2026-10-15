@@ -1,5 +1,5 @@
 // "Latest news" on the homepage: a snapshot of filecoin.io's three latest posts, retrieved
-// October 13, 2026. Chinese (the posts of filecoin.io/zh-cn) is in ./zh-cn/news.ts.
+// October 15, 2026. Chinese (the posts of filecoin.io/zh-cn) is in ./zh-cn/news.ts.
 
 export type Article = {
   title: string
@@ -24,6 +24,15 @@ export const NEWS: {
   viewAll: { label: 'View all articles', href: '/blog' },
   articles: [
     {
+      title:
+        'New Products and Reward Mechanics Optimize the Filecoin Network for Enterprises and Agents',
+      description:
+        'Three major developments are reshaping the future of Filecoin tokenomics and strategy this month.',
+      date: 'Oct 15, 2026',
+      dateTime: '2026-10-15',
+      href: '/blog/New-Products-and-Reward-Mechanics-Optimize-the-Filecoin-Network-for-Enterprises-and-Agents',
+    },
+    {
       title: 'New IPFS Tools Launch on Filecoin',
       description: 'Migrate pinned CIDs to Filecoin unchanged',
       date: 'Sep 30, 2026',
@@ -37,15 +46,6 @@ export const NEWS: {
       date: 'Sep 16, 2026',
       dateTime: '2026-09-16',
       href: '/blog/Real-world-assets-are-onchain-What-about-the-data-behind-them',
-    },
-    {
-      title: 'Filecoin ProPGF Batch 3: ~$1.4M committed',
-      description:
-        'The Protocol Labs Filecoin Impact Fund (PLFIF) is pleased to announce the results of Filecoin Public Goods Funding (ProPGF) Batch 3',
-      date: 'Aug 19, 2026',
-      dateTime: '2026-08-19',
-      author: 'ProPGF Team',
-      href: '/blog/Filecoin-ProPGF-Batch-3-14M-committed',
     },
   ],
 }

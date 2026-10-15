@@ -26,7 +26,8 @@ Other catalysts are also causing huge shifts in the storage market, with growing
 
 Filecoin has made major progress on the priorities of its [2026 Network Strategy](https://www.filecoin.io/blog/the-2026-filecoin-network-strategy). Six years after launch, the Filecoin network is well poised, offering a model that hyperscalers and other incumbents cannot: an open market where independent storage providers build services, compete for customers, and earn network rewards based on the customers they serve.
 
-> “The Filecoin network is already the world’s largest decentralized storage network. This year has been an inflection point for the Filecoin network, with the Filecoin community’s focus shifting away from growing supply and towards scaling demand. This is happening at just the right moment, as AI fundamentally changes the demand for self-sovereign storage, positioning Filecoin to become essential infrastructure for an AI-native world.” – Marta Belcher, President, Filecoin Foundation
+> “The Filecoin network is already the world’s largest decentralized storage network. This year has been an inflection point for the Filecoin network, with the Filecoin community’s focus shifting away from growing supply and towards scaling demand. This is happening at just the right moment, as AI fundamentally changes the demand for self-sovereign storage, positioning Filecoin to become essential infrastructure for an AI-native world.”\
+> – Marta Belcher, President, Filecoin Foundation
 
 ## New Incentive Mechanisms: Rewarding Customer Acquisition & Retention
 
@@ -69,7 +70,8 @@ Filecoin storage has released features that make it a first class destination fo
 
 A customer, whether an enterprise archiving records or an agent storing its outputs, pays for a recurring service, and that payment settles onchain. The storage provider serving that customer earns the revenue and locks FIL against it. Rewards flow toward the services customers keep using, and whatever incentive goes unearned, along with a portion of fees, is burned rather than distributed. The result is a network that becomes more attractive to the next enterprise, developer, and operator, which starts the cycle again.
 
-> “The Filecoin flywheel is connected end to end now, and it’s starting to build momentum. We’re still early but the feedback loop between useful storage, customer revenue, network value, and service provider rewards is fully assembled and we have a downhill run ahead of us to build on that momentum.” – Molly Mackinlay, CEO, FilOz
+> “The Filecoin flywheel is connected end to end now, and it’s starting to build momentum. We’re still early but the feedback loop between useful storage, customer revenue, network value, and service provider rewards is fully assembled and we have a downhill run ahead of us to build on that momentum.”\
+> – Molly Mackinlay, CEO, FilOz
 
 ## What Comes Next for Filecoin
 
