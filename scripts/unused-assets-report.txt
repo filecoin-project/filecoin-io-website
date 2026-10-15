@@ -1,0 +1,13 @@
+UNUSED ASSETS REPORT
+===================
+
+filecoin-site:
+  public/assets/miniatures/storacha-miniature.svg
+  public/assets/miniatures/singularity-miniature.svg
+  public/assets/images/victor-chang.webp
+  public/assets/images/storacha.webp
+  Total: 4
+
+Total unused: 4
+Total deleted: 4
+Generated: 2026-10-01T02:24:59.576Z
