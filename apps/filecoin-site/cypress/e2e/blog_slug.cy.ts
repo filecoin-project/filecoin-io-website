@@ -26,7 +26,7 @@ describe('Blog Slug Page', () => {
         'getEntryFrontmatter',
         `${ENGLISH_CONTENT_FOLDER}/${slug}`,
       ).then(({ title, seo, excerpt }) => {
-        const seoTitle = seo?.title || title
+        const seoTitle = (seo?.title || title).trim()
         const metaTitleWithSuffix = getMetaTitleWithSuffix(seoTitle)
 
         tests.metadata.fn({
@@ -55,7 +55,7 @@ describe('Blog Slug Page (zh-cn)', () => {
         'getEntryFrontmatter',
         `${CHINESE_CONTENT_FOLDER}/${slug}`,
       ).then(({ title, seo, excerpt }) => {
-        const seoTitle = seo?.title || title
+        const seoTitle = (seo?.title || title).trim()
         const metaTitleWithSuffix = getMetaTitleWithSuffix(seoTitle)
 
         tests.metadata.fn({

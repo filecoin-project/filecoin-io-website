@@ -137,7 +137,7 @@ export const COST_COMPARISON: {
   step: number
   bars: CostBar[]
 } = {
-  title: 'Store 4.6X more data for same cost',
+  title: 'Store 4.6X more data for the same cost',
   body: 'Filecoin enables you to store more data quickly without worrying about cost.',
   axisLabel: 'Data per $100 (in TB)',
   max: 20,

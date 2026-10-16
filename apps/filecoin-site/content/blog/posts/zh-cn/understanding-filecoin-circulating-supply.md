@@ -16,7 +16,7 @@ related_article_1: ""
 related_article_2: ""
 related_article_3: ""
 share_image: /uploads/filecoin-circulating-supply-header-2.webp
-title: "了解Filecoin流通供应机制 "
+title: "了解Filecoin流通供应机制"
 ---
 
 本文旨在解读Filecoin代币是如何进入流通供应的，并提供更多关于各种利益相关者如何参与其经济的见解、阐明人们应该如何对待和思考Filecoin代币经济。本可配合阅读[Filecoin经济](/2020-engineering-filecoins-economy-en.pdf)论文和[Filecoin 技术规范](https://spec.filecoin.io/#)中概述的详细机制。

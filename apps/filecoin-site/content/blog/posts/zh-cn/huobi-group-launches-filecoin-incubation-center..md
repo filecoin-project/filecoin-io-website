@@ -15,7 +15,7 @@ related_article_1: ""
 related_article_2: ""
 related_article_3: ""
 share_image: /uploads/huobi-launches-filecoin-incubation-center-2.webp
-title: "火币推出Filecoin孵化中心 "
+title: "火币推出Filecoin孵化中心"
 ---
 
 火币集团与协议实验室合作，宣布成立火币Filecoin孵化中心，并设立1000万美元的基金，专门用于支持Filecoin生态。

@@ -1,7 +1,13 @@
 import clsx from 'clsx'
 
-import type { NavGroup, NavLink, NavSection } from '@/data/site-nav'
+import {
+  opensInNewTab,
+  type NavGroup,
+  type NavLink,
+  type NavSection,
+} from '@/data/site-nav'
 
+import { ArrowUpRightIcon } from '@/components/layout/FooterIcons'
 import NavAnchor, { NavBadge } from '@/components/layout/NavAnchor'
 
 function LinkContent({
@@ -15,6 +21,10 @@ function LinkContent({
     <>
       <span className="block">
         {link.label}
+        {link.href && opensInNewTab(link.href) && (
+          // Marks a link that opens another site in a new tab, as in the footer.
+          <ArrowUpRightIcon className="ease-out-quint ml-1 inline-block size-3.5 shrink-0 align-[-0.125em] text-slate-400 transition-[color,translate] duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-hover/link:text-white" />
+        )}
         {link.badge && <NavBadge blue={products}>{link.badge}</NavBadge>}
       </span>
       {link.note && (
@@ -32,7 +42,7 @@ function LinkContent({
 }
 
 const LINK =
-  '-mx-2.5 block rounded-lg px-2.5 py-1.5 text-[0.9375rem] leading-snug text-slate-100 ' +
+  'group/link -mx-2.5 block rounded-lg px-2.5 py-1.5 text-[0.9375rem] leading-snug text-slate-100 ' +
   'transition-colors duration-150 ease-out hover:bg-white/6 hover:text-white ' +
   'aria-disabled:cursor-default aria-disabled:text-slate-400 aria-disabled:hover:bg-transparent'
 

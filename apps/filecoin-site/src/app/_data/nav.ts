@@ -126,11 +126,11 @@ const NETWORK: NavSection = {
       {
         heading: 'Explorers',
         links: [
-          { label: 'filfox.info', href: 'https://filfox.info/' },
+          { label: 'FilFox', href: 'https://filfox.info/' },
           { label: 'Beryx', href: 'https://beryx.io/' },
           { label: 'Filscout', href: 'https://filscout.com/' },
           {
-            label: 'filecoin.blockscout.com',
+            label: 'Blockscout',
             href: 'https://filecoin.blockscout.com/',
           },
         ],
