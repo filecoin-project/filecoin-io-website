@@ -68,6 +68,8 @@ Filecoin storage has released features that make it a first class destination fo
 
 ## A Single Cohesive Strategy for a New Era: Closing the Economic Loop
 
+![The Filecoin Flywheel: 01 More external customers pay for recurring services; 02 Customer payments settle onchain; 03 Service providers earn revenue and lock FIL; 04 Unused incentives and a portion of revenue is burned; 05 More network value; 06 Attract more customers, developers, and operators](/uploads/blog-filecoin-flywheel.webp)
+
 A customer, whether an enterprise archiving records or an agent storing its outputs, pays for a recurring service, and that payment settles onchain. The storage provider serving that customer earns the revenue and locks FIL against it. Rewards flow toward the services customers keep using, and whatever incentive goes unearned, along with a portion of fees, is burned rather than distributed. The result is a network that becomes more attractive to the next enterprise, developer, and operator, which starts the cycle again.
 
 > “The Filecoin flywheel is connected end to end now, and it’s starting to build momentum. We’re still early but the feedback loop between useful storage, customer revenue, network value, and service provider rewards is fully assembled and we have a downhill run ahead of us to build on that momentum.”\
