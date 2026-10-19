@@ -15,11 +15,12 @@ import { createStoreDataFormSchema } from '@/store-data/talk-to-expert/schema/St
 
 const RequestSchema = createStoreDataFormSchema()
 
-const hubspotFormsUrl = getHubSpotFormsUrl(
-  process.env.HUBSPOT_STORE_DATA_FORM_ID,
-)
-
 export const POST = withHubSpotResponseHandler(async (request: NextRequest) => {
+  // Read at request time, not at import: `next build` loads every route to collect page data,
+  // so a deployment without the HubSpot variables (a preview) would otherwise fail to build.
+  const hubspotFormsUrl = getHubSpotFormsUrl(
+    process.env.HUBSPOT_STORE_DATA_FORM_ID,
+  )
   const body = await request.json()
   const data = RequestSchema.parse(body)
   const mappedData = {
