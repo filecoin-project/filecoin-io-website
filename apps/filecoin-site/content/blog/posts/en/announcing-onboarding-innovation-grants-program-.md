@@ -1,5 +1,5 @@
 ---
-title: "Announcing the Onboarding Innovation Grants Program! "
+title: "Announcing the Onboarding Innovation Grants Program!"
 draft: false
 excerpt: >-
   Introducing the Onboarding Innovation Grants Program - a program to

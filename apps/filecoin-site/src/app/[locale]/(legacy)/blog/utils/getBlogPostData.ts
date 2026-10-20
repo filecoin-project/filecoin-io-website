@@ -37,11 +37,15 @@ function getBlogPostMarkdownData(slug: string, locale: Locale) {
 function transformBlogPostData(
   post: Awaited<ReturnType<typeof getBlogPostMarkdownData>>,
 ) {
+  // Titles are trimmed: a trailing space typed in the CMS would otherwise reach <title>, where
+  // browsers collapse it, while og:title keeps it.
+  const title = post.title.trim()
   return {
     ...post,
+    title,
     publishedOn: post.date,
     seo: {
-      title: post.seo?.title || post.title,
+      title: post.seo?.title?.trim() || title,
       description: post.seo?.description || post.excerpt,
     },
   }
