@@ -15,9 +15,8 @@ export const HERO = {
   /** `null` hides the pill; a translation can drop it when the linked post has no version in that language. */
   announcement: {
     badge: 'New',
-    label:
-      'New Products and Reward Mechanics Optimize the Filecoin Network for Enterprises and Agents',
-    shortLabel: 'New Products and Reward Mechanics',
+    label: 'Filecoin for enterprise and agents',
+    shortLabel: 'Filecoin for enterprise and agents',
     href: '/blog/New-Products-and-Reward-Mechanics-Optimize-the-Filecoin-Network-for-Enterprises-and-Agents',
   } as Announcement | null,
   /** Two lines on wider screens; wraps freely on phones. */

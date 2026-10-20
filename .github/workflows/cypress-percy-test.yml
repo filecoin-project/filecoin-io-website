@@ -62,13 +62,21 @@ jobs:
 
       - name: Determine Test Type
         id: test-type
+        # Passed as env, not interpolated into the script: a quote in a PR title or commit
+        # message would otherwise break the script, or run as shell.
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_REF: ${{ github.head_ref }}
+          REF_NAME: ${{ github.ref_name }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            BRANCH_NAME="${{ github.head_ref }}"
-            COMMIT_MESSAGE="${{ github.event.pull_request.title }}"
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            BRANCH_NAME="$HEAD_REF"
+            COMMIT_MESSAGE="$PR_TITLE"
           else
-            BRANCH_NAME="${{ github.ref_name }}"
-            COMMIT_MESSAGE="${{ github.event.head_commit.message }}"
+            BRANCH_NAME="$REF_NAME"
+            COMMIT_MESSAGE="$HEAD_COMMIT_MESSAGE"
           fi
 
           if [[ "$BRANCH_NAME" == cms/* ]] || [[ "$COMMIT_MESSAGE" == *"[skip percy]"* ]]; then
