@@ -70,7 +70,7 @@ export const ARCHIVAL_STORAGE: Offer = {
 }
 
 export const ENTERPRISE_STORAGE: Offer = {
-  name: 'Fil One Enterprise Storage',
+  name: 'S3-Compatible Storage with Fil One',
   body: 'For teams that already use Amazon S3 tools.',
   // Fil One's published list price (fil.one/pricing, checked 12 October 2026).
   price: {
@@ -96,7 +96,7 @@ export const ENTERPRISE_STORAGE: Offer = {
 export const HERO_PLANS = [
   { label: 'Warm', offer: WARM_STORAGE },
   { label: 'Archival', offer: ARCHIVAL_STORAGE },
-  { label: 'Enterprise', offer: ENTERPRISE_STORAGE },
+  { label: 'S3-Compatible', offer: ENTERPRISE_STORAGE },
 ].map(({ label, offer: { price } }) => ({
   label,
   from: price.from,
@@ -106,7 +106,7 @@ export const HERO_PLANS = [
 
 export const PLANS: { title: string; body: string; offers: Offer[] } = {
   title: 'Three ways to store on Filecoin',
-  body: 'Warm storage for data you use often, archival storage for data you keep, and enterprise storage if you already work with S3.',
+  body: 'Warm storage for data you use often, archival storage for data you keep, and S3-compatible storage with Fil One if you already work with S3.',
   offers: [WARM_STORAGE, ARCHIVAL_STORAGE, ENTERPRISE_STORAGE],
 }
 

@@ -56,7 +56,7 @@ export const STORAGE_PLANS: {
   plans: StoragePlan[]
 } = {
   title: '在 Filecoin 上存储数据的三种方式',
-  body: '从温存储开始，把很少访问的数据归档，或者把 S3 工作流带到企业级存储。',
+  body: '从温存储开始，把很少访问的数据归档，或者把 S3 工作流带到 Fil One。',
   plans: [
     {
       title: '温存储',
@@ -85,7 +85,7 @@ export const STORAGE_PLANS: {
       },
     },
     {
-      title: '企业级存储',
+      title: 'Fil One S3 兼容存储',
       points: [
         '来自 Fil One 的 S3 兼容对象存储',
         '兼容你已在使用的 S3 SDK 和 CLI',

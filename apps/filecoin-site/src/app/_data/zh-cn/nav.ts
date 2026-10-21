@@ -34,7 +34,7 @@ const PRODUCTS: NavSection = {
             note: '保存很少访问的备份和记录。',
           },
           {
-            label: '企业级存储（Fil.one）',
+            label: 'Fil One S3 兼容存储',
             href: 'https://fil.one',
             ref: 'nav-products-filone',
             note: 'S3 兼容的存储，读取快速，价格可预期。',
@@ -63,7 +63,7 @@ const PRODUCTS: NavSection = {
             label: '价格',
             href: zh('/pricing'),
             ref: 'nav-products-pricing',
-            note: '比较温存储、归档存储和企业级存储的价格。',
+            note: '比较温存储、归档存储和 S3 兼容存储的价格。',
           },
         ],
       },

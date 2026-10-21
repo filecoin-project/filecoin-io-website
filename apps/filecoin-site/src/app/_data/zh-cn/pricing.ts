@@ -52,7 +52,7 @@ export const ARCHIVAL_STORAGE: Offer = {
 }
 
 export const ENTERPRISE_STORAGE: Offer = {
-  name: 'Fil One 企业级存储',
+  name: 'Fil One S3 兼容存储',
   body: '适合已在使用 Amazon S3 工具的团队。',
   price: { from: '固定价格', amount: '$5.99', unit: '每 TB 每月' },
   bestFor: '把现有 S3 存储迁移过来的公司',
@@ -72,7 +72,7 @@ export const ENTERPRISE_STORAGE: Offer = {
 export const HERO_PLANS = [
   { label: '温存储', offer: WARM_STORAGE },
   { label: '归档', offer: ARCHIVAL_STORAGE },
-  { label: '企业级', offer: ENTERPRISE_STORAGE },
+  { label: 'S3 兼容', offer: ENTERPRISE_STORAGE },
 ].map(({ label, offer: { price } }) => ({
   label,
   from: price.from,
@@ -82,7 +82,7 @@ export const HERO_PLANS = [
 
 export const PLANS: { title: string; body: string; offers: Offer[] } = {
   title: '在 Filecoin 上存储的三种方式',
-  body: '常用数据用温存储，长期保存用归档存储，已有 S3 工作流则用企业级存储。',
+  body: '常用数据用温存储，长期保存用归档存储，已有 S3 工作流则用 Fil One S3 兼容存储。',
   offers: [WARM_STORAGE, ARCHIVAL_STORAGE, ENTERPRISE_STORAGE],
 }
 

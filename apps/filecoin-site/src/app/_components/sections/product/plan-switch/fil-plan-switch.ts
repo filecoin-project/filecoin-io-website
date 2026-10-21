@@ -2,7 +2,7 @@
  * <fil-plan-switch>: the pricing page hero animation, for "Open storage you control, at a lower
  * cost."
  *
- * A white plan card steps through the ways to store on Filecoin (Warm, Archival, Enterprise), its
+ * A white plan card steps through the ways to store on Filecoin (Warm, Archival, S3-Compatible), its
  * price rolling to each plan's rate per TB per month. Each time, the data leaves the card as three
  * blue copies, one to each of three independent providers, which tick as their copy lands.
  *
@@ -52,7 +52,7 @@ const DEFAULT_PLANS: Plan[] = [
     unit: 'per TB per month',
   },
   {
-    label: 'Enterprise',
+    label: 'S3-Compatible',
     from: 'Flat rate',
     amount: '$5.99',
     unit: 'per TB per month',
@@ -203,7 +203,7 @@ export class FilPlanSwitch extends HTMLElement {
     if (!this.hasAttribute('aria-label')) {
       this.setAttribute(
         'aria-label',
-        'A storage plan card stepping through Warm, Archival and Enterprise prices per TB per month, with copies of the data going to three independent providers',
+        'A storage plan card stepping through Warm, Archival and S3-Compatible prices per TB per month, with copies of the data going to three independent providers',
       )
     }
     this.build()

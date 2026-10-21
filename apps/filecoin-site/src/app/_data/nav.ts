@@ -64,7 +64,7 @@ const PRODUCTS: NavSection = {
             note: 'Preserve backups and records you rarely need to access.',
           },
           {
-            label: 'Enterprise Storage w/ Fil.one',
+            label: 'S3-Compatible Storage with Fil One',
             href: 'https://fil.one',
             ref: 'nav-products-filone',
             note: 'S3-compatible storage with fast reads and predictable pricing.',
@@ -93,7 +93,7 @@ const PRODUCTS: NavSection = {
             label: 'Pricing',
             href: '/pricing',
             ref: 'nav-products-pricing',
-            note: 'Compare warm, archival, and enterprise storage pricing.',
+            note: 'Compare warm, archival, and S3-compatible storage pricing.',
           },
         ],
       },

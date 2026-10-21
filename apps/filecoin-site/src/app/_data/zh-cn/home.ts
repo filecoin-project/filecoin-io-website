@@ -98,7 +98,7 @@ export const STORAGE_USE_CASES: {
     },
     {
       id: 'enterprise',
-      title: '企业级',
+      title: 'S3 兼容',
       body: '来自 Fil One 的 S3 兼容对象存储。使用你已有的 S3 SDK 和 CLI，支持客户端加密和访问控制。',
       href: 'https://fil.one',
       ref: 'home-use-case-enterprise',

@@ -62,7 +62,7 @@ export const STORAGE_PLANS: {
   plans: StoragePlan[]
 } = {
   title: 'Three ways to store data on Filecoin',
-  body: 'Start with warm storage, archive what you rarely touch, or bring your S3 workflow to enterprise storage.',
+  body: 'Start with warm storage, archive what you rarely touch, or bring your S3 workflow to Fil One.',
   plans: [
     {
       title: 'Warm Storage',
@@ -91,7 +91,7 @@ export const STORAGE_PLANS: {
       },
     },
     {
-      title: 'Enterprise Storage',
+      title: 'S3-Compatible Storage with Fil One',
       points: [
         'S3-compatible object storage from Fil One',
         'Works with the S3 SDKs and CLIs you already use',

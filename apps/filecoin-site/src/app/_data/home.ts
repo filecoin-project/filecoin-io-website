@@ -209,7 +209,7 @@ export const STORAGE_USE_CASES: {
     },
     {
       id: 'enterprise',
-      title: 'Enterprise',
+      title: 'S3-Compatible',
       body: 'S3-compatible object storage from Fil One. Use the S3 SDKs and CLIs you already have, with client-side encryption and access control.',
       href: 'https://fil.one',
       ref: 'home-use-case-enterprise',
