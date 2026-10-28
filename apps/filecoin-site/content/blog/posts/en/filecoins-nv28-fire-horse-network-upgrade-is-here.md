@@ -15,7 +15,7 @@ dim_image: true
 
 In 2026, Filecoin is charging ahead with paid, onchain storage deals and improving network economics. The Filecoin network upgrade NV28 "Fire Horse" is now live on mainnet, making the network more usable, trustworthy, and performant for the real businesses running real workloads on the network today. Now, smart contracts on Filecoin can verify the health, status, and expiration of any storage sector in real time. Applications can authenticate users with passkeys instead of seed phrases. And the gas fee mechanism now reflects how Filecoin actually produces blocks.
 
-The result is a protocol that is easier to build on, more compatible with how developers already work on other major chains, and with a fee system designed specifically for Filecoin, in direct support of the Filecoin ecosystem's [2026 focus](https://www.filecoin.io/blog/the-2026-filecoin-network-strategy) on driving real, paid usage of the network.
+The result is a protocol that is easier to build on, more compatible with how developers already work on other major chains, and with a fee system designed specifically for Filecoin, in direct support of the Filecoin ecosystem's [2026 focus](https://filecoin.io/blog/the-2026-filecoin-network-strategy) on driving real, paid usage of the network.
 
 The Filecoin community chose the name Fire Horse, a Chinese zodiac symbol for high energy transformation and forward momentum.
 

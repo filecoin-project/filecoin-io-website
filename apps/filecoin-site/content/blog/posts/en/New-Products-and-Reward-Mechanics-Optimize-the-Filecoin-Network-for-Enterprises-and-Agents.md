@@ -24,14 +24,14 @@ Filecoin is evolving for a future where digital storage is a core pillar. Global
 
 Other catalysts are also causing huge shifts in the storage market, with growing demand for sovereignty over data. As storage gets scarcer, more expensive, and more location sensitive, decentralized storage is uniquely positioned to meet these demands.
 
-Filecoin has made major progress on the priorities of its [2026 Network Strategy](https://www.filecoin.io/blog/the-2026-filecoin-network-strategy). Six years after launch, the Filecoin network is well poised, offering a model that hyperscalers and other incumbents cannot: an open market where independent storage providers build services, compete for customers, and earn network rewards based on the customers they serve.
+Filecoin has made major progress on the priorities of its [2026 Network Strategy](https://filecoin.io/blog/the-2026-filecoin-network-strategy). Six years after launch, the Filecoin network is well poised, offering a model that hyperscalers and other incumbents cannot: an open market where independent storage providers build services, compete for customers, and earn network rewards based on the customers they serve.
 
 > “The Filecoin network is already the world’s largest decentralized storage network. This year has been an inflection point for the Filecoin network, with the Filecoin community’s focus shifting away from growing supply and towards scaling demand. This is happening at just the right moment, as AI fundamentally changes the demand for self-sovereign storage, positioning Filecoin to become essential infrastructure for an AI-native world.”\
 > – Marta Belcher, President, Filecoin Foundation
 
 ## New Incentive Mechanisms: Rewarding Customer Acquisition & Retention
 
-[Solstice](https://www.filecoin.io/blog/Solstice-Towards-a-Filecoin-Service-Economy) will change how the Filecoin network distributes block rewards, starting this month. This is one of the most significant changes to Filecoin’s reward system since the network launched.
+[Solstice](https://filecoin.io/blog/Solstice-Towards-a-Filecoin-Service-Economy) will change how the Filecoin network distributes block rewards, starting this month. This is one of the most significant changes to Filecoin’s reward system since the network launched.
 
 The change will drive a growing share of block rewards to services that bring paying customers onto the network, while less rewards go to consensus-only mining. Any unearned portion of that service share is burned rather than distributed.
 
@@ -64,7 +64,7 @@ Filecoin tooling is making it incredibly easy for agents to choose and buy stora
 
 ### [IPFS Migration Tools Converting Customers](https://filecoin.cloud/ipfs2filecoin)
 
-Filecoin storage has released features that make it a first class destination for IPFS content in 2026. New, easy [migration tools](https://filecoin.cloud/ipfs2filecoin) give users a more cost-effective option attached to a wallet, not a user account, with content addressing. Already, [several teams](https://www.filecoin.io/blog/New-IPFS-Tools-Launch-on-Filecoin) are choosing to store their pinned IPFS data on Filecoin, from NFT platforms to institutions with legal and compliance obligations around their data.
+Filecoin storage has released features that make it a first class destination for IPFS content in 2026. New, easy [migration tools](https://filecoin.cloud/ipfs2filecoin) give users a more cost-effective option attached to a wallet, not a user account, with content addressing. Already, [several teams](https://filecoin.io/blog/New-IPFS-Tools-Launch-on-Filecoin) are choosing to store their pinned IPFS data on Filecoin, from NFT platforms to institutions with legal and compliance obligations around their data.
 
 ## A Single Cohesive Strategy for a New Era: Closing the Economic Loop
 

@@ -52,7 +52,7 @@ We are also releasing two new documents today:
 This adds to the materials we previously released over the last couple of weeks:
 
 - [Filecoin Primer](https://ipfs.tech) - an in-depth presentation of and discussion on the Filecoin Network, the problems it aims to solve, the technology, the team, past traction, the token, and more.
-- [Filecoin Technical Paper](https://filecoin.io/vintage/filecoin.pdf) - a full, academic paper that presents and discusses the Filecoin protocol in detail.
+- [Filecoin Technical Paper](https://filecoin.io/filecoin.pdf) - a full, academic paper that presents and discusses the Filecoin protocol in detail.
 - [Filecoin Research Roadmap 2017](http://filecoin.io/vintage/research-roadmap-2017.pdf) - a short outline of our work in 2017, including a discussion on past work and our results, future work, open problems, and more.
 - [Proof-of-Replication](http://filecoin.io/vintage/proof-of-replication.pdf) - a technical paper that presents some of our recent research results used in Filecoin: proofs-of-replication and proofs-of-spacetime.
 - [Filecoin Video](https://www.youtube.com/watch?v=EClPAFPeXIQ) - a short promo video that introduces the Filecoin Network, the problems it aims to solve, how it works, and how users can be part of it.

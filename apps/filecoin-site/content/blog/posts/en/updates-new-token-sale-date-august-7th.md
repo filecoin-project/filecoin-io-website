@@ -26,7 +26,7 @@ _template: blog_detail
 
 Dear Community,
 
-We are absolutely overwhelmed with the positive response to the [new Filecoin whitepaper](https://filecoin.io/vintage/filecoin.pdf), [our upcoming token sale](https://coinlist.co/), [our video](https://www.youtube.com/watch?v=EClPAFPeXIQ), and [the other info we’ve released](https://filecoin.io/). We’ve been speaking with many of you, collecting feedback, and sharing our excitement. Thank you so much for the fantastic words of encouragement and support for the Filecoin Network. Getting here has taken a lot of hard work, and we are all very proud of the technology we are creating, the people we are bringing together, and the community we are building.
+We are absolutely overwhelmed with the positive response to the [new Filecoin whitepaper](https://filecoin.io/filecoin.pdf), [our upcoming token sale](https://coinlist.co/), [our video](https://www.youtube.com/watch?v=EClPAFPeXIQ), and [the other info we’ve released](https://filecoin.io/). We’ve been speaking with many of you, collecting feedback, and sharing our excitement. Thank you so much for the fantastic words of encouragement and support for the Filecoin Network. Getting here has taken a lot of hard work, and we are all very proud of the technology we are creating, the people we are bringing together, and the community we are building.
 
 We have a few updates for everyone today.
 

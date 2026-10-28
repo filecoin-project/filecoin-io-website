@@ -29,7 +29,7 @@ Using Avalanche, Interplanetary File System (IPFS), and Filecoin together, engin
 
 The result is a durable link between an onchain asset and the exact offchain data it represents. Verification here means that specific content was persisted and that what you retrieve matches its CID. None of these layers judges whether a deed is legitimate. That's a deliberate boundary: the issuer stays the record of authority.
 
-This builds on the [Avalanche and Filecoin cross-chain data bridge](https://www.filecoin.io/blog/new-avalanche-x-filecoin-data-bridge-unlocks-cross-chain-value), live since May 2025, which connects Avalanche's C-Chain to the Filecoin network.
+This builds on the [Avalanche and Filecoin cross-chain data bridge](https://filecoin.io/blog/new-avalanche-x-filecoin-data-bridge-unlocks-cross-chain-value), live since May 2025, which connects Avalanche's C-Chain to the Filecoin network.
 
 \*\*See it in action: [a property record](https://sgtpooki.github.io/Avalanche-IPFS-Filecoin-RWA-reference-Architecture/) \*\*
 
