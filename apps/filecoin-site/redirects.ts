@@ -16,6 +16,16 @@ export const redirects = [
     permanent: false,
   },
   {
+    source: '/assets/documents/filecoin.pdf',
+    destination: '/filecoin.pdf',
+    permanent: true,
+  },
+  {
+    source: '/vintage/filecoin.pdf',
+    destination: '/filecoin.pdf',
+    permanent: true,
+  },
+  {
     source: '/blog/ann-filecoin-token-sale-and-new-paper',
     destination:
       '/blog/announcing-the-filecoin-token-sale-and-upgraded-whitepaper',

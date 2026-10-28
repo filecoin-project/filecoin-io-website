@@ -33,7 +33,7 @@ Additionally, we’re also announcing a significantly upgraded version of the Fi
 
 ## The New Filecoin Whitepaper
 
-[![](/blog/whitepaper.jpg)](/assets/documents/filecoin.pdf)
+[![](/blog/whitepaper.jpg)](/filecoin.pdf)
 
 In the upgraded whitepaper we’ve reached significant new research breakthroughs that will make Filecoin an extremely competitive, reliable, and scalable storage network. More specifically, we’re releasing two new Cryptographic Proofs: Proof-of-Spacetime (PoSt) and Proof-of-Replication (PoRep). Among many things these advancements create a completely decentralized storage market, assure files are secure and robust, and allow Filecoin miners to earn filecoin for the actual storage of files, not for useless proofs of work.
 
