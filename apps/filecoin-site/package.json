@@ -50,7 +50,7 @@
     "schema-dts": "^2.0.0",
     "swr": "^2.4.1",
     "thinking-orbs": "^0.3.2",
-    "tinacms": "^3.4.1",
+    "tinacms": "^3.15.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "@next/eslint-plugin-next": "^16.2.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.2.2",
-    "@tinacms/cli": "^2.1.5",
+    "@tinacms/cli": "^2.7.0",
     "@types/d3-geo": "^3.1.1",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^25.5.0",
