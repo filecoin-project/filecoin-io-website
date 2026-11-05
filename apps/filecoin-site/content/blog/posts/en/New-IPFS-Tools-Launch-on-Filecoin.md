@@ -1,6 +1,9 @@
 ---
 title: New IPFS Tool Launch on Filecoin
 excerpt: Migrate pinned CIDs to Filecoin unchanged
+share_image: /uploads/blog-ipfs-tools-launch.webp
+image:
+  url: /uploads/blog-ipfs-tools-launch.webp
 date: 2026-09-30T20:12:28.204Z
 categories:
   - updates
