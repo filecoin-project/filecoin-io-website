@@ -1,6 +1,9 @@
 ---
 title: Real World Assets Are Onchain. What About the Data Behind Them?
 excerpt: 'A reference architecture for verifiable offchain data for tokenized assets using Avalanche, IPFS and Filecoin'
+share_image: /uploads/blog-rwa-data.webp
+image:
+  url: /uploads/blog-rwa-data.webp
 date: 2026-09-16T16:05:42.306Z
 categories:
   - updates
