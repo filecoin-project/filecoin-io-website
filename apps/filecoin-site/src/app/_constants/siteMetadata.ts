@@ -116,7 +116,7 @@ const FILECOIN_URLS = {
       label: 'Slack',
     },
     telegram: {
-      href: 'https://t.me/filecoin',
+      href: 'https://t.me/FilecoinAnnouncements',
       label: 'Telegram',
     },
     telegramKorea: {
