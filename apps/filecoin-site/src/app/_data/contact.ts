@@ -30,6 +30,18 @@ export const VOLUME_OPTIONS = [
   'Not sure yet',
 ] as const
 
+// The three qualifying questions below match the filecoin.cloud/contact form, so enquiries from
+// either site can be routed without a follow-up email.
+export const TIMING_OPTIONS = [
+  'Now',
+  'Within 3 months',
+  '3–6 months',
+  'More than 6 months',
+  'Not sure yet',
+] as const
+
+export const CUSTOMERS_OPTIONS = ['Yes', 'Not yet'] as const
+
 export const FIELDS = {
   fullName: { label: 'Full name', placeholder: 'Ada Lovelace' },
   email: { label: 'Work email', placeholder: 'ada@company.com' },
@@ -44,6 +56,19 @@ export const FIELDS = {
     label: 'How much data do you expect to store in the next 12 months?',
     placeholder: 'Select one',
   },
+  timing: {
+    label: 'When will you be ready to start storing data?',
+    placeholder: 'Select one',
+  },
+  customers: {
+    label: 'Do you have paying customers today?',
+    placeholder: 'Select one',
+  },
+  roadmap: {
+    label: "What's on your roadmap for the next six months?",
+    placeholder:
+      'Milestones, launches, or the point where you expect to start storing data.',
+  },
 } as const
 
 /** One submission, as the dialog posts it and the sheet stores it. */
@@ -54,6 +79,9 @@ export type ContactSubmission = {
   intent: (typeof INTENT_OPTIONS)[number]
   project: string
   volume: (typeof VOLUME_OPTIONS)[number]
+  timing: (typeof TIMING_OPTIONS)[number]
+  customers: (typeof CUSTOMERS_OPTIONS)[number]
+  roadmap: string
   /** The page the form was sent from, e.g. "/pricing". */
   page: string
 }
@@ -64,5 +92,6 @@ export const LIMITS = {
   email: 254,
   company: 120,
   project: 4000,
+  roadmap: 4000,
   page: 200,
 } as const

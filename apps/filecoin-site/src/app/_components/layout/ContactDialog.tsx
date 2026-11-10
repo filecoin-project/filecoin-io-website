@@ -13,8 +13,15 @@ import FormDialog from '@/components/layout/FormDialog'
  * the sheet.
  */
 export default function ContactDialog({ locale = 'en' }: { locale?: Locale }) {
-  const { CONTACT_FORM, FIELDS, INTENT_OPTIONS, LIMITS, VOLUME_OPTIONS } =
-    copy(locale).contact
+  const {
+    CONTACT_FORM,
+    CUSTOMERS_OPTIONS,
+    FIELDS,
+    INTENT_OPTIONS,
+    LIMITS,
+    TIMING_OPTIONS,
+    VOLUME_OPTIONS,
+  } = copy(locale).contact
   return (
     <FormDialog
       locale={locale}
@@ -71,6 +78,27 @@ export default function ContactDialog({ locale = 'en' }: { locale?: Locale }) {
           options: VOLUME_OPTIONS,
           wide: true,
           ...FIELDS.volume,
+        },
+        {
+          name: 'timing',
+          kind: 'select',
+          options: TIMING_OPTIONS,
+          wide: true,
+          ...FIELDS.timing,
+        },
+        {
+          name: 'customers',
+          kind: 'select',
+          options: CUSTOMERS_OPTIONS,
+          wide: true,
+          ...FIELDS.customers,
+        },
+        {
+          name: 'roadmap',
+          kind: 'textarea',
+          maxLength: LIMITS.roadmap,
+          wide: true,
+          ...FIELDS.roadmap,
         },
       ]}
     />

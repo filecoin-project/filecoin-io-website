@@ -1,6 +1,8 @@
 import {
+  CUSTOMERS_OPTIONS,
   INTENT_OPTIONS,
   LIMITS,
+  TIMING_OPTIONS,
   VOLUME_OPTIONS,
   type ContactSubmission,
 } from '@/data/contact'
@@ -30,8 +32,29 @@ function parse(body: unknown): ContactSubmission | string {
   if (project === null) return 'project'
   const volume = option(VOLUME_OPTIONS, zh.VOLUME_OPTIONS, raw.volume)
   if (!volume) return 'volume'
+  const timing = option(TIMING_OPTIONS, zh.TIMING_OPTIONS, raw.timing)
+  if (!timing) return 'timing'
+  const customers = option(
+    CUSTOMERS_OPTIONS,
+    zh.CUSTOMERS_OPTIONS,
+    raw.customers,
+  )
+  if (!customers) return 'customers'
+  const roadmap = text(raw.roadmap ?? '', LIMITS.roadmap)
+  if (roadmap === null) return 'roadmap'
   const page = text(raw.page ?? '', LIMITS.page) ?? ''
-  return { fullName, email, company, intent, project, volume, page }
+  return {
+    fullName,
+    email,
+    company,
+    intent,
+    project,
+    volume,
+    timing,
+    customers,
+    roadmap,
+    page,
+  }
 }
 
 export async function POST(request: Request) {
