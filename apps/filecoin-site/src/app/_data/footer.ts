@@ -132,7 +132,11 @@ export const FOOTER_SOCIAL: {
     label: 'Bluesky',
     href: 'https://bsky.app/profile/filecoin.io',
   },
-  { network: 'telegram', label: 'Telegram', href: 'https://t.me/filecoin' },
+  {
+    network: 'telegram',
+    label: 'Telegram',
+    href: 'https://t.me/FilecoinAnnouncements',
+  },
   {
     network: 'youtube',
     label: 'YouTube',
