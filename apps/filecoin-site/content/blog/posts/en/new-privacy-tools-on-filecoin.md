@@ -1,6 +1,6 @@
 ---
 title: 'New Privacy Tools on Filecoin: An Easy Way to Protect Your Data'
-draft: true
+draft: false
 excerpt: The network is public. Your data doesn't have to be.
 share_image: /uploads/blog-privacy-tools-launch.webp
 image:
