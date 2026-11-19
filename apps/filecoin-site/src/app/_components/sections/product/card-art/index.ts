@@ -13,7 +13,6 @@ import PrivateFilesArt from './PrivateFilesArt'
 import PublishArtifactsArt from './PublishArtifactsArt'
 import ReplicatedAcrossProvidersArt from './ReplicatedAcrossProvidersArt'
 import ShareSessionsArt from './ShareSessionsArt'
-import WalletLoginArt from './WalletLoginArt'
 
 export const CARD_ART = {
   'addressed-by-content': AddressedByContentArt,
@@ -28,7 +27,6 @@ export const CARD_ART = {
   'media-archives': MediaArchivesArt,
   'datasets-and-models': DatasetsAndModelsArt,
   'keep-a-record': KeepARecordArt,
-  'wallet-login': WalletLoginArt,
   'private-files': PrivateFilesArt,
   'open-source': OpenSourceArt,
 } as const

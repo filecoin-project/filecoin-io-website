@@ -31,11 +31,6 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: '把文件链接发给任何人，对方在浏览器里就能直接打开。',
     },
     {
-      art: 'wallet-login',
-      title: '钱包就是你的登录方式',
-      body: '用钱包登录，无需新建账户，也不用设置密码。',
-    },
-    {
       art: 'private-files',
       title: '让文件保持私密',
       body: '由你选择哪些文件只有你自己能打开。',

@@ -35,11 +35,6 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: 'Send anyone a link to a file. They can open it right in their browser.',
     },
     {
-      art: 'wallet-login',
-      title: 'Your wallet is your login',
-      body: 'Sign in with your wallet. There’s no new account or password to set up.',
-    },
-    {
       art: 'private-files',
       title: 'Keep a file private',
       body: 'Choose the files only you can open.',

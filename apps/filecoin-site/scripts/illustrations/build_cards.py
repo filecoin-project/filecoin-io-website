@@ -191,18 +191,6 @@ CARDS = {
             ("badge", [14, 15, 16], "rise", 950, {}),
         ],
     },
-    # Drive page. The wallet is the login: a wallet tile linked down to a signed-in address.
-    "wallet-login": {
-        "component": "WalletLoginArt",
-        "parts": [
-            ("link", [0], "fade", 300, {"draw": True, "flow": 1000}),
-            ("tile", [1, 2], "scale", 0, {}),
-            ("icon", [3], "scale", 120, {}),
-            ("pill", [4, 6, 7], "rise", 450, {}),
-            ("halo", [5], "scale", 450, {"loop": "pulse"}),
-            ("badge", [8], "scale", 700, {}),
-        ],
-    },
     # Drive page. A file list where one file is switched to private and the others are not.
     "private-files": {
         "component": "PrivateFilesArt",
