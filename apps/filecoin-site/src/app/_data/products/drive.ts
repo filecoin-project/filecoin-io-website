@@ -1,8 +1,8 @@
 // Filecoin Drive page copy, section by section in page order. Filecoin Drive is the consumer app at
 // pin.filecoin.cloud, a drive for everyday files: connect a wallet, top up with USDFC, upload, then
 // open and share. Written for everyday users rather than developers, so the network's terms stay
-// out of the hero and come in lower down in plain words. No Figma frame yet. Confirm the copy, and
-// the "two copies" figure, before launch.
+// out of the hero and come in lower down in plain words. No Figma frame yet. Confirm the copy
+// before launch.
 
 import { PATHS } from '@/constants/paths'
 
@@ -29,11 +29,6 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
   title: 'A home for the files that matter',
   body: 'Drive works like the cloud drives you know, but your files live on Filecoin, an open network no single company controls.',
   cards: [
-    {
-      art: 'replicated-across-providers',
-      title: 'Kept safe in two places',
-      body: 'Every file is stored as two copies, with two separate companies, so it never depends on just one.',
-    },
     {
       art: 'addressed-by-content',
       title: 'Share with a link',

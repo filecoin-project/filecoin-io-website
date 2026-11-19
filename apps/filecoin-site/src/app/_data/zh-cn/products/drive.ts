@@ -26,11 +26,6 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
   body: 'Drive 用起来就像你熟悉的云盘，但你的文件存放在 Filecoin 上，这是一个不受任何一家公司控制的开放网络。',
   cards: [
     {
-      art: 'replicated-across-providers',
-      title: '两处保存，更安全',
-      body: '每个文件都会存成两份，由两家不同的公司保存，从不只依赖一家。',
-    },
-    {
       art: 'addressed-by-content',
       title: '用链接分享',
       body: '把文件链接发给任何人，对方在浏览器里就能直接打开。',
