@@ -15,6 +15,7 @@ export type RedesignPageKey =
   | 'PRODUCTS_AGENTS'
   | 'PRODUCTS_IPFS'
   | 'PRODUCTS_ARCHIVAL_STORAGE'
+  | 'PRODUCTS_DRIVE'
 
 // Every key names a page in PATHS.
 type Check = RedesignPageKey extends keyof typeof PATHS ? true : never
@@ -57,6 +58,7 @@ export function pageSeo(locale: Locale): Record<RedesignPageKey, PageSeo> {
       title: c.archivalStorage.TITLE,
       description: c.archivalStorage.HERO.body,
     },
+    PRODUCTS_DRIVE: { title: c.drive.TITLE, description: c.drive.HERO.body },
   }
 }
 

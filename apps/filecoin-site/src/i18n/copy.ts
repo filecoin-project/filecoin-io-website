@@ -14,6 +14,7 @@ import * as pricingEn from '@/data/pricing'
 import * as agentsEn from '@/data/products/agents'
 import * as archivalStorageEn from '@/data/products/archival-storage'
 import * as dataStorageEn from '@/data/products/data-storage'
+import * as driveEn from '@/data/products/drive'
 import * as ipfsEn from '@/data/products/ipfs-pinning'
 import * as warmStorageEn from '@/data/products/warm-storage'
 import * as provideStorageEn from '@/data/provide-storage'
@@ -29,6 +30,7 @@ import * as pricingZh from '@/data/zh-cn/pricing'
 import * as agentsZh from '@/data/zh-cn/products/agents'
 import * as archivalStorageZh from '@/data/zh-cn/products/archival-storage'
 import * as dataStorageZh from '@/data/zh-cn/products/data-storage'
+import * as driveZh from '@/data/zh-cn/products/drive'
 import * as ipfsZh from '@/data/zh-cn/products/ipfs-pinning'
 import * as warmStorageZh from '@/data/zh-cn/products/warm-storage'
 import * as provideStorageZh from '@/data/zh-cn/provide-storage'
@@ -66,6 +68,7 @@ const EN = {
   archivalStorage: archivalStorageEn,
   ipfs: ipfsEn,
   agents: agentsEn,
+  drive: driveEn,
 }
 
 export type Copy = typeof EN
@@ -86,6 +89,7 @@ const ZH = {
   archivalStorage: archivalStorageZh,
   ipfs: ipfsZh,
   agents: agentsZh,
+  drive: driveZh,
 } satisfies Shape<Copy>
 
 const COPY: Record<Locale, Copy> = { en: EN, 'zh-cn': ZH as unknown as Copy }

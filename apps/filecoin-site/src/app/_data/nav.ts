@@ -77,6 +77,12 @@ const PRODUCTS: NavSection = {
         heading: 'Use Filecoin',
         links: [
           {
+            label: 'Filecoin Drive',
+            href: '/products/drive',
+            ref: 'nav-products-drive',
+            note: 'Store and share files from your browser.',
+          },
+          {
             label: 'Agents Skills',
             href: '/products/agents',
             ref: 'nav-products-agents',
