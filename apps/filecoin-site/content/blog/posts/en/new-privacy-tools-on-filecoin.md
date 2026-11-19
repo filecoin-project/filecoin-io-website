@@ -34,9 +34,9 @@ Now it's built into the Filecoin SDK. For teams, that means fewer moving parts t
 
 Most systems rely on a locksmith, a central service that makes everyone's keys and keeps a spare of each one. That works until the locksmith is breached, goes offline, or changes its terms. Here, your wallet acts as your own private keysmith, making the right key when you need it and storing none of them.
 
-For a deeper look at how the key system was designed, read [Keysmith: No Locksmith Required](https://medium.com/@jon.geater/keysmith-no-locksmith-required-bd52bd05c7db).
+For a deeper look at how the key system was designed, read [Keysmith: No Locksmith Required](https://medium.com/@filoz/keysmith-no-locksmith-required-37fc0fb0c911).
 
-To build with it, start with the [Encryption Guide in the Filecoin docs](https://docs.filecoin.io/build-on-filecoin/advanced/encryption?utm_source=blog&utm_medium=privacy-launch&utm_campaign=relaunch).
+To build with it, start with the [Encryption Guide in the Filecoin docs](https://docs.filecoin.io/build-on-filecoin/advanced/encryption?utm_source=blog&utm_medium=referral&utm_campaign=encryption_docs).
 
 ## **Sharing on your terms**
 
@@ -66,5 +66,5 @@ The skills come with safeguards so nothing is saved or shared unless you ask, ke
 
 * **Try it:** [Filecoin Cloud console](https://pay.filecoin.cloud/console?utm_source=blog&utm_medium=privacy-launch&utm_campaign=relaunch)  
 * **Build with it:** [Filecoin Docs Encryption Guide](https://docs.filecoin.io/build-on-filecoin/advanced/encryption?utm_source=blog&utm_medium=privacy-launch&utm_campaign=relaunch)  
-* **Go deeper on the design:** [Keysmith: No Locksmith Required](https://medium.com/@jon.geater/keysmith-no-locksmith-required-bd52bd05c7db)
+* **Go deeper on the design:** [Keysmith: No Locksmith Required](https://medium.com/@filoz/keysmith-no-locksmith-required-37fc0fb0c911)
 
