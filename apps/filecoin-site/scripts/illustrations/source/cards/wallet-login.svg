@@ -1,0 +1,22 @@
+<svg width="352" height="320" viewBox="0 0 352 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="card-wallet-login">
+<g id="link">
+<path d="M173.12 167.68V213.76" stroke="#0090FF" stroke-opacity="0.3" stroke-width="1.44"/>
+<path d="M178.88 167.68V213.76" stroke="#0090FF" stroke-opacity="0.3" stroke-width="1.44"/>
+</g>
+<path d="M202.88 60.64H149.12C134.54 60.64 122.72 72.46 122.72 87.04V140.8C122.72 155.38 134.54 167.2 149.12 167.2H202.88C217.46 167.2 229.28 155.38 229.28 140.8V87.04C229.28 72.46 217.46 60.64 202.88 60.64Z" fill="#FAFAFA" stroke="#F0F0F0" stroke-width="0.96"/>
+<path d="M195.2 76H156.8C146.46 76 138.08 84.38 138.08 94.72V133.12C138.08 143.46 146.46 151.84 156.8 151.84H195.2C205.54 151.84 213.92 143.46 213.92 133.12V94.72C213.92 84.38 205.54 76 195.2 76Z" fill="white" stroke="#E6E6E6" stroke-width="0.96"/>
+<g id="icon" transform="translate(161.6 99.52) scale(1.2)" stroke="#0090FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/>
+<path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
+</g>
+<path d="M272 214.24H80C67.54 214.24 57.44 224.34 57.44 236.8C57.44 249.26 67.54 259.36 80 259.36H272C284.46 259.36 294.56 249.26 294.56 236.8C294.56 224.34 284.46 214.24 272 214.24Z" fill="white" stroke="#E6E6E6" stroke-width="0.96"/>
+<circle cx="84.5" cy="236.8" r="9" fill="#0090FF" fill-opacity="0.16"/>
+<circle cx="84.5" cy="236.8" r="4" fill="#0090FF"/>
+<text x="101" y="241.4" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#111111">0x7a3f…c91e</text>
+<g id="badge">
+<rect x="203" y="227.2" width="78" height="19.2" rx="5.76" fill="#F1F1F1"/>
+<text x="242" y="240.6" font-size="11" text-anchor="middle" fill="#555555">Signed in</text>
+</g>
+</g>
+</svg>

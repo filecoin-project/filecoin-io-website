@@ -35,9 +35,19 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: 'Send anyone a link to a file. They can open it right in their browser.',
     },
     {
-      art: 'intact-by-design',
-      title: 'Know it’s still there',
-      body: 'Drive keeps checking that your files are stored exactly as you saved them, and shows you the proof.',
+      art: 'wallet-login',
+      title: 'Your wallet is your login',
+      body: 'Sign in with your wallet. There’s no new account or password to set up.',
+    },
+    {
+      art: 'private-files',
+      title: 'Keep a file private',
+      body: 'Choose the files only you can open.',
+    },
+    {
+      art: 'open-source',
+      title: 'Open source',
+      body: 'Drive’s code is open, so anyone can check how it works or build their own.',
     },
   ],
 }

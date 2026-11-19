@@ -31,9 +31,19 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: '把文件链接发给任何人，对方在浏览器里就能直接打开。',
     },
     {
-      art: 'intact-by-design',
-      title: '确认文件仍在',
-      body: 'Drive 会持续检查你的文件是否与保存时完全一致，并把证明展示给你。',
+      art: 'wallet-login',
+      title: '钱包就是你的登录方式',
+      body: '用钱包登录，无需新建账户，也不用设置密码。',
+    },
+    {
+      art: 'private-files',
+      title: '让文件保持私密',
+      body: '由你选择哪些文件只有你自己能打开。',
+    },
+    {
+      art: 'open-source',
+      title: '开源',
+      body: 'Drive 的代码是公开的，任何人都可以查看它如何运作，或搭建自己的版本。',
     },
   ],
 }

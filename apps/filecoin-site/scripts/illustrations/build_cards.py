@@ -11,6 +11,7 @@ lines in, and `flow` adds a travelling highlight along them.
 
     python3 scripts/illustrations/build_cards.py
 """
+import json
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -190,6 +191,45 @@ CARDS = {
             ("badge", [14, 15, 16], "rise", 950, {}),
         ],
     },
+    # Drive page. The wallet is the login: a wallet tile linked down to a signed-in address.
+    "wallet-login": {
+        "component": "WalletLoginArt",
+        "parts": [
+            ("link", [0], "fade", 300, {"draw": True, "flow": 1000}),
+            ("tile", [1, 2], "scale", 0, {}),
+            ("icon", [3], "scale", 120, {}),
+            ("pill", [4, 6, 7], "rise", 450, {}),
+            ("halo", [5], "scale", 450, {"loop": "pulse"}),
+            ("badge", [8], "scale", 700, {}),
+        ],
+    },
+    # Drive page. A file list where one file is switched to private and the others are not.
+    "private-files": {
+        "component": "PrivateFilesArt",
+        "parts": [
+            ("label", [0], "fade", 600, {}),
+            ("row-1", [1], "left", 0, {}),
+            ("row-2", [2], "left", 100, {}),
+            ("lock", [3], "scale", 450, {}),
+            ("toggle", [4], "scale", 550, {"loop": "pulse"}),
+            ("row-3", [5], "fade", 800, {}),
+        ],
+    },
+    # Drive page. An open code window with a fork button under it.
+    "open-source": {
+        "component": "OpenSourceArt",
+        "parts": [
+            ("window", [0], "rise", 0, {}),
+            ("chrome", [1], "fade", 150, {}),
+            ("line-1", [2], "left", 250, {}),
+            ("line-2", [3], "left", 330, {}),
+            ("line-3", [4], "left", 410, {}),
+            ("line-4", [5], "left", 490, {}),
+            ("line-5", [6], "left", 570, {}),
+            ("line-6", [7], "left", 650, {}),
+            ("pill", [8], "rise", 800, {}),
+        ],
+    },
 }
 
 ATTRS = {
@@ -201,6 +241,10 @@ ATTRS = {
     "fill-rule": "fillRule",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
+    "font-size": "fontSize",
+    "font-family": "fontFamily",
+    "font-weight": "fontWeight",
+    "text-anchor": "textAnchor",
 }
 
 
@@ -219,6 +263,9 @@ def jsx(el, indent, draw=False):
     if tag == "g":
         inner = "\n".join(jsx(child, indent + 1, draw) for child in el)
         return f"{pad}<g{attrs(el)}>\n{inner}\n{pad}</g>"
+    if tag == "text":
+        # Hand-drawn sources keep their labels as live text rather than outlines.
+        return f"{pad}<text{attrs(el)}>{{{json.dumps(el.text or '', ensure_ascii=False)}}}</text>"
     # Connector strokes get a normalised length so CSS can draw them in.
     extra = ' pathLength={1} className="ia-draw"' if draw and el.get("stroke") and not el.get("stroke-dasharray") else ""
     return f"{pad}<{tag}{attrs(el, extra)} />"
