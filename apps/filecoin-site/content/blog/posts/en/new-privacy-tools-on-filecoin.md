@@ -6,7 +6,7 @@ share_image: /uploads/blog-privacy-tools-launch.webp
 image:
   url: /uploads/blog-privacy-tools-launch.webp
   alt: A sealed circular vault door with a handprint lock panel and security screens
-date: 2026-11-18T12:00:00.000Z
+date: 2026-11-19T12:00:00.000Z
 categories:
   - updates
 related_article_1: content/blog/posts/en/filecoin-onchain-cloud-launch-roundup.md
