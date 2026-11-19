@@ -40,9 +40,9 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: 'Choose the files only you can open.',
     },
     {
-      art: 'open-source',
-      title: 'Open source',
-      body: 'Drive’s code is open, so anyone can check how it works or build their own.',
+      art: 'pay-for-what-you-store',
+      title: 'Pay only for what you store',
+      body: 'Your storage credit goes to the files you keep, so you never pay for empty space.',
     },
   ],
 }

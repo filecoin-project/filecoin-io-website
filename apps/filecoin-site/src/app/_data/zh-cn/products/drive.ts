@@ -36,9 +36,9 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
       body: '由你选择哪些文件只有你自己能打开。',
     },
     {
-      art: 'open-source',
-      title: '开源',
-      body: 'Drive 的代码是公开的，任何人都可以查看它如何运作，或搭建自己的版本。',
+      art: 'pay-for-what-you-store',
+      title: '按实际存储量付费',
+      body: '存储额度只花在你保存的文件上，不必为空着的空间付费。',
     },
   ],
 }

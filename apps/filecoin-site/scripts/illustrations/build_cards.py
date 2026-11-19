@@ -203,19 +203,18 @@ CARDS = {
             ("row-3", [5], "fade", 800, {}),
         ],
     },
-    # Drive page. An open code window with a fork button under it.
-    "open-source": {
-        "component": "OpenSourceArt",
+    # Drive page. Storage used fills to just the files kept, and that is what you pay for.
+    "pay-for-what-you-store": {
+        "component": "PayForWhatYouStoreArt",
         "parts": [
-            ("window", [0], "rise", 0, {}),
-            ("chrome", [1], "fade", 150, {}),
-            ("line-1", [2], "left", 250, {}),
-            ("line-2", [3], "left", 330, {}),
-            ("line-3", [4], "left", 410, {}),
-            ("line-4", [5], "left", 490, {}),
-            ("line-5", [6], "left", 570, {}),
-            ("line-6", [7], "left", 650, {}),
-            ("pill", [8], "rise", 800, {}),
+            ("link", [0], "fade", 650, {"draw": True, "flow": 1300}),
+            ("card", [1, 2, 3], "rise", 0, {}),
+            ("fill", [4], "left", 250, {}),
+            ("row-1", [5], "rise", 380, {}),
+            ("row-2", [6], "rise", 450, {}),
+            ("row-3", [7], "rise", 520, {}),
+            ("pill", [8, 9, 10], "rise", 800, {}),
+            ("halo", [11], "scale", 800, {"loop": "pulse"}),
         ],
     },
 }

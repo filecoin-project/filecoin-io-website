@@ -1,0 +1,43 @@
+<svg width="352" height="320" viewBox="0 0 352 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="card-pay-for-what-you-store">
+<g id="link">
+<path d="M173.12 180.96V214.24" stroke="#0090FF" stroke-opacity="0.3" stroke-width="1.44"/>
+<path d="M178.88 180.96V214.24" stroke="#0090FF" stroke-opacity="0.3" stroke-width="1.44"/>
+</g>
+<path d="M298 52H54C46.27 52 40 58.27 40 66V166C40 173.73 46.27 180 54 180H298C305.73 180 312 173.73 312 166V66C312 58.27 305.73 52 298 52Z" fill="white" stroke="#E6E6E6" stroke-width="0.96"/>
+<g id="header">
+<text x="60" y="82" font-size="12" fill="#7A7A7A">Storage used</text>
+<text x="292" y="82" font-size="13" text-anchor="end" fill="#111111">1.2 GB</text>
+</g>
+<rect x="60" y="92" width="232" height="10" rx="5" fill="#F1F1F1"/>
+<rect x="60" y="92" width="96" height="10" rx="5" fill="#0090FF"/>
+<g id="row-1">
+<g transform="translate(60 112) scale(0.6)" stroke="#7A7A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+<path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+</g>
+<text x="80" y="124" font-size="12" fill="#111111">first-steps.mov</text>
+<text x="292" y="124" font-size="12" text-anchor="end" fill="#7A7A7A">900 MB</text>
+</g>
+<g id="row-2">
+<g transform="translate(60 134) scale(0.6)" stroke="#7A7A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+<path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+</g>
+<text x="80" y="146" font-size="12" fill="#111111">garden.jpg</text>
+<text x="292" y="146" font-size="12" text-anchor="end" fill="#7A7A7A">240 MB</text>
+</g>
+<g id="row-3">
+<g transform="translate(60 156) scale(0.6)" stroke="#7A7A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+<path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+</g>
+<text x="80" y="168" font-size="12" fill="#111111">lease.pdf</text>
+<text x="292" y="168" font-size="12" text-anchor="end" fill="#7A7A7A">60 MB</text>
+</g>
+<path d="M272 214.24H80C67.54 214.24 57.44 224.34 57.44 236.8C57.44 249.26 67.54 259.36 80 259.36H272C284.46 259.36 294.56 249.26 294.56 236.8C294.56 224.34 284.46 214.24 272 214.24Z" fill="white" stroke="#E6E6E6" stroke-width="0.96"/>
+<circle cx="84.5" cy="236.8" r="4" fill="#0090FF"/>
+<text x="101" y="241.4" font-size="13" fill="#111111">You pay for 1.2 GB</text>
+<circle cx="84.5" cy="236.8" r="9" fill="#0090FF" fill-opacity="0.16"/>
+</g>
+</svg>
