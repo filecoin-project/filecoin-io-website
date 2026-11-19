@@ -63,7 +63,7 @@ export const HOW: {
     },
     {
       title: 'Add storage credit',
-      body: 'Top up with USDFC, a digital dollar. You only pay for what you store.',
+      body: 'Top up with USDFC. You only pay for what you store.',
     },
     {
       title: 'Upload your files',

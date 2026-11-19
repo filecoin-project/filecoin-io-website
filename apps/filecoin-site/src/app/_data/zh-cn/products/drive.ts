@@ -59,7 +59,7 @@ export const HOW: {
     },
     {
       title: '充值存储额度',
-      body: '用 USDFC（一种数字美元）充值。只为你存储的内容付费。',
+      body: '用 USDFC 充值。只为你存储的内容付费。',
     },
     {
       title: '上传文件',
