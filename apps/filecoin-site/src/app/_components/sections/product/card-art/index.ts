@@ -5,9 +5,11 @@ import DatasetsAndModelsArt from './DatasetsAndModelsArt'
 import IntactByDesignArt from './IntactByDesignArt'
 import KeepARecordArt from './KeepARecordArt'
 import MediaArchivesArt from './MediaArchivesArt'
+import PayForWhatYouStoreArt from './PayForWhatYouStoreArt'
 import PinFromYourTerminalArt from './PinFromYourTerminalArt'
 import PinMigrateFromAnotherServiceArt from './PinMigrateFromAnotherServiceArt'
 import PinWithYourAgentsArt from './PinWithYourAgentsArt'
+import PrivateFilesArt from './PrivateFilesArt'
 import PublishArtifactsArt from './PublishArtifactsArt'
 import ReplicatedAcrossProvidersArt from './ReplicatedAcrossProvidersArt'
 import ShareSessionsArt from './ShareSessionsArt'
@@ -25,6 +27,8 @@ export const CARD_ART = {
   'media-archives': MediaArchivesArt,
   'datasets-and-models': DatasetsAndModelsArt,
   'keep-a-record': KeepARecordArt,
+  'private-files': PrivateFilesArt,
+  'pay-for-what-you-store': PayForWhatYouStoreArt,
 } as const
 
 export type CardArtName = keyof typeof CARD_ART

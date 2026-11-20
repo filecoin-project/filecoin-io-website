@@ -38,7 +38,9 @@ export default function FeatureCards({
     <section aria-labelledby={id} className="bg-paper py-section">
       <div className="container-site">
         <SectionIntro id={id} title={title} body={body} />
-        <ul className="mt-[clamp(2rem,1.648rem+1.502vw,3rem)] grid grid-cols-1 gap-[clamp(1rem,0.472rem+2.254vw,2.5rem)] lg:grid-cols-3">
+        <ul
+          className={`mt-[clamp(2rem,1.648rem+1.502vw,3rem)] grid grid-cols-1 gap-[clamp(1rem,0.472rem+2.254vw,2.5rem)] ${cards.length % 2 === 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}
+        >
           {cards.map((card, i) => {
             const Art = CARD_ART[card.art]
             return (

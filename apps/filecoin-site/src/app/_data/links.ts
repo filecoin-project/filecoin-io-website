@@ -9,6 +9,9 @@ export const START_BUILDING = DOCS
 /** The Filecoin Pay console: the Products menu and the homepage's "Create your account" card. */
 export const CONSOLE = 'https://pay.filecoin.cloud/console'
 
+/** Filecoin Drive, the web app for storing and sharing files: the Drive page's "Open Drive" buttons. */
+export const DRIVE = 'https://pin.filecoin.cloud'
+
 /** Every "Store data" / "Get started" link: the storage page that lists the ways to store. */
 export const STORE = '/store-data'
 

@@ -11,6 +11,7 @@ lines in, and `flow` adds a travelling highlight along them.
 
     python3 scripts/illustrations/build_cards.py
 """
+import json
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -190,6 +191,32 @@ CARDS = {
             ("badge", [14, 15, 16], "rise", 950, {}),
         ],
     },
+    # Drive page. A file list where one file is switched to private and the others are not.
+    "private-files": {
+        "component": "PrivateFilesArt",
+        "parts": [
+            ("label", [0], "fade", 600, {}),
+            ("row-1", [1], "left", 0, {}),
+            ("row-2", [2], "left", 100, {}),
+            ("lock", [3], "scale", 450, {}),
+            ("toggle", [4], "scale", 550, {"loop": "pulse"}),
+            ("row-3", [5], "fade", 800, {}),
+        ],
+    },
+    # Drive page. Storage used fills to just the files kept, and that is what you pay for.
+    "pay-for-what-you-store": {
+        "component": "PayForWhatYouStoreArt",
+        "parts": [
+            ("link", [0], "fade", 650, {"draw": True, "flow": 1300}),
+            ("card", [1, 2, 3], "rise", 0, {}),
+            ("fill", [4], "left", 250, {}),
+            ("row-1", [5], "rise", 380, {}),
+            ("row-2", [6], "rise", 450, {}),
+            ("row-3", [7], "rise", 520, {}),
+            ("pill", [8, 9, 10], "rise", 800, {}),
+            ("halo", [11], "scale", 800, {"loop": "pulse"}),
+        ],
+    },
 }
 
 ATTRS = {
@@ -201,6 +228,10 @@ ATTRS = {
     "fill-rule": "fillRule",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
+    "font-size": "fontSize",
+    "font-family": "fontFamily",
+    "font-weight": "fontWeight",
+    "text-anchor": "textAnchor",
 }
 
 
@@ -219,6 +250,9 @@ def jsx(el, indent, draw=False):
     if tag == "g":
         inner = "\n".join(jsx(child, indent + 1, draw) for child in el)
         return f"{pad}<g{attrs(el)}>\n{inner}\n{pad}</g>"
+    if tag == "text":
+        # Hand-drawn sources keep their labels as live text rather than outlines.
+        return f"{pad}<text{attrs(el)}>{{{json.dumps(el.text or '', ensure_ascii=False)}}}</text>"
     # Connector strokes get a normalised length so CSS can draw them in.
     extra = ' pathLength={1} className="ia-draw"' if draw and el.get("stroke") and not el.get("stroke-dasharray") else ""
     return f"{pad}<{tag}{attrs(el, extra)} />"

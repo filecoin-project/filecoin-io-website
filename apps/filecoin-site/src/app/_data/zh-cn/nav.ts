@@ -47,6 +47,12 @@ const PRODUCTS: NavSection = {
         heading: '使用 Filecoin',
         links: [
           {
+            label: 'Filecoin Drive',
+            href: zh('/products/drive'),
+            ref: 'nav-products-drive',
+            note: '在浏览器里存储和分享文件。',
+          },
+          {
             label: 'Agent 技能',
             href: zh('/products/agents'),
             ref: 'nav-products-agents',

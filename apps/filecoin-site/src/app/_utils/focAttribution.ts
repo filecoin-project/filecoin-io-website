@@ -218,6 +218,7 @@ export const PRODUCT_PAGES: Record<string, string> = {
   '/products/ipfs': 'ipfs-pinning',
   '/products/warm-storage': 'data-storage',
   '/products/archival-storage': 'backups-archives',
+  '/products/drive': 'drive',
   '/store-data': 'store-data',
   '/pricing': 'pricing',
 }

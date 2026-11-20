@@ -77,6 +77,10 @@ export const PATHS = {
     path: '/products/archival-storage',
     label: 'Archival Storage',
   },
+  PRODUCTS_DRIVE: {
+    path: '/products/drive',
+    label: 'Filecoin Drive',
+  },
 } as const satisfies Record<string, PathConfig>
 
 const RSS_ROUTE = `/rss.xml`
