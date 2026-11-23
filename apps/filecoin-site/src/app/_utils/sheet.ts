@@ -70,10 +70,32 @@ export async function appendToSheet(
   return Response.json({ ok: true, saved: true })
 }
 
-/** A trimmed string of at most `max` characters, or null when the value is not one. */
-export function text(value: unknown, max: number): string | null {
+// Characters no one types into a form field: ASCII and Latin-1 control characters (line breaks
+// and tabs among them), and the invisible marks that override or isolate text direction, such as
+// the right-to-left override. Line breaks in a name are how header injection (`\nBcc: …`) works,
+// and direction marks make a cell read differently from what it holds.
+// eslint-disable-next-line no-control-regex
+const CONTROL = /[\u0000-\u001f\u007f-\u009f]/g
+// eslint-disable-next-line no-control-regex
+const CONTROL_BUT_NEWLINE = /[\u0000-\u0009\u000b-\u001f\u007f-\u009f]/g
+const DIRECTION_MARKS = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/g
+
+/**
+ * A trimmed string of at most `max` characters, or null when the value is not one. Direction
+ * marks are removed and control characters become spaces; `multiline` keeps line breaks (as \n)
+ * for free-text fields.
+ */
+export function text(
+  value: unknown,
+  max: number,
+  { multiline = false }: { multiline?: boolean } = {},
+): string | null {
   if (typeof value !== 'string') return null
-  const trimmed = value.trim()
+  const withoutMarks = value.replace(DIRECTION_MARKS, '')
+  const cleaned = multiline
+    ? withoutMarks.replace(/\r\n?/g, '\n').replace(CONTROL_BUT_NEWLINE, ' ')
+    : withoutMarks.replace(CONTROL, ' ').replace(/ {2,}/g, ' ')
+  const trimmed = cleaned.trim()
   return trimmed.length <= max ? trimmed : null
 }
 

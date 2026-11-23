@@ -1,3 +1,4 @@
+import { withBotId } from 'botid/next/config'
 import createNextIntlPlugin from 'next-intl/plugin'
 
 import { createNextConfig } from '@filecoin-foundation/next-config'
@@ -16,4 +17,5 @@ const nextConfig = createNextConfig({
   },
 })
 
-export default withNextIntl(nextConfig)
+// withBotId serves Vercel BotID's challenge script from this domain (see src/app/_utils/formGuard.ts).
+export default withBotId(withNextIntl(nextConfig))

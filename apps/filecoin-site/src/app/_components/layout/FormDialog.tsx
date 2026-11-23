@@ -159,8 +159,10 @@ export default function FormDialog({
     }
     setStatus('sending')
     try {
+      // The honeypot goes along too, so the server can turn bots away that skip this script.
       const body: Record<string, FormDataEntryValue | null> = {
         page: location.pathname,
+        website: data.get('website'),
       }
       for (const field of fields) body[field.name] = data.get(field.name)
       const response = await fetch(endpoint, {

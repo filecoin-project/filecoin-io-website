@@ -7,6 +7,7 @@ import {
 } from '@/data/provider-form'
 import * as zh from '@/data/zh-cn/provider-form'
 
+import { screenSubmission } from '@/utils/formGuard'
 import { appendToSheet, EMAIL, option, readJson, text } from '@/utils/sheet'
 
 /**
@@ -52,6 +53,8 @@ export async function POST(request: Request) {
       { ok: false, error: 'Expected a JSON body.' },
       { status: 400 },
     )
+  const screened = await screenSubmission(body)
+  if (screened) return screened
   const submission = parse(body)
   if (typeof submission === 'string') {
     return Response.json(
