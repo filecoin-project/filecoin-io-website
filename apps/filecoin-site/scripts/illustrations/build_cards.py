@@ -191,14 +191,14 @@ CARDS = {
             ("badge", [14, 15, 16], "rise", 950, {}),
         ],
     },
-    # Drive page. A file list where one file is switched to private and the others are not.
+    # Drive page. Every file is locked (encrypted) by default, and one has been switched to public.
     "private-files": {
         "component": "PrivateFilesArt",
         "parts": [
             ("label", [0], "fade", 600, {}),
             ("row-1", [1], "left", 0, {}),
             ("row-2", [2], "left", 100, {}),
-            ("lock", [3], "scale", 450, {}),
+            ("globe", [3], "scale", 450, {}),
             ("toggle", [4], "scale", 550, {"loop": "pulse"}),
             ("row-3", [5], "fade", 800, {}),
         ],

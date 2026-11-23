@@ -28,12 +28,12 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
     {
       art: 'addressed-by-content',
       title: '用链接分享',
-      body: '把文件链接发给任何人，对方在浏览器里就能直接打开。',
+      body: '把文件设为公开，再把链接发给任何人，对方在浏览器里就能直接打开。',
     },
     {
       art: 'private-files',
-      title: '让文件保持私密',
-      body: '由你选择哪些文件只有你自己能打开。',
+      title: '默认私密',
+      body: '你上传的每个文件都会加密，只有你自己能打开。哪些文件设为公开，由你决定。',
     },
     {
       art: 'pay-for-what-you-store',
