@@ -32,12 +32,12 @@ export const FEATURES: { title: string; body: string; cards: FeatureCard[] } = {
     {
       art: 'addressed-by-content',
       title: 'Share with a link',
-      body: 'Send anyone a link to a file. They can open it right in their browser.',
+      body: 'Make a file public and send anyone a link. They can open it right in their browser.',
     },
     {
       art: 'private-files',
-      title: 'Keep a file private',
-      body: 'Choose the files only you can open.',
+      title: 'Private by default',
+      body: 'Every file you upload is encrypted, so only you can open it. You choose which files to make public.',
     },
     {
       art: 'pay-for-what-you-store',

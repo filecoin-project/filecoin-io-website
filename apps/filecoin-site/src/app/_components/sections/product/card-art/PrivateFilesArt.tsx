@@ -19,7 +19,7 @@ export default function PrivateFilesArt({ className }: { className?: string }) {
         style={{ '--d': '600ms' } as CSSProperties}
       >
         <text x="284" y="78" fontSize="11" textAnchor="middle" fill="#7A7A7A">
-          {'Private'}
+          {'Public'}
         </text>
       </g>
       <g
@@ -36,13 +36,13 @@ export default function PrivateFilesArt({ className }: { className?: string }) {
           />
           <g
             transform="translate(51.2 101.4) scale(0.8)"
-            stroke="#7A7A7A"
+            stroke="#0090FF"
             strokeWidth="1.4"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-            <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </g>
           <text x="80" y="113.6" fontSize="13" fill="#111111">
             {'garden.jpg'}
@@ -64,12 +64,12 @@ export default function PrivateFilesArt({ className }: { className?: string }) {
             strokeWidth="0.96"
           />
           <text x="80" y="167.6" fontSize="13" fill="#111111">
-            {'lease.pdf'}
+            {'recipes.docx'}
           </text>
         </g>
       </g>
       <g
-        data-part="lock"
+        data-part="globe"
         data-enter="scale"
         style={{ '--d': '450ms' } as CSSProperties}
       >
@@ -80,8 +80,9 @@ export default function PrivateFilesArt({ className }: { className?: string }) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <rect x="3" y="11" width="18" height="11" rx="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
         </g>
       </g>
       <g
@@ -110,16 +111,16 @@ export default function PrivateFilesArt({ className }: { className?: string }) {
           />
           <g
             transform="translate(51.2 209.4) scale(0.8)"
-            stroke="#A8A8A8"
+            stroke="#0090FF"
             strokeWidth="1.4"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-            <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </g>
           <text x="80" y="221.6" fontSize="13" fill="#555555">
-            {'recipes.docx'}
+            {'lease.pdf'}
           </text>
           <rect x="270" y="209" width="28" height="16" rx="8" fill="#E6E6E6" />
           <circle cx="278" cy="217" r="6" fill="white" />
