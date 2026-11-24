@@ -5,6 +5,7 @@ import {
 } from '@/data/partner'
 import * as zh from '@/data/zh-cn/partner'
 
+import { screenSubmission } from '@/utils/formGuard'
 import { appendToSheet, EMAIL, option, readJson, text } from '@/utils/sheet'
 
 /**
@@ -25,7 +26,7 @@ function parse(body: unknown): PartnerSubmission | string {
   if (!company) return 'company'
   const type = option(PARTNERSHIP_OPTIONS, zh.PARTNERSHIP_OPTIONS, raw.type)
   if (!type) return 'type'
-  const details = text(raw.details, LIMITS.details)
+  const details = text(raw.details, LIMITS.details, { multiline: true })
   if (!details) return 'details'
   const page = text(raw.page ?? '', LIMITS.page) ?? ''
   return { fullName, email, company, type, details, page }
@@ -38,6 +39,8 @@ export async function POST(request: Request) {
       { ok: false, error: 'Expected a JSON body.' },
       { status: 400 },
     )
+  const screened = await screenSubmission(body)
+  if (screened) return screened
   const submission = parse(body)
   if (typeof submission === 'string') {
     return Response.json(

@@ -73,6 +73,8 @@ export default function ProviderForm({ locale = 'en' }: { locale?: Locale }) {
           capacity: data.get('capacity'),
           goals: data.getAll('goals'),
           page: location.pathname,
+          // The honeypot, for the server to turn away bots that skip this script.
+          website: data.get('website'),
         }),
       })
       if (!response.ok) throw new Error(`HTTP ${response.status}`)

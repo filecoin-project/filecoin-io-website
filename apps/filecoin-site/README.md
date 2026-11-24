@@ -110,6 +110,23 @@ Without the variable, `next dev` logs each submission to the terminal and the
 form still reports success; a production build answers 503 and the form shows
 an error. Both routes share `src/app/_utils/sheet.ts`.
 
+Bot protection for the three form routes:
+
+- **Field cleanup:** `text()` in `sheet.ts` drops control characters and
+  text-direction marks (such as the right-to-left override), and turns line
+  breaks into spaces except in the free-text fields.
+- **Honeypot:** each form has a hidden `website` field and sends it with the
+  submission; when it is filled in, the route answers as if it had saved the
+  row and saves nothing.
+- **Vercel BotID:** `instrumentation-client.ts` adds an invisible browser check
+  to POSTs to the paths in `src/app/_constants/formEndpoints.ts`, and
+  `src/app/_utils/formGuard.ts` answers a 403 to requests BotID calls a bot.
+  It runs only on Vercel deployments, and lets a submission through if the
+  check itself fails. It needs OIDC (on by default) in the Vercel project; Deep
+  Analysis, switched on under Firewall → Configure, makes it stricter.
+- **Rate limit:** not in code. It is a Vercel Firewall rate-limit rule on
+  `/api/contact`, `/api/partner` and `/api/provider`, per IP.
+
 ### Illustrations
 
 The storage illustrations come from Figma as SVG exports, trimmed to their
