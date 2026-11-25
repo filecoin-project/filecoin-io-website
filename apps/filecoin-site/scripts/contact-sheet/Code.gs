@@ -34,9 +34,24 @@ var FORMS = {
       "Project and storage needs",
       "Data in the next 12 months",
       "Page",
+      // Added after "Page" so rows sent before these questions existed stay in their columns.
+      "Ready to start storing",
+      "Paying customers today",
+      "Six-month roadmap",
     ],
     row: function (data) {
-      return [data.fullName, data.email, data.company, data.intent, data.project, data.volume, data.page];
+      return [
+        data.fullName,
+        data.email,
+        data.company,
+        data.intent,
+        data.project,
+        data.volume,
+        data.page,
+        data.timing,
+        data.customers,
+        data.roadmap,
+      ];
     },
   },
   provider: {
