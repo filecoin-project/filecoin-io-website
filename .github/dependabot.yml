@@ -12,6 +12,12 @@ updates:
       dependencies:
         patterns:
           - "*"
+    ignore:
+      # typescript-eslint 8.x supports TypeScript >=4.8.4 <6.1.0. Anything newer
+      # breaks `npm ci` (ERESOLVE) and fails the whole grouped PR. Raise this once
+      # typescript-eslint widens its peer range.
+      - dependency-name: "typescript"
+        versions: [">=6.1.0"]
     versioning-strategy: increase
     commit-message:
       prefix: "[DEPENDABOT] Weekly npm updates"
